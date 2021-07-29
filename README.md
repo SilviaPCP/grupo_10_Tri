@@ -13,12 +13,12 @@ Nuestro proyecto de página web de Market Place está enfocado a ofrecer product
 3. Ciclismo
 
 Dado que el mercado deportivo es bastante extenso aunque solo se abarque estos tres deportes, se tiene que acotar cuales serán los productos que ofreceremos como idea inicial, destacando:
-A. Tenis deportivos
-B. Playeras
-C. Short normal 
-D. Short para ciclismo
-E. Bicicletas 
-F. Trajes de natación
+1. Tenis deportivos
+2. Playeras deportivas
+3. Short normal 
+4. Short para ciclismo
+5. Bicicletas 
+6. Trajes de natación
 
 ---Público objetivo---
 
@@ -27,8 +27,8 @@ Los clientes que nuestra página web buscará atraer serán aquellos principiant
 ---Ajuste de la oferta a nuestro público---
 
 Las tiendas online que fueron sondeadas son:
-A. Nike: Es un referente de las marcas de artículos deportivos, teniendo un catálogo muy amplio de produtos que van desde el calzado, ropa deportiva, y balones de futbol. La página tiene un diseño agradable y una amplia accesibilidad a todos sus productos.
-B. Adidas: Al igual que nike, adidas es una de las marcas insignia de la industria deportiva, principalmente se puede apreciar en su página web la distinción de productos por género y edad.  
-C. Marti: La tienda de artículos deportivos Martí tiene un amplio surtido de mercanía de distintas marcas, siendo unos de los principales atractivos de su página las oferetas que presenta en el home
-D. Tristore: La página web de tristore esta especializada en la venta de bicicletas, de todo tipo hasta fijas, además de promover también los accesorios que necesitan los ciclistas, un aspecto a destacar de este sitio web, es la interacción vía chat para los clientes.
-E. 
+1. Nike: Es un referente de las marcas de artículos deportivos, teniendo un catálogo muy amplio de produtos que van desde el calzado, ropa deportiva, y balones de futbol. La página tiene un diseño agradable y una amplia accesibilidad a todos sus productos.
+2. Adidas: Al igual que nike, adidas es una de las marcas insignia de la industria deportiva, principalmente se puede apreciar en su página web la distinción de productos por género y edad.  
+3. Marti: La tienda de artículos deportivos Martí tiene un amplio surtido de mercanía de distintas marcas, siendo unos de los principales atractivos de su página las oferetas que presenta en el home
+4. Tristore: La página web de tristore esta especializada en la venta de bicicletas, de todo tipo hasta fijas, además de promover también los accesorios que necesitan los ciclistas, un aspecto a destacar de este sitio web, es la interacción vía chat para los clientes.
+5. **
