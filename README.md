@@ -27,8 +27,15 @@ Los clientes que nuestra página web buscará atraer serán aquellos principiant
 ---Ajuste de la oferta a nuestro público---
 
 Las tiendas online que fueron sondeadas son:
-1. Nike: Es un referente de las marcas de artículos deportivos, teniendo un catálogo muy amplio de produtos que van desde el calzado, ropa deportiva, y balones de futbol. La página tiene un diseño agradable y una amplia accesibilidad a todos sus productos.
-2. Adidas: Al igual que nike, adidas es una de las marcas insignia de la industria deportiva, principalmente se puede apreciar en su página web la distinción de productos por género y edad.  
-3. Marti: La tienda de artículos deportivos Martí tiene un amplio surtido de mercanía de distintas marcas, siendo unos de los principales atractivos de su página las oferetas que presenta en el home
-4. Tristore: La página web de tristore esta especializada en la venta de bicicletas, de todo tipo hasta fijas, además de promover también los accesorios que necesitan los ciclistas, un aspecto a destacar de este sitio web, es la interacción vía chat para los clientes.
-5. Decathlon: La tienda tiene un amplio surtido de productos deportivos para toda la familia, abarcando varios deportes desde campismo hasta pingpong. Es una página con muchas opciones para comprar y para asesorarse sobre productos de deporte. Cuenta con asesoria en línea. Tiene compra en línea para entrega en domicilio o en tienda, asi como compras físicas en tienda, aunque nuestra tienda solo sera en línea en un principio. Cuenta con una gran variedad de articulos para triatletas.
+1. Nike: Es un referente de las marcas de artículos deportivos, teniendo un catálogo muy amplio de produtos que van desde el calzado, ropa deportiva, y balones de futbol. La página tiene un diseño agradable y una amplia accesibilidad a todos sus productos (https://www.nike.com/mx/).
+2. Adidas: Al igual que nike, adidas es una de las marcas insignia de la industria deportiva, principalmente se puede apreciar en su página web la distinción de productos por género y edad (https://www.adidas.mx/).  
+3. Marti: La tienda de artículos deportivos Martí tiene un amplio surtido de mercanía de distintas marcas, siendo unos de los principales atractivos de su página las ofertas que presenta en el home (https://www.marti.mx/).
+4. Tristore: La página web de tristore esta especializada en la venta de bicicletas, de todo tipo hasta fijas, además de promover también los accesorios que necesitan los ciclistas, un aspecto a destacar de este sitio web, es la interacción vía chat para los clientes (https://tristore.mx/).
+5. Decathlon: La tienda tiene un amplio surtido de productos deportivos para toda la familia, abarcando varios deportes desde campismo hasta pingpong. Es una página con muchas opciones para comprar y para asesorarse sobre productos de deporte. Cuenta con asesoria en línea. Tiene compra en línea para entrega en domicilio o en tienda, asi como compras físicas en tienda, aunque nuestra tienda solo sera en línea en un principio. Cuenta con una gran variedad de articulos para triatletas (https://www.decathlon.com.mx/).
+
+---Breve descripción de integrantes del equipo---
+1. **
+2. **
+3. Jair Omar Díaz Álvarez: Estudiante de la carrera Ingeniería Petrolera de la Facultad de Ingeniería de la UNAM, originario de la Ciudad de México, busco complementar mi formación profesional con los fundamentos de la programación, en mi experiencia académica he tenido contacto con la programación orientada a objetos en lenguajes Python, Fortran, C++, y Java, además de la herramienta MATLAB. 
+
+
