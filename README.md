@@ -4,7 +4,7 @@ eCommerce proyecto de DigitalHouse del equipo 10
 
 Nombre de la tienda: TriathlonStore
 
-##Definición de la temática
+##Definición de la temática##
 
 #---Productos que brindará nuestro sitio---
 
