@@ -36,6 +36,6 @@ Las tiendas online que fueron sondeadas son:
 ---Breve descripción de integrantes del equipo---
 1. **
 2. **Silvia del Carmen Pérez Carrizosa:** Soy egresada de la carrera de Diseño de la comunicación Gráfica de la UAM Xochimilco, y cuento con una maestría en Ciencias de la computación por el ITESM, siempre me he interesado por el desarrollo de páginas web y todo lo que tenga que ver con desarrollo web. Con el curso quiero actualizarme en este tema ya que mi desarrollo laboral tomo el rumbo de la administración. Trabajé en empresas de desarrollo de sistemas ubicadas en la CDMX, ahora radico en la ciudad de Quéretaro.
-4.**Jair Omar Díaz Álvarez:** Estudiante de la carrera Ingeniería Petrolera de la Facultad de Ingeniería de la UNAM, originario de la Ciudad de México, busco complementar mi formación profesional con los fundamentos de la programación, en mi experiencia académica he tenido contacto con la programación orientada a objetos en lenguajes Python, Fortran, C++, y Java, además de la herramienta MATLAB. 
+3. **Jair Omar Díaz Álvarez:** Estudiante de la carrera Ingeniería Petrolera de la Facultad de Ingeniería de la UNAM, originario de la Ciudad de México, busco complementar mi formación profesional con los fundamentos de la programación, en mi experiencia académica he tenido contacto con la programación orientada a objetos en lenguajes Python, Fortran, C++, y Java, además de la herramienta MATLAB. 
 
 
