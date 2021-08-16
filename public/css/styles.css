@@ -73,7 +73,6 @@ li:hover{
     color: gray;
 }
 
-
 nav{
     padding: 20px 5px 10px 5px ;
     margin:auto;
@@ -107,15 +106,33 @@ nav{
 .depMomento label{
     font-weight: bold;
 }
-.ciclismo img{
+
+.depMomento img{
     width: 30vw;
     padding: 10px;
 }
-.carrera img{
-    width: 30vw;
-    padding: 10px;
+
+.prodDestacados{
+    width: 100%;
+    text-align: center;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    flex-wrap:nowrap;
+    flex-direction: row;
+    padding: 2px;
+    border-bottom: solid 3px gray;
 }
-.natacion img{
-    width: 30vw;
+
+.prodDestacados article{
+    width: 25%;
+}
+.prodDestacados img{
+    width: 20vw;
     padding: 10px;
+
+}
+.pie{
+    text-align: center;
 }
