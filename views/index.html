@@ -17,30 +17,44 @@
 <body>
     <header>
         <div class="top-header container">
-            <a href="#"><i class="fas fa-bars "></i></a>
+            <a href=""><i class="fas fa-user"></i></a>
             <a href="#">
                 <p>Triatlhon<span>Store</span></p>
             </a>
             <a href="#"><i class="fas fa-shopping-cart "></i></a>
         </div>
-        <form class="container" action=" ">
-            <input type="text " placeholder="Buscar artículo ">
-            <button type=""><i class="fas fa-search"></i></button>
+        <form class="container" action="#" method="GET">
+            <input class="input" type="text" placeholder="Buscar productos, marcas y más">
+            <button class="submit" type="reset"><i class="fa fa-search"></i></button>
         </form>
     </header>
 
-    <nav>
-        <ul>
-            <li><i class="fas fa-user"></i></li>
-            <li>Contactanos</li>
-            <li>Inicio</li>
-            <li>Hombre</li>
-            <li>Mujer</li>
-            <li>Infantil</li>
-        </ul>
-    </nav>
+    <div class="bar">
 
-    <div class="slider ">
+        <a href="#nav" class="mobile-menu">
+            <!--El gato en el href es para que sea hacia un id-->
+            <i class="fas fa-chevron-circle-down"></i>
+        </a>
+
+        <!--Por default el div tomara todo el espacio disponible-->
+        <nav id="nav" class="principal-nav">
+            <!--El contenedor se pone en el nav para que los enlaces se centren-->
+            <a href="#">Inicio</a>
+            <!--Signo de gato para simular que son enlaces-->
+            <a href="#">Nosotros</a>
+            <a href="#">Blogs</a>
+            <a href="#">Tienda</a>
+            <a href="#">Contacto</a>
+
+            <a href="#" class="close">
+                <i class="fas fa-times-circle"></i>
+            </a>
+        </nav>
+
+    </div>
+
+
+    <div class="slider clearfix">
         <ul>
             <li><img src="/images/ciclista-banner.jpg " alt=" "></li>
             <li><img src="/images/corredor-banner.jpg " alt=" "></li>
@@ -57,17 +71,55 @@
             <h1>Nuestros Deportes</h1>
 
 
-            <div class="sports">
-                <img src="/images/natacion.jpg" alt="">
-                <a href="#"><button>Natación</button></a>
+            <div class="sport-container">
+                <div class="sports">
+                    <img src="/images/natacion.jpg" alt="">
+                    <a href="#"><button>Natación</button></a>
+                </div>
+                <p>Trajes de Baño desde $500.00</p>
+                <div class="sports-nav">
+                    <a href=""><span>Trajes de baño</span></a> &nbsp;
+                    <span>|</span>&nbsp;
+
+                    <a href=""><span>Goggles</span></a>&nbsp;
+                    <span>|</span>&nbsp;
+
+                    <a href=""><span>Equipo</span></a>
+                </div>
             </div>
-            <div class="sports">
-                <img src="/images/bicicleta.jpeg" alt="">
-                <a href="#"><button>Ciclismo</button></a>
+
+            <div class="sport-container">
+                <div class="sports">
+                    <img src="/images/bicicleta.jpeg" alt="">
+                    <a href="#"><button>Ciclismo</button></a>
+                </div>
+                <p>Bicicletas hasta con el 20% de descuento</p>
+                <div class="sports-nav">
+                    <a href=""><span>Bicicletas</span></a> &nbsp;
+                    <span>|</span>&nbsp;
+
+                    <a href=""><span>Cascos</span></a>&nbsp;
+                    <span>|</span>&nbsp;
+
+                    <a href=""><span>Equipo</span></a>
+                </div>
             </div>
-            <div class="sports">
-                <img src="/images/carrera.jpg" alt="">
-                <a href="#"><button>Carrera</button></a>
+
+            <div class="sport-container">
+                <div class="sports">
+                    <img src="/images/carrera.jpg" alt="">
+                    <a href="#"><button>Carrera</button></a>
+                </div>
+                <p>Tenis de todas las marcas</p>
+                <div class="sports-nav">
+                    <a href=""><span>Tenis</span></a> &nbsp;
+                    <span>|</span>&nbsp;
+
+                    <a href=""><span>Uniformes</span></a>&nbsp;
+                    <span>|</span>&nbsp;
+
+                    <a href=""><span>Equipo</span></a>
+                </div>
             </div>
 
         </section>
@@ -79,7 +131,7 @@
                 <article>
                     <img src="/images/destacado1.jpg" alt="">
                     <div class="main-article">
-                        <i class="fas fa-truck"></i>
+                        <i class="fas fa-swimmer"></i>
                         <div class="container01">
                             <p class="price">$1,800.00</p>
                             <p class="discount">5% off</p>
@@ -91,7 +143,7 @@
                 <article>
                     <img src="/images/destacado2.jpg" alt="">
                     <div class="main-article">
-                        <i class="fas fa-truck"></i>
+                        <i class="fas fa-running"></i>
                         <div class="container01">
                             <p class="price">$1,490.00</p>
                             <p class="discount">10% off</p>
@@ -103,7 +155,7 @@
                 <article>
                     <img src="/images/destacado3.jpg" alt="">
                     <div class="main-article">
-                        <i class="fas fa-truck"></i>
+                        <i class="fas fa-biking"></i>
                         <div class="container01">
                             <p class="price">$570.00</p>
                             <p class="discount">15% off</p>
@@ -115,7 +167,7 @@
                 <article>
                     <img src="/images/destacado4.jpg" alt="">
                     <div class="main-article">
-                        <i class="fas fa-truck"></i>
+                        <i class="fas fa-running"></i>
                         <div class="container01">
                             <p class="price">$1,000.00</p>
                             <p class="discount">20% off</p>
@@ -129,12 +181,45 @@
 
     </main>
 
+    <section class="container">
+        <h3 class="follow">Siguenos en:</h3>
+        <div class="social-media">
+            <a href=""><i class="fab fa-facebook-square"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+        </div>
+    </section>
+
+    <section class="container buy">
+        <h2 class="buy-title">¿Por qué comprar con nosotros?</h2>
+
+        <div class="blocks">
+            <div class="block">
+                <img class="block-image" src="/images/icono_1.png" alt="Porque comprar">
+                <h3 class="block-title">El mejor precio</h3>
+                <p>Los precios más competitivos dentro del mercado nacional.</p>
+            </div>
+
+            <div class="block">
+                <img class="block-image" src="/images/icono_3.png" alt="Porque comprar">
+                <h3 class="block-title">Envio gratis</h3>
+                <p>Envío grátis dentro de la República compra mínima de$1,090.00.</p>
+            </div>
+
+            <div class="block">
+                <img class="block-image" src="/images/icono_4.png" alt="Porque comprar">
+                <h3 class="block-title">La mejor calidad</h3>
+                <p>Tenemos artículos de las mejores marcas y de la mejor calidad.</p>
+            </div>
+        </div>
+        <!--.bloques-->
+    </section>
+
     <footer>
         <div class="container">
-            <h4>Lo mejor de los tres deportes!</h4>
-            <div class="logo">
-                <img src="/images/logo.png" alt="">
-            </div>
+            <h4>Lo mejor para el triatleta!</h4>
+            <img src="/images/logo.png" alt="">
+            <p>TriathlonStore - Todos los Derechos Reservados ®</p>
         </div>
     </footer>
 </body>
