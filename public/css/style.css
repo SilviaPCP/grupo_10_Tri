@@ -258,7 +258,7 @@ form .submit {
 
 /*Main*/
 
-.sport-container p, .menu-carrito p {
+.sport-container p {
     text-align: center;
     font-family: var(--fuenteSecundaria);
     font-size: 1.5rem;
@@ -313,7 +313,7 @@ form .submit {
     font-size: 1.3rem;
 }
 
-.sports-nav a, .menu-carrito a {
+.sports-nav a, .menu-cart a {
     text-decoration: none;
     color: var(--primario);
 }
@@ -324,7 +324,26 @@ form .submit {
     align-items: center;
 }
 
+.cart{
+    transition: transform 2s;
+    width: 80%;
+}
 
+.cart:hover{
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.saved{
+    transition: transform 2s;
+    width: 80%;
+}
+
+.saved:hover{
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    : var(--gris);
+}
 
 /*Articles*/
 

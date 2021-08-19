@@ -1,0 +1,152 @@
+.cart-Container{
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    background-color: var(--blanco);
+}
+
+
+.menu-cart p {
+    text-align: center;
+    font-family: var(--fuenteSecundaria);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.menu-cart{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+
+.cart{
+    transition: transform 2s;
+    width: 80%;
+}
+
+.cart:hover{
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.saved{
+    transition: transform 2s;
+    width: 80%;
+}
+
+.saved:hover{
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    : var(--gris);
+}
+
+.option1{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    border-bottom: solid 1px gray;
+
+}
+
+.option1 .descTitle{
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: center;
+}
+.cartPhoto, .cartDesc, .cartCombo{
+    margin: auto;
+    padding: 10px;
+    
+}
+
+.cartTotal{
+    padding: 10px;
+    width: 80%;
+    text-align: center;
+    color: var(--primario);
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.finalCart{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.cartCombo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.cartCombo select{
+    font-size: 1.2rem;
+}
+
+.btnComprar{
+    padding: 20px;
+}
+
+.btnComprar input{
+    padding: 10px;
+    width: 50%;
+    transition: transform 2s;
+}
+
+.btnComprar input:hover{
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+@media (min-width: 480px) {
+    .cart-Container{
+        width:auto;
+        margin: auto;
+        background-color: var(--blanco);
+    }
+    .cart-Container img{
+        width: 50%;
+    }
+    .cartDesc{
+        padding: 30px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .option1{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+    }
+    .cartPhoto, .cartDesc, .cartCombo{
+        padding: 20px;
+    }
+    .cartTotal{
+        padding: 15px;
+        width: 80%;
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.3rem;
+    }
+           
+    .cartPhoto img{
+        width: 30% !important;
+    }
+
+    .cart-Container img{
+        width: 100%;
+    }
+    
+}
