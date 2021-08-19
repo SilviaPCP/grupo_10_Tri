@@ -56,7 +56,6 @@ html {
     padding: 0;
 }
 
-*,
 *:before,
 *:after {
     box-sizing: inherit;
@@ -259,7 +258,7 @@ form .submit {
 
 /*Main*/
 
-.sport-container p {
+.sport-container p, .menu-carrito p {
     text-align: center;
     font-family: var(--fuenteSecundaria);
     font-size: 1.5rem;
@@ -314,10 +313,17 @@ form .submit {
     font-size: 1.3rem;
 }
 
-.sports-nav a {
+.sports-nav a, .menu-carrito a {
     text-decoration: none;
     color: var(--primario);
 }
+
+.menu-cart{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
 
 
 /*Articles*/
