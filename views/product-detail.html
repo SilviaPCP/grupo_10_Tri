@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del producto</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+
+<body>
+    <header>
+        <div class="top-header container">
+            <div class="base">
+                <a class="align" href=""><i class="fas fa-user"></i></a>
+            </div>
+            <div class="base first">
+                <a class="base" href="/index">
+                    <p>Triathlon<span>Store</span></p>
+                </a>
+            </div>
+            <div class="base">
+                <a class="right" href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            <form class="form" action="#" method="GET">
+                <input class="input" type="text" placeholder="Buscar productos, marcas y más">
+                <button class="submit" type="reset"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+
+
+    </header>
+
+    <div class="bar">
+
+        <a href="#nav" class="mobile-menu">
+            <!--El gato en el href es para que sea hacia un id-->
+            <i class="fas fa-chevron-circle-down"></i>
+        </a>
+
+        <!--Por default el div tomara todo el espacio disponible-->
+        <nav id="nav" class="principal-nav">
+            <a href="/index">Inicio</a>
+            <a href="#">Hombre</a>
+            <a href="#">Mujer</a>
+            <a href="#">Infantil</a>
+            <a href="#">Contactanos</a>
+
+            <a href="#" class="close">
+                <i class="fas fa-times-circle"></i>
+            </a>
+        </nav>
+
+    </div>
+
+    <main class="contenedor clearfix">
+        <h1>VueJS</h1>
+
+        <div class="camisa">
+            <!--.camisa es un bloque-->
+            <img class="camisa__imagen" src="img/1.jpg" alt="Imagen de la camisa">
+            <div class="camisa__contenedor">
+                <p>Sint laboriosam quaerat neque perspiciatis soluta! In dolor amet nostrum error. Eligendi sequi possimus maiores libero et distinctio facere voluptate asperiores nulla?</p>
+
+                <form class="formulario">
+                    <!--.formulario es otro bloque distinto-->
+                    <select class="formulario__campo" name="" id="">
+                        <option disabled selected>--Seleccionar talla--</option><!--se desabilita y al mismo se selecciona la oopion con estos dos parametros-->
+                        <option>Chica</option>
+                        <option>Mediana</option>
+                        <option>Grande</option>
+                    </select>
+                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1" step="1">
+                    <input class="formulario__input" type="submit" value="Agregar al carrito">
+                </form>
+
+            </div>
+        </div>
+        <!---.camisa-->
+    </main>
+</body>
+
+</html>
