@@ -26,8 +26,8 @@ app.get('/product-detail', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/product-detail.html'));
 });
 
-app.get('/register', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/register.html'));
+app.get('/formulario', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/formulario.html'));
 });
 
 app.get('/login', (req, res) => {
