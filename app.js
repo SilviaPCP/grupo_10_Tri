@@ -26,14 +26,14 @@ app.get('/product-detail', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/product-detail.html'));
 });
 
-app.get('/register', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/register.html'));
+app.get('/formulario', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/formulario.html'));
 });
 
 app.get('/login', (req, res) => {
     res.sendFile(path.resolve(__dirname, './views/login.html'));
 });
 
-app.get('/tienda', (req, res) => {
-    res.sendFile(path.resolve(__dirname, './views/tienda.html'));
+app.get('/productCart', (req, res) => {
+    res.sendFile(path.resolve(__dirname, './views/productCart.html'));
 });
