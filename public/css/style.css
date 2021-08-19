@@ -152,6 +152,7 @@ header {
 form {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding-bottom: 1rem;
     margin: 0.5rem auto;
 }
@@ -313,37 +314,38 @@ form .submit {
     font-size: 1.3rem;
 }
 
-.sports-nav a, .menu-cart a {
+.sports-nav a,
+.menu-cart a {
     text-decoration: none;
     color: var(--primario);
 }
 
-.menu-cart{
+.menu-cart {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.cart{
+.cart {
     transition: transform 2s;
     width: 80%;
 }
 
-.cart:hover{
+.cart:hover {
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.saved{
+.saved {
     transition: transform 2s;
     width: 80%;
 }
 
-.saved:hover{
+.saved:hover {
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.3);
-    : var(--gris);
 }
+
 
 /*Articles*/
 
@@ -361,8 +363,8 @@ main section article {
 
 .main-article i {
     display: block;
-    font-size: 1.6rem;
-    padding: 0.5rem;
+    font-size: 2rem;
+    padding: 0.3rem;
     width: 3rem;
     height: 3rem;
     border: solid var(--primario) 0.1rem;
@@ -693,7 +695,7 @@ footer p {
 @media (min-width: 1200px) {
     /*Slider*/
     .slider img {
-        height: 50rem;
+        height: 55rem;
     }
     /*Footer*/
     footer img {
