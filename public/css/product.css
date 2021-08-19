@@ -1,3 +1,5 @@
+/*Main*/
+
 .blue {
     background-color: var(--primario);
     padding: 1rem;
@@ -49,7 +51,7 @@
     border-radius: 1rem;
     background-color: transparent;
     color: var(--blanco);
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: var(--fuentePrincipal);
     padding: 1rem;
     appearance: none;
@@ -60,7 +62,7 @@
     background-color: var(--secundario);
     border: none;
     border-radius: 1rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-family: var(--fuentePrincipal);
     padding: 2rem;
     transition: background-color .4s ease;
@@ -70,6 +72,41 @@
 .form-input:hover {
     cursor: pointer;
     background-color: var(--terciario);
+}
+
+
+/*Productos Similares*/
+
+.similar-title {
+    text-align: center;
+    font-family: var(--fuenteSecundaria);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.similar {
+    width: 70%;
+    margin: 2rem auto;
+    padding-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+.similar:hover {
+    box-shadow: 0px 0px 10px var(--primario);
+}
+
+.similar p {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--terciario);
+}
+
+.similar p span {
+    color: var(--blanco)!important;
+    background-color: var(--secundario);
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 
@@ -93,6 +130,14 @@
     .product-discount {
         flex: 0 0 calc(50% - 1rem);
     }
+    /*Productos Similares*/
+    .similar-products {
+        display: flex;
+        justify-content: space-between;
+    }
+    .similar {
+        flex: 0 0 calc(50% - 1rem);
+    }
 }
 
 @media (min-width: 768px) {
@@ -108,4 +153,10 @@
     .product-container {
         flex: 0 0 calc(60% - 1rem);
     }
+    /*Productos similares*/
+    .similar-products {
+        width: 50%;
+        margin: auto;
+    }
+    ;
 }
