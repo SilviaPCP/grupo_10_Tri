@@ -1,0 +1,111 @@
+.blue {
+    background-color: var(--primario);
+    padding: 1rem;
+    margin-top: 1rem;
+    border: solid var(--blanco) 0.1rem;
+    border-radius: 2rem;
+}
+
+.blue h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--blanco);
+    text-align: center;
+}
+
+.product-container p {
+    font-size: 2rem;
+    color: var(--blanco);
+    text-align: center;
+}
+
+.product-price span {
+    background-color: var(--terciario);
+}
+
+.product-discount span {
+    background-color: red;
+}
+
+.product-price span,
+.product-discount span {
+    margin: 0;
+    padding: 0.5rem;
+    border-radius: 0.8rem;
+}
+
+.product01 {
+    padding: 1rem;
+}
+
+.form-product {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+}
+
+.form-camp {
+    border: 0.5rem solid var(--blanco);
+    border-radius: 1rem;
+    background-color: transparent;
+    color: var(--blanco);
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    padding: 1rem;
+    appearance: none;
+    min-width: 50%;
+}
+
+.form-input {
+    background-color: var(--secundario);
+    border: none;
+    border-radius: 1rem;
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+    padding: 2rem;
+    transition: background-color .4s ease;
+    grid-column: 1 / 3;
+}
+
+.form-input:hover {
+    cursor: pointer;
+    background-color: var(--terciario);
+}
+
+
+/*Footer*/
+
+.no-padding {
+    padding: 1rem!important;
+}
+
+
+/*Media*/
+
+@media (min-width: 480px) {
+    .info-product {
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .product-price,
+    .product-discount {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+
+@media (min-width: 768px) {
+    .product01 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .product-image {
+        width: 100%;
+        flex: 0 0 calc(40% - 1rem);
+    }
+    .product-container {
+        flex: 0 0 calc(60% - 1rem);
+    }
+}

@@ -10,8 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/product.css">
+
 </head>
 
 <body>
@@ -21,7 +23,7 @@
                 <a class="align" href=""><i class="fas fa-user"></i></a>
             </div>
             <div class="base first">
-                <a class="base" href="/index">
+                <a class="base" href="/">
                     <p>Triathlon<span>Store</span></p>
                 </a>
             </div>
@@ -46,7 +48,7 @@
 
         <!--Por default el div tomara todo el espacio disponible-->
         <nav id="nav" class="principal-nav">
-            <a href="/index">Inicio</a>
+            <a href="/">Inicio</a>
             <a href="#">Hombre</a>
             <a href="#">Mujer</a>
             <a href="#">Infantil</a>
@@ -59,31 +61,44 @@
 
     </div>
 
-    <main class="contenedor clearfix">
-        <h1>VueJS</h1>
+    <main class="container blue clearfix">
+        <h1>Mono trifunción ld triatlón negro hombre</h1>
 
-        <div class="camisa">
-            <!--.camisa es un bloque-->
-            <img class="camisa__imagen" src="img/1.jpg" alt="Imagen de la camisa">
-            <div class="camisa__contenedor">
-                <p>Sint laboriosam quaerat neque perspiciatis soluta! In dolor amet nostrum error. Eligendi sequi possimus maiores libero et distinctio facere voluptate asperiores nulla?</p>
+        <div class="product01">
 
-                <form class="formulario">
-                    <!--.formulario es otro bloque distinto-->
-                    <select class="formulario__campo" name="" id="">
+            <img class="product-image" src="/images/destacado1.jpg" alt="Imagen de la camisa">
+            <div class="product-container">
+
+                <div class="info-product">
+                    <p class="product-price"><span>$1,800.00</span></p>
+                    <p class="product-discount"><span>5% off</span></p>
+                </div>
+
+                <p>Mono trifunción creado para triatletas apasionados(as), equipamiento icónico e imprescindible, para tus primeros triatlones larga distancia</p>
+
+                <form class="form-product">
+                    <select class="form-camp" name="" id="">
                         <option disabled selected>--Seleccionar talla--</option><!--se desabilita y al mismo se selecciona la oopion con estos dos parametros-->
                         <option>Chica</option>
                         <option>Mediana</option>
                         <option>Grande</option>
                     </select>
-                    <input class="formulario__campo" type="number" placeholder="Cantidad" min="1" step="1">
-                    <input class="formulario__input" type="submit" value="Agregar al carrito">
+                    <input class="form-camp" type="number" placeholder="Cantidad" min="1" step="1">
+                    <button class="form-input" type="submit"><i class="fas fa-shopping-cart"></i> Agregar al carrito</button>
                 </form>
 
             </div>
         </div>
-        <!---.camisa-->
+
     </main>
+
+    <footer>
+        <div class="container ">
+            <h4 class="no-padding">Lo mejor para el triatleta!</h4>
+            <img src="/images/logo.png" alt="">
+            <p>TriathlonStore - Todos los Derechos Reservados ®</p>
+        </div>
+    </footer>
 </body>
 
 </html>
