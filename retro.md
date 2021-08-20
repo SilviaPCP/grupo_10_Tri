@@ -1,4 +1,4 @@
-Retrospectiva del trabajo en equipo del primer Sprint
+Retrospectiva del trabajo en equipo del Sprint 1
 
 ¿Qué se hizo bien en el sprint anterior?
 Se organizó bien el trabajo y cada quien se hizo responsable de algunas actividades, se repartieron los wireframes del sitio y se acordó como se realizaría y con que se trabajaría el ellos. Todos contribuimos a la creación de los mismos así como en el archivo README,  cada quien agregando lo que de cada sección se acordó previamente.
@@ -11,3 +11,17 @@ Debemos empezar a comunicarnos más de forma directa, talvez en audios, videolla
 
 ¿Qué deberíamos dejar de hacer?
 No encontramos nada que debamos dejar de hacer.
+
+Retrospectiva del trabajo en equipo del Sprint 2
+
+¿Qué problemas tuvimos?
+Un poco de falta de coordinación en tiempos para ponernos de acuerdo en las bases de la página. Falta de comunicación y administrar los tiempos requeridos para el desarrollo de los entregables.
+
+¿Qué hacer mas?
+Agendar reuniones virtuales ya sea por whatsapp o zoom los días miércoles 8pm y domingo 6pm. Y comunicarnos sobre cambios y dudas.
+
+¿Qué continuar haciendo?
+Seguir trabajando y avanzando con el proyecto y apoyándonos en las dudas y temas relacionados al mismo.
+
+¿Qué hacer menos?
+Suponer situaciones en las cuales tenemos dudas, tratando de apoyarnos en todo.
