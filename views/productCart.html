@@ -18,8 +18,8 @@
 <body>
     <header>
         <div class="top-header container">
-            <a href=""><i class="fas fa-user"></i></a>
-            <a href="#">
+            <a href="/login"><i class="fas fa-user"></i></a>
+            <a href="/">
                 <p>Triatlhon<span>Store</span></p>
             </a>
             <a href="productCart"><i class="fas fa-shopping-cart "></i></a>
@@ -40,7 +40,7 @@
         <!--Por default el div tomara todo el espacio disponible-->
         <nav id="nav" class="principal-nav">
             <!--El contenedor se pone en el nav para que los enlaces se centren-->
-            <a href="#">Inicio</a>
+            <a href="/">Inicio</a>
             <!--Signo de gato para simular que son enlaces-->
             <a href="#">Nosotros</a>
             <a href="#">Blogs</a>
@@ -71,71 +71,82 @@
             <!--Menu de carrito de compras -->
             <h1>Carrito de compra</h1>
             <div class="menu-cart">
-                <div class="cart"><a href="#"><p>Carrito(1)</p></a></div>
-                <div class="saved"><a href="guardados"><p>Guardados(1)</p></a></div>
+                <div class="cart">
+                    <a href="#">
+                        <p>Carrito(1)</p>
+                    </a>
+                </div>
+                <div class="saved">
+                    <a href="guardados">
+                        <p>Guardados(1)</p>
+                    </a>
+                </div>
             </div>
-                <div class="cart-Container">
+            <div class="cart-Container">
                 <!--Primera opcion de carrito-->
                 <article>
-                <div class="option1 ">
-                    <div class="Cartphoto">
-                        <p class="descTitle">TriSuit para hombre</p>
-                        <img src="/images/destacado1.jpg" alt="">
-                    </div>
-                    <div class="cartDesc">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iste mollitia qui vel incidunt consectetur aliquam! Natus, nemo! Nihil enim, ipsa fugiat aliquam vel reiciendis quaerat fuga! Accusamus, impedit! Officiis!</p>
-                    </div>
-                    <div class="cartCombo">
-                        <select>
+                    <div class="option1 ">
+                        <div class="Cartphoto">
+                            <p class="descTitle">TriSuit para hombre</p>
+                            <img src="/images/destacado1.jpg" alt="">
+                        </div>
+                        <div class="cartDesc">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iste mollitia qui vel incidunt consectetur aliquam! Natus, nemo! Nihil enim, ipsa fugiat aliquam vel reiciendis quaerat fuga! Accusamus, impedit! Officiis!</p>
+                        </div>
+                        <div class="cartCombo">
+                            <select>
                             <option value="0">Cantidad</option>
                             <option value="1">3 unidades disp</option>
                             <option value="2">1</option>
                             <option value="3">2</option>
                             <option value="4">3</option>
                         </select>
+                        </div>
+                        <div class="cartTotal">
+                            <p>Total $1,450.00</p>
+                        </div>
+
                     </div>
-                    <div class="cartTotal">
-                        <p>Total $1,450.00</p>
+                    <div class="finalCart">
+                        <div><a href="#">Guardar  </a> </div>
+                        <div><a href="#">  Eliminar</a></div>
                     </div>
-                    
-                </div>
-                <div class="finalCart">
-                    <div><a href="#">Guardar  </a> </div><div><a href="#">  Eliminar</a></div>
-                </div>
-            </article>
+                </article>
                 <br>
                 <!--Segunda opción de carrito-->
                 <article>
-                <div class="option1">
-                    <div class="Cartphoto">
-                        <p class="descTitle">Descripción Artículo</p>
-                        <img src="/images/destacado4.jpg" alt="">
-                    </div>
-                    <div class="cartDesc">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iste mollitia qui vel incidunt consectetur aliquam! Natus, nemo! Nihil enim, ipsa fugiat aliquam vel reiciendis quaerat fuga! Accusamus, impedit! Officiis!</p>
-                    </div>
-                    <div class="cartCombo">
-                        
-                        <select name="Cantidad">
+                    <div class="option1">
+                        <div class="Cartphoto">
+                            <p class="descTitle">Descripción Artículo</p>
+                            <img src="/images/destacado4.jpg" alt="">
+                        </div>
+                        <div class="cartDesc">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iste mollitia qui vel incidunt consectetur aliquam! Natus, nemo! Nihil enim, ipsa fugiat aliquam vel reiciendis quaerat fuga! Accusamus, impedit! Officiis!</p>
+                        </div>
+                        <div class="cartCombo">
+
+                            <select name="Cantidad">
                             <option value="0">Cantidad</option>
                             <option value="1">3 unidades disp</option>
                             <option value="2">1</option>
                             <option value="3">2</option>
                             <option value="4">3</option>
                         </select>
+                        </div>
+                        <div class="cartTotal">
+                            <p>Total $1,450.00</p>
+                        </div>
                     </div>
-                    <div class="cartTotal">
-                        <p>Total $1,450.00</p>
+                    <div class="finalCart">
+                        <div><a href="#">Guardar  </a> </div>
+                        <div><a href="#">  Eliminar</a></div>
                     </div>
-                </div>
-                <div class="finalCart">
-                    <div><a href="#">Guardar  </a> </div><div><a href="#">  Eliminar</a></div>
-                </div>
-                <div class="btnComprar">
-                    <h3>Total con envío</h3><h2> $2,200.00</h2>
-                    <input type="submit" name ="Comprar" value="Comprar">
-                </div>
-                </div>
+                    <div class="btnComprar">
+                        <h3>Total con envío</h3>
+                        <h2> $2,200.00</h2>
+                        <input type="submit" name="Comprar" value="Comprar">
+                    </div>
+            </div>
             </article>
         </section>
 
