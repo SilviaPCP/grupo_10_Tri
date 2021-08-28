@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 
 const app = express();
-const mainRutas = require('./routes/main');
+const mainRutas = require('./routes/mainRouter');
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 app.set('view engine', 'ejs');
