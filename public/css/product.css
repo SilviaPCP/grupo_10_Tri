@@ -147,7 +147,7 @@
         align-items: center;
     }
     .product-image {
-        width: 100%;
+        width: 40%;
         flex: 0 0 calc(40% - 1rem);
     }
     .product-container {
