@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style_formulario.css">
+    <title>Formulario</title>
+</head>
+
+<header>
+    <div class="top-header container">
+        <a href="/login"><i class="fas fa-user"></i></a>
+        <a href="/">
+            <p>Triatlhon<span>Store</span></p>
+        </a>
+</header>
+
+<body>
+    <section class="form-register">
+        <h4>Triathlon Store</h4>
+        <h4>INGRESAR</h4>
+        <form action="Register" method="POST">
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+        </form>
+        <form action="Register" method="POST">
+            <input class="controls" type="password" name="pass1" id="correo" placeholder="Ingrese su contraseña">
+        </form>
+        </form>
+        <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
+        <form action="Register" method="POST">
+            <input class="botons" type="submit" value="Ingresar">
+        </form>
+        <form action="LoginCuenta" method="POST">
+            <p><a class="botons" href="#">¿Olvidaste tu contraseña?</a></p>
+        </form>
+        <h4>O bien ingresa a través de...</h4>
+        <form action="LoginExternoGoogle" method="POST">
+            <button type="submit" class="LoginGoogle">
+            <img href="" src="/images/googlelogo.png" width="80px">
+        </button>
+        </form>
+        <form action="LoginExternoFacebook" method="POST">
+            <button class="LoginFacebook">
+            <img href="" src="/images/facebooklogo.png" width="80px">
+        </button>
+        </form>
+
+        <form action="LoginRegistro" method="POST">
+            <p><a class="botons" href="formulario">¿Aún no te has registrado?</a></p>
+        </form>
+
+    </section>
+
+    <footer>
+        <div class="container">
+            <h4>Lo mejor para el triatleta!</h4>
+            <img src="/images/logo.png" alt="">
+            <p>TriathlonStore - Todos los Derechos Reservados ®</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
