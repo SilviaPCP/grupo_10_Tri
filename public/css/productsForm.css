@@ -1,0 +1,27 @@
+.formProd{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: stretch;
+    width: 70%;
+    margin: auto;
+    background-color: var(--secundario);
+    padding: 40px;
+}
+form input{
+
+}
+
+h2{
+    text-align: center;
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: stretch;
+    width: 70%;
+    margin: auto;
+    padding: 20px;
+}
