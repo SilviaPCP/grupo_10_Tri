@@ -13,6 +13,9 @@ const controller = {
     },
     detail: (req, res) => {
         res.render('productDetail');
+    },
+    products: (req, res) => {
+        res.render('productsForm');
     }
 }
 

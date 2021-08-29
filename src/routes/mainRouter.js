@@ -8,5 +8,6 @@ router.get('/formulario', mainController.form);
 router.get('/login', mainController.login);
 router.get('/productCart', mainController.cart);
 router.get('/productDetail', mainController.detail);
+router.get('/productsForm', mainController.products);
 
 module.exports = router;
