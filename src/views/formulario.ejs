@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/normalize.css">
+<!--Partial del head-->
+<%- include('partials/head') %>
+
+<!--Se dejaron afuera las ccs propias de la pagina-->
     <link rel="stylesheet" href="css/style_formulario.css">
     <title>Formulario</title>
-</head>
+
 <header>
     <div class="top-header container">
         <a href="/login"><i class="fas fa-user"></i></a>
@@ -66,15 +63,9 @@
             <img href="" src="/images/facebooklogo.png" width="80px">
         </button>
         </form>
-    </section>
-    <footer>
-        <div class="container">
-            <h4>Lo mejor para el triatleta!</h4>
-            <img src="/images/logo.png" alt="">
-            <p>TriathlonStore - Todos los Derechos Reservados ®</p>
-        </div>
-    </footer>
-
+    </section><br>
+<!--Partial del footer desde social media-->
+<%- include ('partials/footer')%>
 </body>
 
 </html>

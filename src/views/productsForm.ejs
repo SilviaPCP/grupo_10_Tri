@@ -1,44 +1,15 @@
-<html lang="en">
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>TriathlonStore Home</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/style.css">
+        <!--Partial del head-->
+        <%- include('partials/head') %>    
+        <!--Se dejaron afuera las ccs propias de la pagina-->
         <link rel="stylesheet" href="css/productsForm.css">
         <link rel="stylesheet" href="css/product.css">
-    </head>
+
     <body>
-        <header>
-            <div class="top-header container">
-                <div class="base">
-                    <a class="align" href="login"><i class="fas fa-user"></i></a>
-                </div>
-                <div class="base first">
-                    <a class="base" href="/">
-                        <p>Triathlon<span>Store</span></p>
-                    </a>
-                </div>
-                <div class="base">
-                    <a class="right" href="productCart"><i class="fas fa-shopping-cart"></i></a>
-                </div>
-                <form class="form" action="#" method="GET">
-                    <input class="input" type="text" placeholder="Buscar productos, marcas y más">
-                    <button class="submit" type="reset"><i class="fa fa-search"></i></button>
-                </form>
-            </div>
-    
-    
-        </header>
+        <%- include('partials/header') %>
         <main>
+            
             <div class="headProd">
                 <h1>Productos</h1>
                 <form >
