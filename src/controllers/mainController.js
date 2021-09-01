@@ -8,6 +8,9 @@ const controller = {
     login: (req, res) => {
         res.render('login');
     },
+    recuperarpass: (req, res) => {
+        res.render('recuperarpass');
+    },
     cart: (req, res) => {
         res.render('productCart');
     },
