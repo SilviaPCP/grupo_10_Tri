@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Partial del head-->
+<%- include('partials/head') %>
+<!--Se dejaron afuera las ccs propias de la pagina-->
+    <link rel="stylesheet" href="css/style_formulario.css">
+    <title>Formulario</title>
+
+<header>
+    <div class="top-header container">
+        <a href="/login"><i class="fas fa-user"></i></a>
+        <a href="/">
+            <p>Triatlhon<span>Store</span></p>
+        </a>
+</header>
+
+<body>
+    <section class="form-register">
+        <p>Triathlon Store</p>
+        <p>RECUPERACIÓN CONTRASEÑA</p>
+        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+        <p>Estoy de acuerdo con</p>
+        <a href="#">Terminos y Condiciones</a>
+        <p><a class="botons" href="submit">Confirmar</a></p>
+        <p></p>
+        <p><a class="botons" href="formulario">¿Aún no te has registrado?</a></p>
+        <p></p>
+        <p>Se enviará un mensaje a su email</p>
+    </section>
+
+</body>
+</html>
+
+    <!--Partial del footer desde social media-->
+    <%- include ('partials/footer')%>
+</body>
+
+</html>
