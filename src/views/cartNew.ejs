@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!--Partial del head-->
+    <%- include('partials/head') %>
+
+    <!--Se dejaron afuera las ccs propias de la pagina-->
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/cart.css">
+<body>
+    <!--Partial del header-->
+    <%- include('partials/header') %>
+
+    <!--Partial del menu seleccion-->
+    <%- include('partials/menu') %>
+
+    <main class="container blue">
+        <h1>Carrito de compra</h1>
+        <div class="product01">
+            <img class="product-image" src="/images/destacado1.jpg" alt="Imagen de la camisa">
+            <div class="product-container">
+                <p>Mono trifunción creado para triatletas apasionados(as), equipamiento icónico e imprescindible, para tus primeros triatlones larga distancia</p>
+                <form class="form-product">
+                    <input class="form-camp" type="number" placeholder="Cantidad" min="1" step="1">
+                    <div class="info-product">
+                        <p class="product-price"><span>$1,800.00</span></p>
+                    </div>
+                    <a class="cartLink" href="#">Eliminar</a>
+                    <a class="cartLink" href="#">Ver similares</a>
+                </form>
+            </div>
+        </div><br>
+        <div class="product01">
+            <img class="product-image" src="/images/destacado2.jpg" alt="Imagen de la camisa">
+            <div class="product-container">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia magnam modi quidem quasi facilis sed, veritatis reprehenderit pariatur veniam aperiam quae quisquam ab, obcaecati rerum nesciunt minus odit fuga vitae?</p>
+                <form class="form-product">
+                    <input class="form-camp" type="number" placeholder="Cantidad" min="1" step="1">
+                    <div class="info-product">
+                        <p class="product-price"><span>$700.00</span></p>
+                    </div>
+                        <a class="cartLink" href="#">Eliminar</a>
+                        <a class="cartLink" href="#">Ver similares</a>
+                </form>
+
+            </div>
+        </div><br>
+        <div class="total">    
+            <h3>Envio gratis a esta dirección: 5ta Calle de los Laureles #34</h3>
+            <p><span>Total con envío $1,800.00</span></p>
+            <button class="form-input" type="submit">Continuar Compra</button>
+        </div>
+    </main>
+
+    <section class="container">
+        <h3 class="similar-title">Productos Similares</h3>
+        <div class="similar-products">
+            <div class="similar">
+                <div class="similar-img">
+                    <a href="#"><img src="/images/similar1.jpg" alt=""></a>
+                </div>
+                <p>Traje triatlón trifunción</p>
+                <p><span>$840.00</span></p>
+            </div>
+
+            <div class="similar">
+                <div class="similar-img">
+                    <a href="#"><img src="/images/similar2.jpg" alt=""></a>
+                </div>
+                <p>Traje triatlón trifunción</p>
+                <p><span>$840.00</span></p>
+            </div>
+        </div>
+    </section>
+
+<!--Partial del footer desde social media-->
+<%- include ('partials/footer')%>
+</body>
+
+</html>
