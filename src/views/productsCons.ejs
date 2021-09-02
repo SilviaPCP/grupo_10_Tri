@@ -15,14 +15,19 @@
                 <h1>Consulta de Productos</h1>
                 <form >
                     <div class="formProd">
-                    <label for="producto">Nombre del producto</label><input class="form-camp" type="text" value="Producto">  
-                    <label for="descrpcion">Descripción del producto</label><input class="form-camp" type="text" value="Descrpcion"> <br>
-                    <img src="images/destacado1.jpg" alt="producto">
+                        <label for="productID">Id del producto</label><input class="form-camp" type="text" value="Id de producto" name="productID" onfocus="this.value=' '">
+                        <label for="producto">Nombre del producto</label><input class="form-camp" type="text" value="Producto" name="producto" onfocus="this.value=' '">  
+                        <div class="botones">
+                            <input type="submit" class="form-input" value="Consultar">
+                            <input type="submit" class="form-input" value="Agregar">
+                        </div>
+                    <label for="descrpcion">Descripción del producto</label><input class="form-camp" type="text" value="Descrpcion"onfocus="this.value=' '"> <br>
+                    <img src="images/destacado3.jpg" alt="producto">
                     <label for="imagen" ></label><input class="form-camp"  type="file" value="imagen">  
-                    <label for="categoria">Categoría del producto</label><input class="form-camp" type="text" value="Categoría">
-                    <label for="color">Color </label><input class ="form-camp" class="form-camp" type="text" value="Color">
-                    <label for="talla">Talla </label><input type="text"  class="form-camp" value="Talla">
-                    <label for="precio">Precio </label><input type="text" class="form-camp" value="Precio">
+                    <label for="categoria">Categoría del producto</label><input class="form-camp" type="text" value="Categoría" onfocus="this.value=' '">
+                    <label for="color">Color </label><input class ="form-camp" class="form-camp" type="text" value="Color" onfocus="this.value=' '">
+                    <label for="talla">Talla </label><input type="text"  class="form-camp" value="Talla"onfocus="this.value=' '">
+                    <label for="precio">Precio </label><input type="text" class="form-camp" value="Precio" onfocus="this.value=' '">
                         <div class="botones">
                             <input type="submit" class="form-input" value="Guardar">
                             <input type="reset"  class="form-input" value="Limpiar">
