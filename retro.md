@@ -25,3 +25,18 @@ Seguir trabajando y avanzando con el proyecto y apoyándonos en las dudas y tema
 
 ¿Qué hacer menos?
 Suponer situaciones en las cuales tenemos dudas, tratando de apoyarnos en todo.
+
+Retrospectiva del trabajo en equipo del Sprint 3
+
+¿Qué problemas tuvimos?
+La distribución de tareas para los integrantes del equipo talves no fue del todo equitativa por una falta de comunicación debido a los tiempos de los cuales dispone cada integrante del equipo
+
+¿Qué hacer mas?
+Cada integrante trabajo en una parte del proyecto, por lo que se puede seguir puliendo los detalles de la página acomodando estilos y haciendo el sitio más interactivo e intuitivo, continuar con el proceso de comunicación entre los integrantes del equipo. 
+
+¿Qué continuar haciendo?
+Responsabilizarse de cada parte del proyecto que le toco a cada integrante del equipo que se definio en los primeros sprints.
+
+¿Qué hacer menos?
+No distanciarnos tanto, estar al pendiente de los avances que se van subiendo.
+
