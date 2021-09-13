@@ -6,23 +6,15 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 
-const visited = products.filter(function(product){
-	return product.category == 'visited'
-})
-const inSale = products.filter(function(product){
-	return product.category == 'in-sale'
-})
+// const visited = products.filter(function(product) {
+//     return product.category == 'visited'
+// })
+// const inSale = products.filter(function(product) {
+//     return product.category == 'in-sale'
+// })
 
 const controller = {
-	// products: (req, res) => {
-	// 	res.render('products1', {
-	// 		visited,
-	// 		inSale,
-	// 		toThousand
-	// 	})
-    //     console.log("entre a products en Main")
-	// },
-     index: (req, res) => {
+    index: (req, res) => {
         res.render('index');
     },
     form: (req, res) => {
@@ -45,16 +37,17 @@ const controller = {
     },
     prodsCons: (req, res) => {
         res.render('productsCons');
+    },
+    search: (req, res) => {
+        let search = req.query.keywords;
+        let productsToSearch = products.filter(product => product.name.toLowerCase().includes(search));
+        res.render('results', {
+            products: productsToSearch,
+            search,
+            toThousand,
+        });
     }
-	// search: (req, res) => {
-	// 	let search = req.query.keywords;
-	// 	let productsToSearch = products.filter(product => product.name.toLowerCase().includes(search));	
-	// 	res.render('results', { 
-	// 		products: productsToSearch, 
-	// 		search,
-	// 		toThousand,
-	// 	});
-	// },
+
 };
 
 module.exports = controller;
