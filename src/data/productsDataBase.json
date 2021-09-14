@@ -64,5 +64,15 @@
   "color": "Rosa y Negro",
   "size": "Unitalla",
   "image": "image-1631581491318.jpg"
+ },
+ {
+  "id": 7,
+  "name": "",
+  "price": "",
+  "discount": "",
+  "description": "",
+  "color": "",
+  "size": "",
+  "image": "default-image.png"
  }
 ]

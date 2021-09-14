@@ -27,15 +27,13 @@ router.get('/create', productsController.create);
 router.post('/', upload.any(), productsController.store);
 
 /*** GET ONE PRODUCT ***/
-router.get('/:id/', productsController.detail);
+router.get('/detail/:id', productsController.detail);
 
 /*** EDIT ONE PRODUCT ***/
-router.get('/:id/edit', productsController.edit);
-router.put('/:id', upload.single('image'), productsController.update);
-
+router.get('/edit/:id', productsController.edit);
+router.patch('/edit/:id', upload.any(), productsController.update);
 
 /*** DELETE ONE PRODUCT ***/
 router.delete('/:id', productsController.destroy);
-
 
 module.exports = router;

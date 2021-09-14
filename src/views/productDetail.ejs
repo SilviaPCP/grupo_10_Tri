@@ -1,72 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-    <!--Partial del head-->
-    <%- include('partials/head') %>
+<!--Partial del head-->
+<%- include('partials/head') %>
 
     <!--Se dejaron afuera las ccs propias de la pagina-->
     <link rel="stylesheet" href="css/product.css">
 
-<body>
-    <!--Partial del header-->
-    <%- include('partials/header') %>
+    <body>
+        <!--Partial del header-->
+        <%- include('partials/header') %>
 
-    <!--Partial del menu seleccion-->
-    <%- include('partials/menu') %>
+            <!--Partial del menu seleccion-->
+            <%- include('partials/menu') %>
 
-    <main class="container blue clearfix">
-        <h1>Mono trifunción ld triatlón negro hombre</h1>
+                <main class="container blue clearfix">
+                    <h1>Mono trifunción ld triatlón negro hombre</h1>
 
-        <div class="product01">
+                    <div class="product01">
 
-            <img class="product-image" src="/images/destacado1.jpg" alt="Imagen de la camisa">
-            <div class="product-container">
+                        <img class="product-image" src="/images/destacado1.jpg" alt="Imagen de la camisa">
+                        <div class="product-container">
 
-                <div class="info-product">
-                    <p class="product-price"><span>$1,800.00</span></p>
-                    <p class="product-discount"><span>5% off</span></p>
-                </div>
+                            <div class="info-product">
+                                <p class="product-price"><span>$1,800.00</span></p>
+                                <p class="product-discount"><span>5% off</span></p>
+                            </div>
 
-                <p>Mono trifunción creado para triatletas apasionados(as), equipamiento icónico e imprescindible, para tus primeros triatlones larga distancia</p>
+                            <p>Mono trifunción creado para triatletas apasionados(as), equipamiento icónico e imprescindible, para tus primeros triatlones larga distancia</p>
 
-                <form class="form-product">
-                    <select class="form-camp" name="" id="">
+                            <form class="form-product">
+                                <select class="form-camp" name="" id="">
                         <option disabled selected>--Seleccionar talla--</option><!--se desabilita y al mismo se selecciona la oopion con estos dos parametros-->
                         <option>Chica</option>
                         <option>Mediana</option>
                         <option>Grande</option>
                     </select>
-                    <input class="form-camp" type="number" placeholder="Cantidad" min="1" step="1">
-                    <button class="form-input" type="submit"><i class="fas fa-shopping-cart"></i> Agregar al carrito</button>
-                </form>
+                                <input class="form-camp" type="number" placeholder="Cantidad" min="1" step="1">
+                                <button class="form-input" type="submit"><i class="fas fa-shopping-cart"></i> Agregar al carrito</button>
+                            </form>
 
-            </div>
-        </div>
+                        </div>
+                    </div>
 
-    </main>
+                </main>
 
-    <section class="container">
-        <h3 class="similar-title">Productos Similares</h3>
-        <div class="similar-products">
-            <div class="similar">
-                <div class="similar-img">
-                    <a href="#"><img src="/images/similar1.jpg" alt=""></a>
-                </div>
-                <p>Traje triatlón trifunción</p>
-                <p><span>$840.00</span></p>
-            </div>
+                <section class="container">
+                    <h3 class="similar-title">Productos Similares</h3>
+                    <div class="similar-products">
+                        <div class="similar">
+                            <div class="similar-img">
+                                <a href="#"><img src="/images/similar1.jpg" alt=""></a>
+                            </div>
+                            <p>Traje triatlón trifunción</p>
+                            <p><span>$840.00</span></p>
+                        </div>
 
-            <div class="similar">
-                <div class="similar-img">
-                    <a href="#"><img src="/images/similar2.jpg" alt=""></a>
-                </div>
-                <p>Traje triatlón trifunción</p>
-                <p><span>$840.00</span></p>
-            </div>
-        </div>
-    </section>
+                        <div class="similar">
+                            <div class="similar-img">
+                                <a href="#"><img src="/images/similar2.jpg" alt=""></a>
+                            </div>
+                            <p>Traje triatlón trifunción</p>
+                            <p><span>$840.00</span></p>
+                        </div>
+                    </div>
+                </section>
 
-<!--Partial del footer desde social media-->
-<%- include ('partials/footer')%>
-</body>
+                <!--Partial del footer desde social media-->
+                <%- include ('partials/footer')%>
+    </body>
 
 </html>
