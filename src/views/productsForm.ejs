@@ -1,34 +1,61 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <!--Partial del head-->
-        <%- include('partials/head') %>    
-        <!--Se dejaron afuera las ccs propias de la pagina-->
-        <link rel="stylesheet" href="css/productsForm.css">
-        <link rel="stylesheet" href="css/product.css">
+<html lang="en">
+<!--Partial del head-->
+<%- include('partials/head') %>
+    <!--Se dejaron afuera las ccs propias de la pagina-->
+    <link rel="stylesheet" href="css/productsForm.css">
+    <link rel="stylesheet" href="css/product.css">
 
     <body>
         <%- include('partials/header') %>
-        <main>
-            
-            <div class="headProd">
-                <h1> Alta de Productos</h1>
-                <form >
-                <div class="formProd">
-                <label for="producto">Nombre del producto</label><input class="form-camp" type="text" value="Producto">  
-                <label for="descrpcion">Descripción del producto</label><input class="form-camp" type="text" value="Descrpcion">  
-                <label for="imagen">Imagen del producto</label><input class="form-camp" type="file" value="imagen">  
-                <label for="categoria">Categoría del producto</label><input class="form-camp" type="text" value="Categoría">
-                <label for="color">Color </label><input class="form-camp" type="text" value="Color">
-                <label for="talla">Talla </label><input class="form-camp" type="text" value="Talla">
-                <label for="precio">Precio </label><input class="form-camp" type="text" value="Precio">
-                    <div class="botones">
-                        <a href="productsCons"><input class="form-input" type="button" value="Consultar"></a>
-                        <input type="submit" class="form-input" value="Guardar">
-                        <input type="reset" class="form-input" value="Limpiar">
-                    </div>
+            <main>
+
+                <div class="headProd">
+                    <h1> Alta de Productos</h1>
+
+                    <form action="/products" method="POST" enctype="multipart/form-data">
+                        <div class="formProd">
+
+                            <label for="producto">Nombre del producto:</label>
+                            <input class="form-camp" type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok">
+
+                            <label for="precio">Precio:</label>
+                            <input class="form-camp" type="number" id="price" name="price" placeholder="Ej: 5678" min="1" step="1">
+
+                            <label for="discount" class="form-label">Descuento:</label>
+                            <input class="form-camp" type="number" id="discount" name="discount" placeholder="Ej: 15" min="1" step="1">
+
+                            <label for="category" class="form-label">Categoría:</label>
+                            <select class="form-camp" name="category" id="category">
+                                <option disabled selected>Elige categoria</option>
+                                <option value="swim">Natación</option>
+                                <option value="bike">Ciclismo</option>
+                                <option value="run">Carrera</option>
+						    </select>
+
+                            <label for="description">Descripción del producto:</label>
+                            <textarea class="form-camp" name="description" id="description"></textarea>
+
+                            <label for="color">Color </label>
+                            <input class="form-camp" type="text" id="color" name="color" placeholder="Ej: Azul">
+
+                            <label for="size">Talla </label>
+                            <input class="form-camp" type="text" id="size" name="size" placeholder="Ej: Chica">
+
+                            <label for="imagen">Imagen del producto</label>
+                            <input class="form-camp" type="file" name="image" id="image">
+
+                            <div class="botones">
+                                <input type="submit" class="form-input" value="Guardar">
+                                <input type="reset" class="form-input" value="Limpiar">
+                            </div>
+
+                        </div>
+                    </form>
+
                 </div>
-            </form>
-        </div>    
-        </main>
-</body>
+
+            </main>
+    </body>
+
 </html>

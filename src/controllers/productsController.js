@@ -34,17 +34,24 @@ const controller = {
 
     // Create - Form to create
     create: (req, res) => {
-        res.render('product-create-form');
+        res.render('productsForm');
     },
 
     // Create -  Method to store
     store: (req, res) => {
+        let image
+        console.log(req.files);
+        if (req.files[0] != undefined) {
+            image = req.files[0].filename
+        } else {
+            image = 'default-image.png'
+        }
         let newProduct = {
+            id: products[products.length - 1].id + 1,
             ...req.body,
-            image: 'default-image.png',
-            id: products[products.length - 1].id + 1
+            image: image
         };
-        products.push(newProduct);
+        products.push(newProduct)
         fs.writeFileSync(productsFilePath, JSON.stringify(products, null, ' '));
         res.redirect('/');
     },
