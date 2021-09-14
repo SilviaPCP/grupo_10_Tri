@@ -24,7 +24,7 @@ const controller = {
 
     // Detail - Detail from one product
     detail: (req, res) => {
-		console.log(req.params.id);
+		//console.log(req.params.id);
         let id = req.params.id;
         let product = products.find(product => product.id == id)
         res.render('productDetail', {
@@ -35,7 +35,7 @@ const controller = {
 
     // Create - Form to create
     create: (req, res) => {
-		console.log("create");
+		//console.log("create");
         res.render('productsForm');
     },
 
@@ -60,6 +60,7 @@ const controller = {
 
     // Update - Form to edit
     edit: (req, res) => {
+		console.log("edit de detail")
         let id = req.params.id
         let productToEdit = products.find(product => product.id == id)
         res.render('productsCons', { productToEdit })
@@ -67,6 +68,7 @@ const controller = {
 
     // Update - Method to update
     update: (req, res) => {
+		console.log(req.params.id);
         let id = req.params.id;
         let productToEdit = products.find(product => product.id == id)
         let image

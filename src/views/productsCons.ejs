@@ -13,57 +13,29 @@
                 <div class="headProd">
                     <h1>Consulta de Productos</h1>
 
-                    <form>
-                        <div class="formProd">
-                            <label for="productID">Id del producto</label>
-                            <input class="form-camp" type="text" value="Id de producto" name="productID" onfocus="this.value=' '">
-
-                            <label for="producto">Nombre del producto</label>
-                            <input class="form-camp" type="text" value="Producto" name="producto" onfocus="this.value=' '">
-
-                            <div class="botones">
-                                <input type="submit" class="form-input" value="Consultar">
-                            </div>
-                        </div>
-                    </form>
-
-                    <h2>Edición de producto:</h2>
-
                     <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
                         <div class="formProd">
-                            <label for="producto">Nombre del producto:</label>
-                            <input class="form-camp" type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok">
+                            <label for="id">Id del producto</label>
+                            <input class="form-camp" type="number" id="id" name="id" value="<%= productToEdit.id %>" disabled>
 
-                            <label for="precio">Precio:</label>
-                            <input class="form-camp" type="number" id="price" name="price" placeholder="Ej: 5678" min="1" step="1">
+                            <label for="name">Nombre del producto</label>
+                            <input class="form-camp" type="text" id="name" name="name" value="<%= productToEdit.name%>" disabled>
 
-                            <label for="discount" class="form-label">Descuento:</label>
-                            <input class="form-camp" type="number" id="discount" name="discount" placeholder="Ej: 15" min="1" step="1">
+                            <img src="/images/products/<%= productToEdit.image %>" alt="Imagen del producto">
+                            <div class="product-container">
+                                <div class="info-product">
+                                    <p class="product-price"><span>$1,800.00</span></p>
+                                    <p class="product-discount"><span>5% off</span></p>
+                                </div>
 
-                            <label for="category" class="form-label">Categoría:</label>
-                            <select class="form-camp" name="category" id="category">
-                                <option disabled selected>Elige categoria</option>
-                                <option value="swim">Natación</option>
-                                <option value="bike">Ciclismo</option>
-                                <option value="run">Carrera</option>
-						    </select>
-
-                            <label for="description">Descripción del producto:</label>
-                            <textarea class="form-camp" name="description" id="description"></textarea>
-
-                            <label for="color">Color </label>
-                            <input class="form-camp" type="text" id="color" name="color" placeholder="Ej: Azul">
-
-                            <label for="size">Talla </label>
-                            <input class="form-camp" type="text" id="size" name="size" placeholder="Ej: Chica">
-
-                            <label for="imagen">Imagen del producto</label>
-                            <input class="form-camp" type="file" name="image" id="image">
-
-                            <div class="botones">
-                                <input type="submit" class="form-input" value="Guardar">
-                                <input type="reset" class="form-input" value="Limpiar">
+                                <p>
+                                    <%= productToEdit.description %>
+                                </p>
                             </div>
+
+                            <button class="form-input" type="submit">Editar</button>
+                            <button class="form-input">Eliminar</button>
+                        </div>
                     </form>
                     </div>
 
