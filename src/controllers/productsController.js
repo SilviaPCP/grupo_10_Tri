@@ -22,14 +22,16 @@ const controller = {
             inSale,
 			toThousand
 		});
-        console.log(products[1].image);
+        console.log(products[1].image)
+        console.log(products[47].image.filename)
+        
 	},
 
 	// Detail - Detail from one product
 	detail: (req, res) => {
 		let id = req.params.id;
 		let product = products.find(product=> product.id == id)
-		res.render('detail',{
+		res.render('productsCons',{
 			product,
 			toThousand
 		});
@@ -37,14 +39,14 @@ const controller = {
 
 	// Create - Form to create
 	create: (req, res) => {
-		res.render('product-create-form');
+		res.render('productsForm');
 	},
 	
 	// Create -  Method to store
 	store: (req, res) => {
 		let newProduct = {
 			...req.body,
-			image: 'default-image.png',
+			image: req.file,
 			id: products[products.length - 1].id + 1
 		};
 		products.push(newProduct);
