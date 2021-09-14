@@ -62,7 +62,7 @@
 						    </select>
 
                             <label for="description">Descripción del producto:</label>
-                            <textarea class="form-camp" name="description" id="description"></textarea>
+                            <textarea class="form-camp" name="description" id="description"><%= productToEdit.description %></textarea>
 
                             <label for="color">Color </label>
                             <input class="form-camp" type="text" id="color" name="color" placeholder="Ej: Azul">
@@ -74,8 +74,8 @@
                             <input class="form-camp" type="file" name="image" id="image">
 
                             <div class="botones">
-                                <input type="submit" class="form-input" value="Guardar">
-                                <input type="reset" class="form-input" value="Limpiar">
+                                <button type="submit" class="form-input">Guardar producto</button>
+                                <button type="reset" class="form-input">Limpiar</button>
                             </div>
 
                         </div>

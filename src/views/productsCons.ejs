@@ -1,35 +1,74 @@
 <!DOCTYPE html>
-    <html lang="en">    
-        <!--Partial del head-->
-        <%- include('partials/head') %>
+<html lang="en">
+<!--Partial del head-->
+<%- include('partials/head') %>
 
         <!--Se dejaron afuera las ccs propias de la pagina-->
         <link rel="stylesheet" href="/css/productsForm.css">
         <link rel="stylesheet" href="/css/product.css">
     <body>
-        <!--Partial del menu seleccion-->
         <%- include('partials/header') %>
 
-        <main>
-            <div class="headProd">
-                <h1>Consulta de Productos</h1>
-                <form action="/products/create">
-                    <div class="formProd">
-                        <label for="productID">Id del producto</label><input disabled class="form-camp" type="text" value="<%= product.id %>" name="productID" onfocus="this.value=' '">
-                        <label for="producto">Nombre del producto</label><input disabled class="form-camp" type="text" value="<%= product.name %>" name="producto" onfocus="this.value=' '">  
-                        <label for="descrpcion">Descripción producto</label><textarea disabled class="form-camp" type="textarea" value="<%= product.description %>"onfocus="this.value=' '"><%= product.description %></textarea><br>
-                        <img src="/images/<%= product.image %>" alt="producto">
-                        <label for="categoria">Categoría  producto</label><input disabled class="form-camp" type="text" value="<%= product.description %>" rows="10">
-                        <label for="color">Color </label><input disabled class ="form-camp" class="form-camp" type="text" value="Color" onfocus="this.value=' '">
-                        <label for="talla">Talla </label><input disabled type="text"  class="form-camp" value="Talla"onfocus="this.value=' '">
-                        <label for="precio">Precio </label><input disabled type="text" class="form-camp" value="<%= product.price %>" onfocus="this.value=' '">
-                        <div class="botones">
-                        <input type="button" onclick="history.go(-1)"  class="form-input" value="Regresar">
-                        <input type="submit" class="form-input" value="Producto Nuevo" >
+            <main>
+                <div class="headProd">
+                    <h1>Consulta de Productos</h1>
+
+                    <form>
+                        <div class="formProd">
+                            <label for="productID">Id del producto</label>
+                            <input class="form-camp" type="text" value="Id de producto" name="productID" onfocus="this.value=' '">
+
+                            <label for="producto">Nombre del producto</label>
+                            <input class="form-camp" type="text" value="Producto" name="producto" onfocus="this.value=' '">
+
+                            <div class="botones">
+                                <input type="submit" class="form-input" value="Consultar">
+                            </div>
                         </div>
-                    </div>        
-                </form>
-            </div>
-</main>
-</body>
+                    </form>
+
+                    <h2>Edición de producto:</h2>
+
+                    <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+                        <div class="formProd">
+                            <label for="producto">Nombre del producto:</label>
+                            <input class="form-camp" type="text" id="name" name="name" placeholder="Ej: Zapatillas Reebok">
+
+                            <label for="precio">Precio:</label>
+                            <input class="form-camp" type="number" id="price" name="price" placeholder="Ej: 5678" min="1" step="1">
+
+                            <label for="discount" class="form-label">Descuento:</label>
+                            <input class="form-camp" type="number" id="discount" name="discount" placeholder="Ej: 15" min="1" step="1">
+
+                            <label for="category" class="form-label">Categoría:</label>
+                            <select class="form-camp" name="category" id="category">
+                                <option disabled selected>Elige categoria</option>
+                                <option value="swim">Natación</option>
+                                <option value="bike">Ciclismo</option>
+                                <option value="run">Carrera</option>
+						    </select>
+
+                            <label for="description">Descripción del producto:</label>
+                            <textarea class="form-camp" name="description" id="description"></textarea>
+
+                            <label for="color">Color </label>
+                            <input class="form-camp" type="text" id="color" name="color" placeholder="Ej: Azul">
+
+                            <label for="size">Talla </label>
+                            <input class="form-camp" type="text" id="size" name="size" placeholder="Ej: Chica">
+
+                            <label for="imagen">Imagen del producto</label>
+                            <input class="form-camp" type="file" name="image" id="image">
+
+                            <div class="botones">
+                                <input type="submit" class="form-input" value="Guardar">
+                                <input type="reset" class="form-input" value="Limpiar">
+                            </div>
+                    </form>
+                    </div>
+
+                </div>
+            </main>
+    </body>
+
 </html>

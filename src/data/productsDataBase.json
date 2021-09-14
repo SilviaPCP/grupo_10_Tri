@@ -67,12 +67,12 @@
  },
  {
   "id": 7,
-  "name": " PRUEBA",
-  "description": " PRUEBA",
-  "category": " RUN",
-  "color": " MULTI",
-  "size": " 26",
-  "price": " 2000",
-  "image": "image-1631618634295.jpg"
+  "name": "",
+  "price": "",
+  "discount": "",
+  "description": "",
+  "color": "",
+  "size": "",
+  "image": "default-image.png"
  }
 ]
