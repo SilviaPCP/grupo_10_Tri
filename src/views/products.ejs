@@ -10,10 +10,7 @@
             <!--Partial del menu seleccion-->
             <%- include('partials/menu') %>
 
-
                 <main class="container">
-
-
                     <section class="offers">
                         <h2>Todos los productos</h2>
                         <div class="products">
@@ -21,20 +18,26 @@
                     let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
                 %>
                                 <article>
-                                    <a href="/productDetail"><img src="/images/<%= product.image %>" alt="Imagen del producto"></a>
+                                    <a href="/productDetail"><img src="/images/products/<%= product.image %>" alt="Imagen del producto"></a>
                                     <div class="main-article">
-                                        <i class="fas fa-swimmer"></i>
-                                        <div class="container01">
-                                            <p class="price">$
-                                                <%= product.price %>
-                                            </p>
-                                            <p class="discount">
-                                                <%= product.discount%> off
-                                            </p>
-                                        </div>
-                                        <p class="description">
-                                            <%= product.name %>
-                                        </p>
+                                        <% if (product.category == "swim") { %>
+                                            <i class="fas fa-swimmer"></i>
+                                            <% } else if(product.category == "run") { %>
+                                                <i class="fas fa-running"></i>
+                                                <% } else { %>
+                                                    <i class="fas fa-biking"></i>
+                                                    <% } %>
+                                                        <div class="container01">
+                                                            <p class="price">$
+                                                                <%= product.price %>
+                                                            </p>
+                                                            <p class="discount">
+                                                                <%= product.discount%> off
+                                                            </p>
+                                                        </div>
+                                                        <p class="description">
+                                                            <%= product.name %>
+                                                        </p>
                                     </div>
                                 </article>
                                 <% }) %>
