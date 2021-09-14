@@ -74,5 +74,27 @@
   "color": "",
   "size": "",
   "image": "default-image.png"
+ },
+ {
+  "id": 8,
+  "name": "Mallas-short ",
+  "price": "169",
+  "discount": "30",
+  "category": "swim",
+  "description": "El tejido de este producto anti-UV OLAIAN permite bloquear el 98% de los rayos UVB y el 95% de los rayos UVA (UPF 50+). Ofrece la seguridad de una protección eficaz contra el sol. Puede usarse en el agua y fuera del agua para la práctica de deportes náuticos y acuáticos. La filtración de los rayos UV es posible gracias a la densidad de las fibras textiles, esta protección es duradera, incluso después del lavado.",
+  "color": "Azul",
+  "size": "Chica",
+  "image": "image-1631630517594.jpg"
+ },
+ {
+  "id": 9,
+  "name": "Sandalias de Natación",
+  "price": "200",
+  "discount": "20",
+  "category": "swim",
+  "description": "Suela equipada con insertos de caucho para asegurar una buena adherencia. ",
+  "color": "Naranja y Negro",
+  "size": "Chica",
+  "image": "image-1631630957510.jpg"
  }
 ]
