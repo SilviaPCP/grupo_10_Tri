@@ -3,8 +3,8 @@
         <!--Partial del head-->
         <%- include('partials/head') %>    
         <!--Se dejaron afuera las ccs propias de la pagina-->
-        <link rel="stylesheet" href="css/productsForm.css">
-        <link rel="stylesheet" href="css/product.css">
+        <link rel="stylesheet" href="/css/productsForm.css">
+        <link rel="stylesheet" href="/css/product.css">
 
     <body>
         <%- include('partials/header') %>
@@ -12,17 +12,16 @@
             
             <div class="headProd">
                 <h1> Alta de Productos</h1>
-                <form >
+                <form action="/products/store" enctype="multipart/form-data" method="POST">
                 <div class="formProd">
-                <label for="producto">Nombre del producto</label><input class="form-camp" type="text" value="Producto">  
-                <label for="descrpcion">Descripción del producto</label><input class="form-camp" type="text" value="Descrpcion">  
-                <label for="imagen">Imagen del producto</label><input class="form-camp" type="file" value="imagen">  
-                <label for="categoria">Categoría del producto</label><input class="form-camp" type="text" value="Categoría">
-                <label for="color">Color </label><input class="form-camp" type="text" value="Color">
-                <label for="talla">Talla </label><input class="form-camp" type="text" value="Talla">
-                <label for="precio">Precio </label><input class="form-camp" type="text" value="Precio">
+                <label for="producto">Nombre del producto</label><input class="form-camp" name="name" type="text" value="Producto"onfocus="this.value=' '" >  
+                <label for="descrpcion">Descripción del producto</label><input class="form-camp" name="description" type="text" value="Descrpcion" onfocus="this.value=' '">  
+                <label for="imagen">Imagen del producto</label><input class="form-camp" name="image" type="file" value="imagen">  
+                <label for="categoria">Categoría del producto</label><input class="form-camp" name="category" type="text" value="Categoría" onfocus="this.value=' '">
+                <label for="color">Color </label><input class="form-camp" name = "color" type="text" value="Color" onfocus="this.value=' '">
+                <label for="talla">Talla </label><input class="form-camp" name ="size" type="text" value="Talla" onfocus="this.value=' '">
+                <label for="precio">Precio </label><input class="form-camp" name="price"  type="text" value="Precio" onfocus="this.value=' '">
                     <div class="botones">
-                        <a href="productsCons"><input class="form-input" type="button" value="Consultar"></a>
                         <input type="submit" class="form-input" value="Guardar">
                         <input type="reset" class="form-input" value="Limpiar">
                     </div>

@@ -21,7 +21,7 @@
                     let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
                 %>		
                 <article>
-                    <a href="/productDetail"><img src="/images/<%= product.image %>" alt=""></a>
+                    <a href="/products/detail/<%= product.id %>"><img src="/images/<%= product.image %>" alt=""></a>
                     <div class="main-article">
                         <i class="fas fa-swimmer"></i>
                         <div class="container01">
