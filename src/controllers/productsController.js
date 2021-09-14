@@ -24,7 +24,11 @@ const controller = {
 
     // Detail - Detail from one product
     detail: (req, res) => {
+<<<<<<< HEAD
 		//console.log(req.params.id);
+=======
+        console.log(req.params.id);
+>>>>>>> e5a9a8c97a0ca42a34e3623ad5fe40c67bbc0e48
         let id = req.params.id;
         let product = products.find(product => product.id == id)
         res.render('productDetail', {
@@ -35,7 +39,11 @@ const controller = {
 
     // Create - Form to create
     create: (req, res) => {
+<<<<<<< HEAD
 		//console.log("create");
+=======
+        console.log("create");
+>>>>>>> e5a9a8c97a0ca42a34e3623ad5fe40c67bbc0e48
         res.render('productsForm');
     },
 

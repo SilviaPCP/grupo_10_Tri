@@ -3,9 +3,10 @@
 <!--Partial del head-->
 <%- include('partials/head') %>
 
-        <!--Se dejaron afuera las ccs propias de la pagina-->
-        <link rel="stylesheet" href="/css/productsForm.css">
-        <link rel="stylesheet" href="/css/product.css">
+    <!--Se dejaron afuera las ccs propias de la pagina-->
+    <link rel="stylesheet" href="/css/productsForm.css">
+    <link rel="stylesheet" href="/css/product.css">
+
     <body>
         <%- include('partials/header') %>
 
@@ -31,6 +32,49 @@
                                 <p>
                                     <%= productToEdit.description %>
                                 </p>
+                            </div>
+
+                            <button class="form-input" type="submit">Editar</button>
+                            <button class="form-input">Eliminar</button>
+                        </div>
+                    </form>
+
+                    <h2>Edición de producto:</h2>
+
+                    <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+                        <div class="formProd">
+                            <label for="name">Nombre del producto:</label>
+                            <input class="form-camp" type="text" id="name" name="name" placeholder="<%= productToEdit.name %>">
+
+                            <label for="price">Precio:</label>
+                            <input class="form-camp" type="number" id="price" name="price" placeholder="<%= productToEdit.price %>" min="1" step="1">
+
+                            <label for="discount" class="form-label">Descuento:</label>
+                            <input class="form-camp" type="number" id="discount" name="discount" placeholder="<%= productToEdit.discount %>" min="1" step="1">
+
+                            <label for="category" class="form-label">Categoría:</label>
+                            <select class="form-camp" name="category" id="category">
+                                <option disabled selected>Elige categoria</option>
+                                <option value="swim">Natación</option>
+                                <option value="bike">Ciclismo</option>
+                                <option value="run">Carrera</option>
+						    </select>
+
+                            <label for="description">Descripción del producto:</label>
+                            <textarea class="form-camp" name="description" id="description"><%= productToEdit.description %> </textarea>
+
+                            <label for="color">Color </label>
+                            <input class="form-camp" type="text" id="color" name="color" placeholder="<%= productToEdit.color %>">
+
+                            <label for="size">Talla </label>
+                            <input class="form-camp" type="text" id="size" name="size" placeholder="<%= productToEdit.size %>">
+
+                            <label for="imagen">Imagen del producto</label>
+                            <input class="form-camp" type="file" name="image" id="image">
+
+                            <div class="botones">
+                                <input type="submit" class="form-input" value="Guardar">
+                                <input type="reset" class="form-input" value="Limpiar">
                             </div>
 
                             <button class="form-input" type="submit">Editar</button>
