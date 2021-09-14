@@ -64,5 +64,15 @@
   "color": "Rosa y Negro",
   "size": "Unitalla",
   "image": "image-1631581491318.jpg"
+ },
+ {
+  "id": 7,
+  "name": " PRUEBA",
+  "description": " PRUEBA",
+  "category": " RUN",
+  "color": " MULTI",
+  "size": " 26",
+  "price": " 2000",
+  "image": "image-1631618634295.jpg"
  }
 ]
