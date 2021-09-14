@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Includes HEAD-->
+<%- include('partials/head', {title: 'Resultados de tu búsqueda'}) %>
+
+    <body>
+
+        <!--Includes HEADER-->
+        <%- include('partials/header') %>
+
+            <!--All products-->
+            <div class="container">
+
+                <h2 class="products-title">Resultados de la búsqueda:
+                    <%= search %>
+                </h2>
+
+                <% if (products.length > 0) {
+                        products.forEach(function(product){  
+                            let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0) 
+                            %>
+                    <div class="products">
+                        <article>
+                            <a href="/productDetail"><img src="/images/products/<%= product.image %>" alt="Imagen del producto"></a>
+                            <div class="main-article">
+                                <i class="fas fa-swimmer"></i>
+                                <div class="container01">
+                                    <p class="price">$
+                                        <%= toThousand(finalPrice) %>
+                                    </p>
+                                    <p class="discount">
+                                        <%= product.discount %>
+                                    </p>
+                                </div>
+                                <p class="description">
+                                    <%= product.name %>
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                    <% })} else { %>
+                        <div class="col-12">
+                            <h2 style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
+                        </div>
+                        <% } %>
+            </div>
+
+            <!--Includes FOOTER-->
+            <%- include('partials/footer') %>
+    </body>
+
+</html>

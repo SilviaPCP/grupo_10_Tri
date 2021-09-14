@@ -440,6 +440,48 @@ main section article {
 }
 
 
+/*Bottom-nav*/
+
+.bottom-navbar {
+    overflow: hidden;
+    background-color: var(--primario)
+}
+
+.bottom-mobile-menu {
+    color: var(--blanco);
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+    padding: 1rem 0;
+}
+
+#bottom-nav1:target,
+#bottom-nav2:target {
+    max-height: 80rem;
+    transition: .5s;
+}
+
+.b-nav {
+    max-height: 0;
+    transition: .5s;
+}
+
+.b-nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block;
+    text-align: center;
+    padding: 1rem;
+}
+
+.b-nav a:hover {
+    background-color: var(--secundario);
+    color: var(--terciario);
+}
+
+
 /*Redes Sociales*/
 
 .follow {
@@ -661,6 +703,50 @@ footer p {
     /*Articulos*/
     .products article {
         flex: 0 0 calc(25% - 1rem);
+    }
+    /*Bottom Navbar*/
+    .block-navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-top: solid var(--terciario) 0.1rem;
+    }
+    .bottom-navbar {
+        background-color: var(--blanco);
+    }
+    .bottom-mobile-menu {
+        display: none;
+    }
+    .b-nav {
+        max-height: unset;
+    }
+    .help::before {
+        content: 'Ayuda:';
+        display: block;
+        text-align: center;
+        margin: 1rem 0;
+        color: var(--negro);
+        font-weight: 700;
+        font-size: 2.2rem;
+    }
+    .advice::before {
+        content: 'Aviso Legal:';
+        display: block;
+        text-align: center;
+        margin: 1rem 0;
+        color: var(--negro);
+        font-weight: 700;
+        font-size: 2.2rem;
+    }
+    .b-nav a {
+        color: var(--terciario);
+        font-weight: 700;
+        font-size: 1.8rem;
+    }
+    .b-nav a:hover {
+        color: var(--secundario);
+        background-color: var(--blanco);
+        transition: .5s;
     }
     /*Redes Sociales*/
     .social {

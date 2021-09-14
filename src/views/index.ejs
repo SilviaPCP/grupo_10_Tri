@@ -3,145 +3,173 @@
 <!--Partial del head-->
 <%- include('partials/head') %>
 
-<body>
-    <!--Partial del header-->
-    <%- include('partials/header') %>
+    <body>
+        <!--Partial del header-->
+        <%- include('partials/header') %>
 
-    <!--Partial del menu seleccion-->
-    <%- include('partials/menu') %>
-    
+            <!--Partial del menu seleccion-->
+            <%- include('partials/menu') %>
 
-    <div class="slider clearfix">
-        <ul>
-            <li><img src="/images/ciclista-banner.jpg " alt="Ciclistas"></li>
-            <li><img src="/images/corredor-banner.jpg " alt="Corredores"></li>
-            <li><img src="/images/natacion-banner.jpg " alt="Nadadores"></li>
-            <li><img src="/images/ciclista-banner2.jpg " alt="Ciclistas"></li>
-            <li><img src="/images/corredor-banner2.jpg " alt="Corredores"></li>
-            <li><img src="/images/natacion-banner2.jpg " alt="Nadadores"></li>
-        </ul>
-    </div>
 
-    <main class="container">
+                <div class="slider clearfix">
+                    <ul>
+                        <li><img src="/images/ciclista-banner.jpg " alt="Ciclistas"></li>
+                        <li><img src="/images/corredor-banner.jpg " alt="Corredores"></li>
+                        <li><img src="/images/natacion-banner.jpg " alt="Nadadores"></li>
+                        <li><img src="/images/ciclista-banner2.jpg " alt="Ciclistas"></li>
+                        <li><img src="/images/corredor-banner2.jpg " alt="Corredores"></li>
+                        <li><img src="/images/natacion-banner2.jpg " alt="Nadadores"></li>
+                    </ul>
+                </div>
 
-        <section class="main-container">
-            <h1>Nuestros Deportes</h1>
+                <main class="container">
 
-            <div class="container02">
-                <div class="sport-container">
-                    <div class="sports">
-                        <img src="/images/natacion.jpg" alt="">
-                        <a href="#"><button>Natación</button></a>
+                    <section class="main-container">
+                        <h1>Nuestros Deportes</h1>
+
+                        <div class="container02">
+                            <div class="sport-container">
+                                <div class="sports">
+                                    <img src="/images/natacion.jpg" alt="">
+                                    <a href="#"><button>Natación</button></a>
+                                </div>
+                                <p>Trajes de Baño desde $500.00</p>
+                                <div class="sports-nav">
+                                    <a href=""><span>Trajes de baño</span></a> &nbsp;
+                                    <span>|</span>&nbsp;
+
+                                    <a href=""><span>Goggles</span></a>&nbsp;
+                                    <span>|</span>&nbsp;
+
+                                    <a href=""><span>Equipo</span></a>
+                                </div>
+                            </div>
+
+                            <div class="sport-container">
+                                <div class="sports">
+                                    <img src="/images/bicicleta.jpeg" alt="">
+                                    <a href="#"><button>Ciclismo</button></a>
+                                </div>
+                                <p>Bicicletas hasta con el 20% de descuento</p>
+                                <div class="sports-nav">
+                                    <a href=""><span>Bicicletas</span></a> &nbsp;
+                                    <span>|</span>&nbsp;
+
+                                    <a href=""><span>Cascos</span></a>&nbsp;
+                                    <span>|</span>&nbsp;
+
+                                    <a href=""><span>Equipo</span></a>
+                                </div>
+                            </div>
+
+                            <div class="sport-container">
+                                <div class="sports">
+                                    <img src="/images/carrera.jpg" alt="">
+                                    <a href="#"><button>Carrera</button></a>
+                                </div>
+                                <p>Tenis de todas las marcas</p>
+                                <div class="sports-nav">
+                                    <a href=""><span>Tenis</span></a> &nbsp;
+                                    <span>|</span>&nbsp;
+
+                                    <a href=""><span>Uniformes</span></a>&nbsp;
+                                    <span>|</span>&nbsp;
+
+                                    <a href=""><span>Equipo</span></a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                    <section class="offers">
+                        <h2>Artículos Destacados</h2>
+
+                        <div class="products">
+                            <article>
+                                <a href="/productDetail"><img src="/images/destacado1.jpg" alt="Mono trifunción"></a>
+                                <div class="main-article">
+                                    <i class="fas fa-swimmer"></i>
+                                    <div class="container01">
+                                        <p class="price">$1,800.00</p>
+                                        <p class="discount">5% off</p>
+                                    </div>
+                                    <p class="description">Mono trifunción</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <a href="/productDetail"><img src="/images/destacado2.jpg" alt="Mochila transición"></a>
+                                <div class="main-article">
+                                    <i class="fas fa-running"></i>
+                                    <div class="container01">
+                                        <p class="price">$1,490.00</p>
+                                        <p class="discount">10% off</p>
+                                    </div>
+                                    <p class="description">Mochila transición</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <a href="/productDetail"><img src="/images/destacado3.jpg" alt="Casco ciclismo"></a>
+                                <div class="main-article">
+                                    <i class="fas fa-biking"></i>
+                                    <div class="container01">
+                                        <p class="price">$570.00</p>
+                                        <p class="discount">15% off</p>
+                                    </div>
+                                    <p class="description">Casco ciclismo</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <a href="/productDetail"><img src="/images/destacado4.jpg" alt="Reloj pulsómetro"></a>
+                                <div class="main-article">
+                                    <i class="fas fa-running"></i>
+                                    <div class="container01">
+                                        <p class="price">$1,000.00</p>
+                                        <p class="discount">20% off</p>
+                                    </div>
+                                    <p class="description">Reloj pulsómetro</p>
+                                </div>
+                            </article>
+                        </div>
+
+                    </section>
+
+                </main>
+
+                <div class="block-navbar">
+                    <div class="bottom-navbar">
+                        <a href="#bottom-nav1" class="bottom-mobile-menu">
+                            <span>Ayuda</span>
+                            <i class="fas fa-chevron-circle-down"></i>
+                        </a>
+
+                        <nav id="bottom-nav1" class="b-nav help">
+                            <a href="#">¿Quiénes somos?</a>
+                            <a href="#">Contactanos</a>
+                        </nav>
                     </div>
-                    <p>Trajes de Baño desde $500.00</p>
-                    <div class="sports-nav">
-                        <a href=""><span>Trajes de baño</span></a> &nbsp;
-                        <span>|</span>&nbsp;
 
-                        <a href=""><span>Goggles</span></a>&nbsp;
-                        <span>|</span>&nbsp;
+                    <div class="bottom-navbar">
+                        <a href="#bottom-nav2" class="bottom-mobile-menu">
+                            <span>Aviso Legal</span>
+                            <i class="fas fa-chevron-circle-down"></i>
+                        </a>
 
-                        <a href=""><span>Equipo</span></a>
+                        <nav id="bottom-nav2" class="b-nav advice">
+                            <a href="#">Términos y Condiciones</a>
+                            <a href="#">Promociones Vigentes</a>
+                            <a href="#">Privacidad</a>
+                        </nav>
                     </div>
                 </div>
 
-                <div class="sport-container">
-                    <div class="sports">
-                        <img src="/images/bicicleta.jpeg" alt="">
-                        <a href="#"><button>Ciclismo</button></a>
-                    </div>
-                    <p>Bicicletas hasta con el 20% de descuento</p>
-                    <div class="sports-nav">
-                        <a href=""><span>Bicicletas</span></a> &nbsp;
-                        <span>|</span>&nbsp;
+                <!--Partial del footer desde social media-->
+                <%- include ('partials/footer')%>
 
-                        <a href=""><span>Cascos</span></a>&nbsp;
-                        <span>|</span>&nbsp;
-
-                        <a href=""><span>Equipo</span></a>
-                    </div>
-                </div>
-
-                <div class="sport-container">
-                    <div class="sports">
-                        <img src="/images/carrera.jpg" alt="">
-                        <a href="#"><button>Carrera</button></a>
-                    </div>
-                    <p>Tenis de todas las marcas</p>
-                    <div class="sports-nav">
-                        <a href=""><span>Tenis</span></a> &nbsp;
-                        <span>|</span>&nbsp;
-
-                        <a href=""><span>Uniformes</span></a>&nbsp;
-                        <span>|</span>&nbsp;
-
-                        <a href=""><span>Equipo</span></a>
-                    </div>
-                </div>
-
-            </div>
-
-        </section>
-
-        <section class="offers">
-            <h2>Artículos Destacados</h2>
-
-            <div class="products">
-                <article>
-                    <a href="/productDetail"><img src="/images/destacado1.jpg" alt="Mono trifunción"></a>
-                    <div class="main-article">
-                        <i class="fas fa-swimmer"></i>
-                        <div class="container01">
-                            <p class="price">$1,800.00</p>
-                            <p class="discount">5% off</p>
-                        </div>
-                        <p class="description">Mono trifunción</p>
-                    </div>
-                </article>
-
-                <article>
-                    <a href="/productDetail"><img src="/images/destacado2.jpg" alt="Mochila transición"></a>
-                    <div class="main-article">
-                        <i class="fas fa-running"></i>
-                        <div class="container01">
-                            <p class="price">$1,490.00</p>
-                            <p class="discount">10% off</p>
-                        </div>
-                        <p class="description">Mochila transición</p>
-                    </div>
-                </article>
-
-                <article>
-                    <a href="/productDetail"><img src="/images/destacado3.jpg" alt="Casco ciclismo"></a>
-                    <div class="main-article">
-                        <i class="fas fa-biking"></i>
-                        <div class="container01">
-                            <p class="price">$570.00</p>
-                            <p class="discount">15% off</p>
-                        </div>
-                        <p class="description">Casco ciclismo</p>
-                    </div>
-                </article>
-
-                <article>
-                    <a href="/productDetail"><img src="/images/destacado4.jpg" alt="Reloj pulsómetro"></a>
-                    <div class="main-article">
-                        <i class="fas fa-running"></i>
-                        <div class="container01">
-                            <p class="price">$1,000.00</p>
-                            <p class="discount">20% off</p>
-                        </div>
-                        <p class="description">Reloj pulsómetro</p>
-                    </div>
-                </article>
-            </div>
-
-        </section>
-
-    </main>
-    <!--Partial del footer desde social media-->
-    <%- include ('partials/footer')%>
-
-</body>
+    </body>
 
 </html>

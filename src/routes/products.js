@@ -8,37 +8,38 @@ const productsController = require('../controllers/productsController');
 
 //CONFIG MULTER//
 const multer = require('multer');
-const { log } = require('console');
 
 const storage = multer.diskStorage({
-    destination: (req, file, cb)=>{
-        cb(null, path.join(__dirname,'../../public/images/products/'));
+    destination: (req, file, cb) => {
+        cb(null, 'public/images/products/');
     },
-    filename: (req, file, cb)=>{
-        const newFilename = Date.now() + path.extname(file.originalname);
-        cb(null, newFilename);
+    filename: (req, file, cb) => {
+        cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname))
     }
 })
-const upload = multer({storage:storage});
-
-/*** GET ALL PRODUCTS ***/ 
-router.get('/', productsController.index); 
+const upload = multer({ storage: storage });
 
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create/', productsController.create); 
 router.post('/store/', upload.single('image'), productsController.store); 
 
+/*** GET ALL PRODUCTS ***/
+router.get('/', productsController.index);
 
-/*** GET ONE PRODUCT ***/ 
-router.get('/detail/:id/', productsController.detail); 
+/*** CREATE ONE PRODUCT ***/
+router.get('/create', productsController.create);
+router.post('/', upload.any(), productsController.store);
 
-/*** EDIT ONE PRODUCT ***/ 
-router.get('/:id/edit', productsController.edit); 
-router.put('/:id', upload.single('image'), productsController.update); 
+/*** GET ONE PRODUCT ***/
+router.get('/:id/', productsController.detail);
+
+/*** EDIT ONE PRODUCT ***/
+router.get('/:id/edit', productsController.edit);
+router.put('/:id', upload.single('image'), productsController.update);
 
 
-/*** DELETE ONE PRODUCT ***/ 
-router.delete('/:id', productsController.destroy); 
+/*** DELETE ONE PRODUCT ***/
+router.delete('/:id', productsController.destroy);
 
 
 module.exports = router;

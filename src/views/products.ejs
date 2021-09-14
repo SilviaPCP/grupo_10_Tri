@@ -3,79 +3,52 @@
 <!--Partial del head-->
 <%- include('partials/head') %>
 
-<body>
-    <!--Partial del header-->
-    <%- include('partials/header') %>
+    <body>
+        <!--Partial del header-->
+        <%- include('partials/header') %>
 
-    <!--Partial del menu seleccion-->
-    <%- include('partials/menu') %>
-    
+            <!--Partial del menu seleccion-->
+            <%- include('partials/menu') %>
 
-   <main class="container">
-
-
-        <section class="offers">
-            <h2>Artículos Destacados</h2>
-            <div class="products">
-                <% inSale.forEach(function(product){ 
+                <main class="container">
+                    <section class="offers">
+                        <h2>Todos los productos</h2>
+                        <div class="products">
+                            <% products.forEach(function(product){ 
                     let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
-                %>		
-                <article>
-                    <a href="/products/detail/<%= product.id %>"><img src="/images/<%= product.image %>" alt=""></a>
-                    <div class="main-article">
-                        <i class="fas fa-swimmer"></i>
-                        <div class="container01">
-                            <p><%= product.name %></p>
-                            <p class="price">$<%= product.price %></p>
-                            <p class="discount"><%= product.discount%></p>
+                %>
+                                <article>
+                                    <a href="/productDetail"><img src="/images/products/<%= product.image %>" alt="Imagen del producto"></a>
+                                    <div class="main-article">
+                                        <% if (product.category == "swim") { %>
+                                            <i class="fas fa-swimmer"></i>
+                                            <% } else if(product.category == "run") { %>
+                                                <i class="fas fa-running"></i>
+                                                <% } else { %>
+                                                    <i class="fas fa-biking"></i>
+                                                    <% } %>
+                                                        <div class="container01">
+                                                            <p class="price">$
+                                                                <%= product.price %>
+                                                            </p>
+                                                            <p class="discount">
+                                                                <%= product.discount%> off
+                                                            </p>
+                                                        </div>
+                                                        <p class="description">
+                                                            <%= product.name %>
+                                                        </p>
+                                    </div>
+                                </article>
+                                <% }) %>
                         </div>
-                        <p class="description"><%= product.name %></p>
-                    </div>
-                </article>
-                <% }) %>
-                <article>
-                    <a href="/productDetail"><img src="/images/destacado2.jpg" alt="Mochila transición"></a>
-                    <div class="main-article">
-                        <i class="fas fa-running"></i>
-                        <div class="container01">
-                            <p class="price">$1,490.00</p>
-                            <p class="discount">10% off</p>
-                        </div>
-                        <p class="description">Mochila transición</p>
-                    </div>
-                </article>
 
-                <article>
-                    <a href="/productDetail"><img src="/images/destacado3.jpg" alt="Casco ciclismo"></a>
-                    <div class="main-article">
-                        <i class="fas fa-biking"></i>
-                        <div class="container01">
-                            <p class="price">$570.00</p>
-                            <p class="discount">15% off</p>
-                        </div>
-                        <p class="description">Casco ciclismo</p>
-                    </div>
-                </article>
+                    </section>
 
-                <article>
-                    <a href="/productDetail"><img src="/images/destacado4.jpg" alt="Reloj pulsómetro"></a>
-                    <div class="main-article">
-                        <i class="fas fa-running"></i>
-                        <div class="container01">
-                            <p class="price">$1,000.00</p>
-                            <p class="discount">20% off</p>
-                        </div>
-                        <p class="description">Reloj pulsómetro</p>
-                    </div>
-                </article>
-            </div>
+                </main>
+                <!--Partial del footer desde social media-->
+                <%- include ('partials/footer')%>
 
-        </section>
-
-    </main>
-    <!--Partial del footer desde social media-->
-    <%- include ('partials/footer')%>
-
-</body>
+    </body>
 
 </html>
