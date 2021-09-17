@@ -28,11 +28,20 @@
                                                     <i class="fas fa-biking"></i>
                                                     <% } %>
                                                         <div class="container01">
-                                                            <p class="price">$
-                                                                <%= product.price %>
+                                                            <p class="price">
+                                                                <% if (product.price != null) { %>
+                                                                    $
+                                                                    <%= product.price %>
+                                                                        <% } else { %>
+                                                                            $0
+                                                                            <% } %>
                                                             </p>
                                                             <p class="discount">
-                                                                <%= product.discount%>% off
+                                                                <% if (product.discount != null) { %>
+                                                                    <%= product.discount %>% off
+                                                                        <% } else { %>
+                                                                            0% off
+                                                                            <% } %>
                                                             </p>
                                                         </div>
                                                         <p class="description">

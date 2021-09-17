@@ -4,9 +4,7 @@
 <%- include('partials/head') %>
 
     <!--Se dejaron afuera las ccs propias de la pagina-->
-    <link rel="stylesheet" href="/css/product.css">
-    <link rel="stylesheet" href="/css/productsForm.css">
-
+    <link rel="stylesheet" href="css/product.css">
 
     <body>
         <!--Partial del header-->
@@ -16,23 +14,34 @@
             <%- include('partials/menu') %>
 
                 <main class="container blue clearfix">
-                    <h1>Detalle del producto: <%= product.name %></h1>
+                    <h1>Mono trifunción ld triatlón negro hombre</h1>
+
                     <div class="product01">
-                        <img class="product-image" src="/images/<%= product.image %>" alt="Imagen de la camisa">
+
+                        <img class="product-image" src="/images/destacado1.jpg" alt="Imagen de la camisa">
                         <div class="product-container">
-                            <form action="/products/edit/<%= product.id %>" method="GET" enctype="multipart/form-data">
+
                             <div class="info-product">
-                                <p class="product-price"><span>Precio $<%= product.price %></span></p>
-                                <p class="product-discount"><span>Descuento <%= product.discount %>%</span></p>
+                                <p class="product-price"><span>$1,800.00</span></p>
+                                <p class="product-discount"><span>5% off</span></p>
                             </div>
-                            <p class="product-detail-description"><span><%= product.description %></span></p>
-                            <div class="botones">
-                                <input type="button" onclick="history.go(-1)" class="form-input" value="Regresar">
-                                <input type="submit" class="form-input" value="Editar">
-                            </div>
+
+                            <p>Mono trifunción creado para triatletas apasionados(as), equipamiento icónico e imprescindible, para tus primeros triatlones larga distancia</p>
+
+                            <form class="form-product">
+                                <select class="form-camp" name="" id="">
+                        <option disabled selected>--Seleccionar talla--</option><!--se desabilita y al mismo se selecciona la oopion con estos dos parametros-->
+                        <option>Chica</option>
+                        <option>Mediana</option>
+                        <option>Grande</option>
+                    </select>
+                                <input class="form-camp" type="number" placeholder="Cantidad" min="1" step="1">
+                                <button class="form-input" type="submit"><i class="fas fa-shopping-cart"></i> Agregar al carrito</button>
                             </form>
+
                         </div>
                     </div>
+
                 </main>
 
                 <section class="container">

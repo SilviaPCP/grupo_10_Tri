@@ -58,6 +58,10 @@
     min-width: 50%;
 }
 
+.t-height {
+    height: 15rem;
+}
+
 .form-input {
     background-color: var(--secundario);
     border: none;
@@ -72,6 +76,26 @@
 .form-input:hover {
     cursor: pointer;
     background-color: var(--terciario);
+}
+
+a.form-input {
+    text-decoration: none;
+    color: var(--negro)!important;
+}
+
+.b-margin {
+    margin: 1rem 0;
+}
+
+.b-delete {
+    background-color: rgba(255, 0, 0, 0.795);
+    border: solid 0.2rem var(--negro);
+    color: var(--blanco);
+    font-weight: 700;
+}
+
+.b-delete:hover {
+    background-color: rgb(255, 0, 0);
 }
 
 

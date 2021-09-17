@@ -14,75 +14,53 @@
                 <div class="headProd">
                     <h1>Consulta de Productos</h1>
 
-                    <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+                    <form action="/products/detail/<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
                         <div class="formProd">
                             <label for="id">Id del producto</label>
-                            <input class="form-camp" type="number" id="id" name="id" value="<%= productToEdit.id %>" disabled>
+                            <input class="form-camp" type="number" id="id" name="id" value="<%= product.id %>" disabled>
 
                             <label for="name">Nombre del producto</label>
-                            <input class="form-camp" type="text" id="name" name="name" value="<%= productToEdit.name%>" disabled>
+                            <input class="form-camp" type="text" id="name" name="name" value="<%= product.name%>" disabled>
 
-                            <img src="/images/products/<%= productToEdit.image %>" alt="Imagen del producto">
-                            <div class="product-container">
-                                <div class="info-product">
-                                    <p class="product-price"><span>$1,800.00</span></p>
-                                    <p class="product-discount"><span>5% off</span></p>
+                            <div class="f-blocks">
+                                <img class="i-margin form-block" src="/images/products/<%= product.image %>" alt="Imagen del producto">
+                                <div class="product-container form-block">
+                                    <div class="info-product f-info">
+                                        <p class="product-price f-price"><span>$<%= product.price %> </span></p>
+                                        <p class="product-discount f-price"><span><%= product.discount %>% off </span></p>
+                                    </div>
+                                    <p class="final-price">Precio Final:
+                                        <% if(product.discount > 0 ){
+                                    let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0) %>
+
+                                            $
+                                            <%= toThousand(finalPrice) %>
+
+                                                <% } else { %>
+
+                                                    <%= product.price %>
+
+                                                        <% } %>
+
+                                    </p>
+
                                 </div>
+                            </div>
+                            <p class="f-description">
+                                <%= product.description %>
+                            </p>
 
-                                <p>
-                                    <%= productToEdit.description %>
-                                </p>
+
+                            <div class="b-container">
+                                <a href="/products/edit/<%= product.id %>" class="form-input">Editar</a>
+                                <button onclick="history.go(-1)" class="form-input b-margin">Regresar</button>
                             </div>
 
-                            <button class="form-input" type="submit">Editar</button>
-                            <button class="form-input">Eliminar</button>
                         </div>
                     </form>
-
-                    <h2>Edición de producto:</h2>
-
-                    <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
-                        <div class="formProd">
-                            <label for="name">Nombre del producto:</label>
-                            <input class="form-camp" type="text" id="name" name="name" placeholder="<%= productToEdit.name %>">
-
-                            <label for="price">Precio:</label>
-                            <input class="form-camp" type="number" id="price" name="price" placeholder="<%= productToEdit.price %>" min="1" step="1">
-
-                            <label for="discount" class="form-label">Descuento:</label>
-                            <input class="form-camp" type="number" id="discount" name="discount" placeholder="<%= productToEdit.discount %>" min="1" step="1">
-
-                            <label for="category" class="form-label">Categoría:</label>
-                            <select class="form-camp" name="category" id="category">
-                                <option disabled selected>Elige categoria</option>
-                                <option value="swim">Natación</option>
-                                <option value="bike">Ciclismo</option>
-                                <option value="run">Carrera</option>
-						    </select>
-
-                            <label for="description">Descripción del producto:</label>
-                            <textarea class="form-camp" name="description" id="description"><%= productToEdit.description %> </textarea>
-
-                            <label for="color">Color </label>
-                            <input class="form-camp" type="text" id="color" name="color" placeholder="<%= productToEdit.color %>">
-
-                            <label for="size">Talla </label>
-                            <input class="form-camp" type="text" id="size" name="size" placeholder="<%= productToEdit.size %>">
-
-                            <label for="imagen">Imagen del producto</label>
-                            <input class="form-camp" type="file" name="image" id="image">
-
-                            <div class="botones">
-                                <input type="submit" class="form-input" value="Guardar">
-                                <input type="reset" class="form-input" value="Limpiar">
-                            </div>
-
-                            <button class="form-input" type="submit">Editar</button>
-                            <button class="form-input">Eliminar</button>
-                        </div>
+                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
+                        <button class="form-input b-margin b-delete">Eliminar</button>
                     </form>
-                    </div>
-
                 </div>
             </main>
     </body>

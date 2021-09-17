@@ -1,4 +1,4 @@
-.formProd{
+.formProd {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -10,20 +10,20 @@
     border-radius: 10px;
 }
 
-h2{
+h2 {
     text-align: center;
 }
 
-.botones{
+.botones {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     width: 100%;
     margin: auto;
-    padding: 20px;    
+    padding: 20px;
 }
 
-label{
+label {
     font-weight: 400;
     color: var(--blanco);
     text-align: center;
@@ -31,6 +31,50 @@ label{
     margin: 1rem;
 }
 
-.headProd{
+.headProd {
     text-align: center;
+}
+
+.i-margin {
+    margin: 1rem 0;
+}
+
+.final-price {
+    font-weight: 700;
+    color: green!important;
+    font-size: 2.3rem!important;
+}
+
+.f-description {
+    color: var(--blanco);
+    font-size: 1.8rem;
+}
+
+@media (min-width: 768px) {
+    .b-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 1rem;
+    }
+    .f-blocks {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    img.form-block {
+        flex: 0 0 calc(60% - 1rem);
+        width: 40%;
+        border: solid var(--terciario) 0.5rem;
+    }
+    div.form-block {
+        flex: 0 0 calc(40% - 1rem);
+    }
+    .f-info {
+        display: block!important;
+    }
+    .f-price {
+        font-size: 2rem!important;
+    }
 }

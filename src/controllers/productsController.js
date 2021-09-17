@@ -24,14 +24,10 @@ const controller = {
 
     // Detail - Detail from one product
     detail: (req, res) => {
-<<<<<<< HEAD
-		//console.log(req.params.id);
-=======
-        console.log(req.params.id);
->>>>>>> e5a9a8c97a0ca42a34e3623ad5fe40c67bbc0e48
+        //console.log(req.params.id);
         let id = req.params.id;
         let product = products.find(product => product.id == id)
-        res.render('productDetail', {
+        res.render('productsCons', {
             product,
             toThousand
         });
@@ -39,11 +35,7 @@ const controller = {
 
     // Create - Form to create
     create: (req, res) => {
-<<<<<<< HEAD
-		//console.log("create");
-=======
-        console.log("create");
->>>>>>> e5a9a8c97a0ca42a34e3623ad5fe40c67bbc0e48
+        //console.log("create");
         res.render('productsForm');
     },
 
@@ -68,15 +60,15 @@ const controller = {
 
     // Update - Form to edit
     edit: (req, res) => {
-		console.log("edit de detail")
+        console.log("edit de detail")
         let id = req.params.id
         let productToEdit = products.find(product => product.id == id)
-        res.render('productsCons', { productToEdit })
+        res.render('productEdit', { productToEdit })
     },
 
     // Update - Method to update
     update: (req, res) => {
-		console.log(req.params.id);
+        console.log(req.params.id);
         let id = req.params.id;
         let productToEdit = products.find(product => product.id == id)
         let image
@@ -106,10 +98,14 @@ const controller = {
 
     // Delete - Delete one product from DB
     destroy: (req, res) => {
-        let id = req.params.id;
-        let finalProducts = products.filter(product => product.id != id);
-        fs.writeFileSync(productsFilePath, JSON.stringify(finalProducts, null, ' '));
-        res.redirect('/');
+        let id = req.params.id
+        const productoAEliminar = products.findIndex(producto => id == producto.id)
+        if (productoAEliminar >= 0) {
+            products.splice(productoAEliminar, 1)
+            fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2), 'utf-8')
+            res.redirect('/products')
+        } else
+            res.redirect('/products')
     }
 };
 
