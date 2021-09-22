@@ -16,8 +16,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 
-app.set('views', path.resolve(__dirname, './src/views'));
+//Template Enginee
 app.set('view engine', 'ejs');
+app.set('views', path.resolve(__dirname, './src/views'));
 
 app.use('/', mainRutas);
 app.use('/products', productsRouter);

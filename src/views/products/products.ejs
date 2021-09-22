@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--Partial del head-->
-<%- include('partials/head') %>
+<%- include('../partials/head', {title: 'Todos los productos'}) %>
 
     <body>
         <!--Partial del header-->
-        <%- include('partials/header') %>
+        <%- include('../partials/header') %>
 
             <!--Partial del menu seleccion-->
-            <%- include('partials/menu') %>
+            <%- include('../partials/menu') %>
 
                 <main class="container">
                     <section class="offers">
@@ -56,7 +56,7 @@
 
                 </main>
                 <!--Partial del footer desde social media-->
-                <%- include ('partials/footer')%>
+                <%- include ('../partials/footer')%>
 
     </body>
 

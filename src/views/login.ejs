@@ -2,43 +2,44 @@
 <html lang="en">
 
 <!--Partial del head-->
-<%- include('partials/head') %>
-<!--Se dejaron afuera las ccs propias de la pagina-->
+<%- include('partials/head', {title: 'Login'}) %>
+    <!--Se dejaron afuera las ccs propias de la pagina-->
     <link rel="stylesheet" href="css/style_formulario.css">
     <title>Formulario</title>
 
-<header>
-    <div class="top-header container">
-        <a href="/login"><i class="fas fa-user"></i></a>
-        <a href="/">
-            <p>Triatlhon<span>Store</span></p>
-        </a>
-</header>
+    <header>
+        <div class="top-header container">
+            <a href="/login"><i class="fas fa-user"></i></a>
+            <a href="/">
+                <p>Triatlhon<span>Store</span></p>
+            </a>
+    </header>
 
-<body>
-    <section class="form-register">
-        <p>Triathlon Store</p>
-        <p>INGRESAR</p>
-        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-        <input class="controls" type="password" name="pass1" id="correo" placeholder="Ingrese su contraseña">
-        <p>Estoy de acuerdo con</p>
-        <a href="#">Terminos y Condiciones</a>
-        <p><a class="botons" href="submit">Ingresar</a></p>
-        <p></p>
-        <p><a class="botons" href="recuperarpass">¿Olvidaste tu contraseña?</a></p>
-        <p></p>
-        <p><a class="botons" href="formulario">¿Aún no te has registrado?</a></p>
-        <p></p>
-        <p>O bien ingresa a través de...</p>
-        <a class="logos" href="#"><img href="#" src="/images/googlelogo.png" width="30%"></a>
-        <a class="logos" href="#"><img href="#" src="/images/facebooklogo.png" width="30%"></a>
-    </section>
+    <body>
+        <section class="form-register">
+            <p>Triathlon Store</p>
+            <p>INGRESAR</p>
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+            <input class="controls" type="password" name="pass1" id="correo" placeholder="Ingrese su contraseña">
+            <p>Estoy de acuerdo con</p>
+            <a href="#">Terminos y Condiciones</a>
+            <p><a class="botons" href="submit">Ingresar</a></p>
+            <p></p>
+            <p><a class="botons" href="recuperarpass">¿Olvidaste tu contraseña?</a></p>
+            <p></p>
+            <p><a class="botons" href="formulario">¿Aún no te has registrado?</a></p>
+            <p></p>
+            <p>O bien ingresa a través de...</p>
+            <a class="logos" href="#"><img href="#" src="/images/googlelogo.png" width="30%"></a>
+            <a class="logos" href="#"><img href="#" src="/images/facebooklogo.png" width="30%"></a>
+        </section>
 
-</body>
-</html>
-
-    <!--Partial del footer desde social media-->
-    <%- include ('partials/footer')%>
-</body>
+    </body>
 
 </html>
+
+<!--Partial del footer desde social media-->
+<%- include ('partials/footer')%>
+    </body>
+
+    </html>

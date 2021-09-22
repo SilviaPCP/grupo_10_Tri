@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--Partial del head-->
-<%- include('partials/head') %>
+<%- include('../partials/head', {title: 'Editar producto'}) %>
 
     <!--Se dejaron afuera las ccs propias de la pagina-->
     <link rel="stylesheet" href="/css/productsForm.css">
@@ -10,10 +10,10 @@
     <body>
 
         <!--Partial del header-->
-        <%- include('partials/header') %>
+        <%- include('../partials/header') %>
 
             <!--Partial del menu seleccion-->
-            <%- include('partials/menu') %>
+            <%- include('../partials/menu') %>
                 <h2>Edición de producto:</h2>
 
                 <form action="/products/edit/<%= productToEdit.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">

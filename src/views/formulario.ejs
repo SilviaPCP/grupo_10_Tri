@@ -2,49 +2,49 @@
 <html lang="en">
 
 <!--Partial del head-->
-<%- include('partials/head') %>
+<%- include('partials/head', {title: 'Formulario'}) %>
 
-<!--Se dejaron afuera las ccs propias de la pagina-->
+    <!--Se dejaron afuera las ccs propias de la pagina-->
     <link rel="stylesheet" href="css/style_formulario.css">
     <title>Formulario</title>
 
-<header>
-    <div class="top-header container">
-        <a href="/login"><i class="fas fa-user"></i></a>
-        <a href="/">
-            <p>Triatlhon<span>Store</span></p>
-        </a>
-</header>
+    <header>
+        <div class="top-header container">
+            <a href="/login"><i class="fas fa-user"></i></a>
+            <a href="/">
+                <p>Triatlhon<span>Store</span></p>
+            </a>
+    </header>
 
-<body>
+    <body>
 
-    <section class="form-register">
-        <p>Triathlon Store</p>
-        <p>REGISTRO</p>
-        <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-        <input class="controls" type="password" name="pass1" id="correo" placeholder="Ingrese su contraseña">
-        <input class="controls" type="password" name="pass2" id="correo" placeholder="Ingrese otra vez su contraseña">
-        <select class="controls" name="genero" placeholder="Género">
+        <section class="form-register">
+            <p>Triathlon Store</p>
+            <p>REGISTRO</p>
+            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
+            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
+            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+            <input class="controls" type="password" name="pass1" id="correo" placeholder="Ingrese su contraseña">
+            <input class="controls" type="password" name="pass2" id="correo" placeholder="Ingrese otra vez su contraseña">
+            <select class="controls" name="genero" placeholder="Género">
             <option value="sinSelección" selected>Selecciona género</option>
             <option value="femenino">Femenino</option>
             <option value="masculino">Masculino</option>
         </select>
-        <input class="controls" type="date" name="fecha">
-        <p>Estoy de acuerdo con</p>
-        <a href="#">Terminos y Condiciones</a>
-        <p><a class="botons" href="submit">Registrar</a></p>
-        <p></p>
-        <p><a class="botons" href="login">¿Ya tienes cuenta?</a></p>
-        <p></p>
-        <p>O bien registrate a través de...</p>
-        <a class="logos" href="#"><img href="#" src="/images/googlelogo.png" width="30%"></a>
-        <a class="logos" href="#"><img href="#" src="/images/facebooklogo.png" width="30%"></a>
-    </section>
+            <input class="controls" type="date" name="fecha">
+            <p>Estoy de acuerdo con</p>
+            <a href="#">Terminos y Condiciones</a>
+            <p><a class="botons" href="submit">Registrar</a></p>
+            <p></p>
+            <p><a class="botons" href="login">¿Ya tienes cuenta?</a></p>
+            <p></p>
+            <p>O bien registrate a través de...</p>
+            <a class="logos" href="#"><img href="#" src="/images/googlelogo.png" width="30%"></a>
+            <a class="logos" href="#"><img href="#" src="/images/facebooklogo.png" width="30%"></a>
+        </section>
 
-<!--Partial del footer desde social media-->
-<%- include ('partials/footer')%>
-</body>
+        <!--Partial del footer desde social media-->
+        <%- include ('partials/footer')%>
+    </body>
 
 </html>

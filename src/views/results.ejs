@@ -4,48 +4,60 @@
 <%- include('partials/head', {title: 'Resultados de tu búsqueda'}) %>
 
     <body>
-
         <!--Includes HEADER-->
         <%- include('partials/header') %>
 
             <!--All products-->
-            <div class="container">
-
-                <h2 class="products-title">Resultados de la búsqueda:
-                    <%= search %>
-                </h2>
-
-                <% if (products.length > 0) {
-                        products.forEach(function(product){  
-                            let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0) 
-                            %>
+            <main class="container">
+                <section class="offers">
+                    <h2>Resultados de la búsqueda:
+                        <%= search %>
+                    </h2>
                     <div class="products">
-                        <article>
-                            <a href="/productDetail"><img src="/images/products/<%= product.image %>" alt="Imagen del producto"></a>
-                            <div class="main-article">
-                                <i class="fas fa-swimmer"></i>
-                                <div class="container01">
-                                    <p class="price">$
-                                        <%= toThousand(finalPrice) %>
-                                    </p>
-                                    <p class="discount">
-                                        <%= product.discount %>
-                                    </p>
+                        <% if (products.length > 0) {
+                            products.forEach(function(product){  
+                                let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0) 
+                                %>
+                            <article>
+                                <a href="/products/detail/<%= product.id %>"><img src="/images/products/<%= product.image %>" alt="Imagen del producto"></a>
+                                <div class="main-article">
+                                    <% if (product.category == "swim") { %>
+                                        <i class="fas fa-swimmer"></i>
+                                        <% } else if(product.category == "run") { %>
+                                            <i class="fas fa-running"></i>
+                                            <% } else { %>
+                                                <i class="fas fa-biking"></i>
+                                                <% } %>
+                                                    <div class="container01">
+                                                        <p class="price">
+                                                            <% if (product.price != null) { %>
+                                                                $
+                                                                <%= product.price %>
+                                                                    <% } else { %>
+                                                                        $0
+                                                                        <% } %>
+                                                        </p>
+                                                        <p class="discount">
+                                                            <% if (product.discount != null) { %>
+                                                                <%= product.discount %>% off
+                                                                    <% } else { %>
+                                                                        0% off
+                                                                        <% } %>
+                                                        </p>
+                                                    </div>
+                                                    <p class="description">
+                                                        <%= product.name %>
+                                                    </p>
                                 </div>
-                                <p class="description">
-                                    <%= product.name %>
-                                </p>
-                            </div>
-                        </article>
+                            </article>
+                            <% })} else { %>
+                                <h2 class="products-title" style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
+                                <% } %>
                     </div>
-                    <% })} else { %>
-                        <div class="col-12">
-                            <h2 style="color: tomato;">No hay productos que coincidan con esa búsqueda</h2>
-                        </div>
-                        <% } %>
-            </div>
+                </section>
+            </main>
 
-            <!--Includes FOOTER-->
+            <!--Includes footer-->
             <%- include('partials/footer') %>
     </body>
 

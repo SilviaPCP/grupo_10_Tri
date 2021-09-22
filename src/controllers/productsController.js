@@ -16,7 +16,7 @@ const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 const controller = {
     // Root - Show all products  	
     index: (req, res) => {
-        res.render('products', {
+        res.render('products/products', {
             products,
             toThousand
         });
@@ -27,7 +27,7 @@ const controller = {
         //console.log(req.params.id);
         let id = req.params.id;
         let product = products.find(product => product.id == id)
-        res.render('productsCons', {
+        res.render('products/productsCons', {
             product,
             toThousand
         });
@@ -36,7 +36,7 @@ const controller = {
     // Create - Form to create
     create: (req, res) => {
         //console.log("create");
-        res.render('productsForm');
+        res.render('products/productsForm');
     },
 
     // Create -  Method to store
@@ -63,7 +63,7 @@ const controller = {
         console.log("edit de detail")
         let id = req.params.id
         let productToEdit = products.find(product => product.id == id)
-        res.render('productEdit', { productToEdit })
+        res.render('products/productEdit', { productToEdit })
     },
 
     // Update - Method to update

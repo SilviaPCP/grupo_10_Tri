@@ -1,54 +1,55 @@
 [
  {
-  "id": 3,
-  "name": "Otro ejemplo",
-  "price": "100",
-  "discount": "2",
-  "description": "Experiencia visual excepcional. Mirá tus series y películas favoritas con la mejor definición.Tendrás colores brillantes y detalles precisos en todos tus contenidos.Disfrutá aún más del mejor entretenimiento gracias a su vasta pantalla y ángulos de visión amplios.    ",
-  "color": "Negro",
-  "size": "Grande",
-  "image": "image-1631842727427.jpg"
- },
- {
-  "id": 5,
-  "name": "Mono triatlón",
-  "price": "1200",
+  "id": 1,
+  "name": "Mono trifunción",
+  "price": "1800",
   "discount": "5",
   "category": "swim",
-  "description": "Este es un ejemplo",
-  "color": "Azul",
+  "description": "Nuestro equipo de triatletas apasionados(as) ha creado este mono trifunción, equipamiento icónico e imprescindible, para tus primeros triatlones larga distancia   ",
+  "color": "Negro",
   "size": "Grande",
-  "image": "image-1631579370198.jpg"
+  "image": "destacado1.jpg"
  },
  {
-  "id": 6,
-  "name": "Guantes",
-  "price": "190",
-  "discount": "15",
-  "description": "Ciclistas que realizan salidas regulares en verano con clima caluroso y que buscan unos guantes delgados y muy ligeros. ",
-  "color": "Rosa y Negro",
+  "id": 2,
+  "name": "Mochila transición",
+  "price": "1490",
+  "discount": "10",
+  "category": "run",
+  "description": "Para ayudarte a organizar el material, acceder fácilmente durante la prueba y recuperarlo después de la prueba, te ofrecemos esta bolsa con 3 compartimentos (¡1 para cada prueba!) y múltiples bolsillos. ",
+  "color": "Negro",
   "size": "Unitalla",
-  "image": "image-1631581491318.jpg"
+  "image": "destacado2.jpg"
  },
  {
-  "id": 8,
-  "name": "Mallas-short ",
-  "price": "169",
-  "discount": "30",
-  "category": "swim",
-  "description": "El tejido de este producto anti-UV OLAIAN permite bloquear el 98% de los rayos UVB y el 95% de los rayos UVA (UPF 50+). Ofrece la seguridad de una protección eficaz contra el sol. Puede usarse en el agua y fuera del agua para la práctica de deportes náuticos y acuáticos. La filtración de los rayos UV es posible gracias a la densidad de las fibras textiles, esta protección es duradera, incluso después del lavado.",
-  "color": "Azul",
-  "size": "Chica",
-  "image": "image-1631630517594.jpg"
+  "id": 3,
+  "name": "Casco ciclismo",
+  "price": "570",
+  "discount": "15",
+  "description": "Este casco fácil de usar y ajustable fue concebido para las primeras travesías en BTT, de hasta 1 h 30 min. ",
+  "color": "Negro",
+  "size": "Mediana",
+  "image": "destacado3.jpg"
  },
  {
-  "id": 9,
-  "name": "Sandalias de Natación",
-  "price": "200",
+  "id": 4,
+  "name": "Reloj pulsómetro",
+  "price": "1000",
   "discount": "20",
-  "description": "Suela equipada con insertos de caucho para asegurar una buena adherencia.  ",
-  "color": "Naranja y Negro",
-  "size": "Chica",
-  "image": "image-1631630957510.jpg"
+  "category": "run",
+  "description": "Mide tu regularidad o de tu progresión en una distancia fija. La función Tiempo intermedio permite medir el tiempo de paso en una marca determinada (vuelta de pista, kilómetro, etc.). ",
+  "color": "Negro",
+  "size": "Unitalla",
+  "image": "destacado4.jpg"
+ },
+ {
+  "id": 10,
+  "name": "Ejemplo s/imagen",
+  "price": "5892",
+  "discount": "10",
+  "description": "Hola esta es la descripción de un producto que no tiene imagen ",
+  "color": "s/color",
+  "size": "Grande",
+  "image": "default-image.png"
  }
 ]

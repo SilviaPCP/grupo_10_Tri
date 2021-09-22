@@ -1,160 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--Partial del head-->
-<%- include('partials/head') %>
-<!--Se dejaron afuera las ccs propias de la pagina-->
-<link rel="stylesheet" href="css/cart.css">
-<link rel="stylesheet" href="css/product.css">
+<%- include('partials/head', {title: 'Carrito'}) %>
+    <!--Se dejaron afuera las ccs propias de la pagina-->
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/product.css">
 
-<body>
-    <!--Partial del header-->
-    <%- include('partials/header') %>
+    <body>
+        <!--Partial del header-->
+        <%- include('partials/header') %>
 
-    <!--Partial del menu seleccion-->
-    <%- include('partials/menu') %>
+            <!--Partial del menu seleccion-->
+            <%- include('partials/menu') %>
 
-    <main class="container">
-        <section class="main-container">
-            <!--Menu de carrito de compras -->
-            <h1>Carrito de compra</h1>
-            <div class="menu-cart">
-                <div class="cart">
-                    <a href="#">
-                        <p>Carrito(1)</p>
-                    </a>
-                </div>
-                <div class="saved">
-                    <a href="guardados">
-                        <p>Guardados(1)</p>
-                    </a>
-                </div>
-            </div>
-            <div class="product-container">
-                <!--Primera opcion de carrito-->
-                <article>
-                    <div class="option1 ">
-                        <div class="Cartphoto">
-                            <p class="descTitle">TriSuit para hombre</p>
-                            <img src="/images/destacado1.jpg" alt="">
+                <main class="container">
+                    <section class="main-container">
+                        <!--Menu de carrito de compras -->
+                        <h1>Carrito de compra</h1>
+                        <div class="menu-cart">
+                            <div class="cart">
+                                <a href="#">
+                                    <p>Carrito(1)</p>
+                                </a>
+                            </div>
+                            <div class="saved">
+                                <a href="guardados">
+                                    <p>Guardados(1)</p>
+                                </a>
+                            </div>
                         </div>
-                        <div class="info-product">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iste mollitia qui vel incidunt consectetur aliquam! Natus, nemo! Nihil enim, ipsa fugiat aliquam vel reiciendis quaerat fuga! Accusamus, impedit! Officiis!</p>
-                        </div>
-                        <div class="form-input">
-                            <select>
+                        <div class="product-container">
+                            <!--Primera opcion de carrito-->
+                            <article>
+                                <div class="option1 ">
+                                    <div class="Cartphoto">
+                                        <p class="descTitle">TriSuit para hombre</p>
+                                        <img src="/images/destacado1.jpg" alt="">
+                                    </div>
+                                    <div class="info-product">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iste mollitia qui vel incidunt consectetur aliquam! Natus, nemo! Nihil enim, ipsa fugiat aliquam vel reiciendis quaerat fuga! Accusamus, impedit! Officiis!</p>
+                                    </div>
+                                    <div class="form-input">
+                                        <select>
                             <option value="0">Cantidad</option>
                             <option value="1">3 unidades disp</option>
                             <option value="2">1</option>
                             <option value="3">2</option>
                             <option value="4">3</option>
                         </select>
-                        </div>
-                        <div class="cartTotal">
-                            <p>Total $1,450.00</p>
-                        </div>
+                                    </div>
+                                    <div class="cartTotal">
+                                        <p>Total $1,450.00</p>
+                                    </div>
 
-                    </div>
-                    <div class="finalCart">
-                        <div><a href="#">Guardar  </a> </div>
-                        <div><a href="#">  Eliminar</a></div>
-                    </div>
-                </article>
-                <br>
-                <!--Segunda opción de carrito-->
-                <article>
-                    <div class="option1">
-                        <div class="Cartphoto">
-                            <p class="descTitle">Descripción Artículo</p>
-                            <img src="/images/destacado4.jpg" alt="">
-                        </div>
-                        <div class="cartDesc">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iste mollitia qui vel incidunt consectetur aliquam! Natus, nemo! Nihil enim, ipsa fugiat aliquam vel reiciendis quaerat fuga! Accusamus, impedit! Officiis!</p>
-                        </div>
-                        <div class="cartCombo">
+                                </div>
+                                <div class="finalCart">
+                                    <div><a href="#">Guardar  </a> </div>
+                                    <div><a href="#">  Eliminar</a></div>
+                                </div>
+                            </article>
+                            <br>
+                            <!--Segunda opción de carrito-->
+                            <article>
+                                <div class="option1">
+                                    <div class="Cartphoto">
+                                        <p class="descTitle">Descripción Artículo</p>
+                                        <img src="/images/destacado4.jpg" alt="">
+                                    </div>
+                                    <div class="cartDesc">
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni iste mollitia qui vel incidunt consectetur aliquam! Natus, nemo! Nihil enim, ipsa fugiat aliquam vel reiciendis quaerat fuga! Accusamus, impedit! Officiis!</p>
+                                    </div>
+                                    <div class="cartCombo">
 
-                            <select name="Cantidad">
+                                        <select name="Cantidad">
                             <option value="0">Cantidad</option>
                             <option value="1">3 unidades disp</option>
                             <option value="2">1</option>
                             <option value="3">2</option>
                             <option value="4">3</option>
                         </select>
+                                    </div>
+                                    <div class="cartTotal">
+                                        <p>Total $1,450.00</p>
+                                    </div>
+                                </div>
+                                <div class="finalCart">
+                                    <div><a href="#">Guardar  </a> </div>
+                                    <div><a href="#">  Eliminar</a></div>
+                                </div>
+                                <div class="btnComprar">
+                                    <h3>Total con envío</h3>
+                                    <h2> $2,200.00</h2>
+                                    <input type="submit" name="Comprar" value="Comprar">
+                                </div>
                         </div>
-                        <div class="cartTotal">
-                            <p>Total $1,450.00</p>
+                        </article>
+                    </section>
+
+                    <section class="offers">
+                        <h2>Artículos Destacados</h2>
+
+                        <div class="products">
+                            <article>
+                                <img src="/images/destacado1.jpg" alt="">
+                                <div class="main-article">
+                                    <i class="fas fa-swimmer"></i>
+                                    <div class="container01">
+                                        <p class="price">$1,800.00</p>
+                                        <p class="discount">5% off</p>
+                                    </div>
+                                    <p class="description">Mono trifunción</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img src="/images/destacado2.jpg" alt="">
+                                <div class="main-article">
+                                    <i class="fas fa-running"></i>
+                                    <div class="container01">
+                                        <p class="price">$1,490.00</p>
+                                        <p class="discount">10% off</p>
+                                    </div>
+                                    <p class="description">Mochila transición</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img src="/images/destacado3.jpg" alt="">
+                                <div class="main-article">
+                                    <i class="fas fa-biking"></i>
+                                    <div class="container01">
+                                        <p class="price">$570.00</p>
+                                        <p class="discount">15% off</p>
+                                    </div>
+                                    <p class="description">Casco ciclismo</p>
+                                </div>
+                            </article>
+
+                            <article>
+                                <img src="/images/destacado4.jpg" alt="">
+                                <div class="main-article">
+                                    <i class="fas fa-running"></i>
+                                    <div class="container01">
+                                        <p class="price">$1,000.00</p>
+                                        <p class="discount">20% off</p>
+                                    </div>
+                                    <p class="description">Reloj pulsómetro</p>
+                                </div>
+                            </article>
                         </div>
-                    </div>
-                    <div class="finalCart">
-                        <div><a href="#">Guardar  </a> </div>
-                        <div><a href="#">  Eliminar</a></div>
-                    </div>
-                    <div class="btnComprar">
-                        <h3>Total con envío</h3>
-                        <h2> $2,200.00</h2>
-                        <input type="submit" name="Comprar" value="Comprar">
-                    </div>
-            </div>
-            </article>
-        </section>
 
-        <section class="offers">
-            <h2>Artículos Destacados</h2>
+                    </section>
 
-            <div class="products">
-                <article>
-                    <img src="/images/destacado1.jpg" alt="">
-                    <div class="main-article">
-                        <i class="fas fa-swimmer"></i>
-                        <div class="container01">
-                            <p class="price">$1,800.00</p>
-                            <p class="discount">5% off</p>
-                        </div>
-                        <p class="description">Mono trifunción</p>
-                    </div>
-                </article>
+                </main>
 
-                <article>
-                    <img src="/images/destacado2.jpg" alt="">
-                    <div class="main-article">
-                        <i class="fas fa-running"></i>
-                        <div class="container01">
-                            <p class="price">$1,490.00</p>
-                            <p class="discount">10% off</p>
-                        </div>
-                        <p class="description">Mochila transición</p>
-                    </div>
-                </article>
+                <!--Partial del footer desde social media-->
+                <%- include ('partials/footer')%>
+    </body>
 
-                <article>
-                    <img src="/images/destacado3.jpg" alt="">
-                    <div class="main-article">
-                        <i class="fas fa-biking"></i>
-                        <div class="container01">
-                            <p class="price">$570.00</p>
-                            <p class="discount">15% off</p>
-                        </div>
-                        <p class="description">Casco ciclismo</p>
-                    </div>
-                </article>
-
-                <article>
-                    <img src="/images/destacado4.jpg" alt="">
-                    <div class="main-article">
-                        <i class="fas fa-running"></i>
-                        <div class="container01">
-                            <p class="price">$1,000.00</p>
-                            <p class="discount">20% off</p>
-                        </div>
-                        <p class="description">Reloj pulsómetro</p>
-                    </div>
-                </article>
-            </div>
-
-        </section>
-
-    </main>
-
-    <!--Partial del footer desde social media-->
-    <%- include ('partials/footer')%>
-</body>
 </html>

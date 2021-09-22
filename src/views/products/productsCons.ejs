@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--Partial del head-->
-<%- include('partials/head') %>
+<%- include('../partials/head', {title: 'Detalle del producto'}) %>
 
     <!--Se dejaron afuera las ccs propias de la pagina-->
     <link rel="stylesheet" href="/css/productsForm.css">
     <link rel="stylesheet" href="/css/product.css">
 
     <body>
-        <%- include('partials/header') %>
+        <%- include('../partials/header') %>
 
             <main>
                 <div class="headProd">
@@ -53,7 +53,7 @@
 
                             <div class="b-container">
                                 <a href="/products/edit/<%= product.id %>" class="form-input">Editar</a>
-                                <button onclick="history.go(-1)" class="form-input b-margin">Regresar</button>
+                                <a href="/products" class="form-input b-margin">Regresar</a>
                             </div>
 
                         </div>
