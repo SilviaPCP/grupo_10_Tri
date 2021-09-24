@@ -40,3 +40,19 @@ Responsabilizarse de cada parte del proyecto que le toco a cada integrante del e
 ¿Qué hacer menos?
 No distanciarnos tanto, estar al pendiente de los avances que se van subiendo.
 
+Retrospectiva del trabajo en equipo del Sprint 4
+
+¿Qué problemas tuvimos?
+A la hora de hacer push en el repositorio tuvimos conflictos de versiones, por lo que tuvimos que separar la codificación y practicmante empezar desde el sprint anterior.
+
+¿Qué hacer mas?
+Tener mas comunicación entre todos los integrantes para poder manejar con mayor facilidad los conflictos y solucionarlos en equipo.
+
+¿Qué continuar haciendo?
+Continuar investiagando sobre los temas que mas se nos complican o que desconocemos y platicarlo
+y resolverlos con conjutno.
+
+¿Qué hacer menos?
+Dejar de darleseguimeto de manera constnte al proyecto y subir trabajo son consultar
+
+
