@@ -10,6 +10,7 @@ const app = express();
 
 const mainRutas = require('./src/routes/mainRouter');
 const productsRouter = require('./src/routes/products'); // Rutas /products
+const usersRouter = require('./src/routes/users'); // Rutas /users
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 app.use(express.urlencoded({ extended: false }));
@@ -22,6 +23,8 @@ app.set('views', path.resolve(__dirname, './src/views'));
 
 app.use('/', mainRutas);
 app.use('/products', productsRouter);
+//ageragar ruta de users
+app.use('/users', usersRouter);
 
 app.listen(3000, () => {
     console.log('Servidor funcionando en el puerto 3000');

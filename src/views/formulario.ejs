@@ -6,6 +6,9 @@
 
     <!--Se dejaron afuera las ccs propias de la pagina-->
     <link rel="stylesheet" href="css/style_formulario.css">
+    <link rel="stylesheet" href="css/productForm.css">
+    <link rel="stylesheet" href="/css/product.css">
+
     <title>Formulario</title>
 
     <header>
@@ -18,26 +21,70 @@
 
     <body>
 
-        <section class="form-register">
+        <section >
             <p>Triathlon Store</p>
             <p>REGISTRO</p>
-            <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-            <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-            <input class="controls" type="password" name="pass1" id="correo" placeholder="Ingrese su contraseña">
-            <input class="controls" type="password" name="pass2" id="correo" placeholder="Ingrese otra vez su contraseña">
-            <select class="controls" name="genero" placeholder="Género">
-            <option value="sinSelección" selected>Selecciona género</option>
-            <option value="femenino">Femenino</option>
-            <option value="masculino">Masculino</option>
-        </select>
-            <input class="controls" type="date" name="fecha">
-            <p>Estoy de acuerdo con</p>
-            <a href="#">Terminos y Condiciones</a>
-            <p><a class="botons" href="submit">Registrar</a></p>
-            <p></p>
-            <p><a class="botons" href="login">¿Ya tienes cuenta?</a></p>
-            <p></p>
+            <form action="/users" method="POST" enctype="multipart/form-data">
+                <div class="form-register">
+                    <label for="nombre">Nombre:</label>
+                    <input  class="form-camp" type="text" name="firstName" id="nombre" placeholder="Ingrese su Nombre" value="<%= locals.oldData ? oldData.firstName : null %>">
+                    <% if (locals.errors && errors.firstName) { %>
+                        <div class="text-danger">
+                            <%= errors.firstName.msg %>
+                        </div>
+                    <% } %>
+                    <label for="lastName">Apellido:</label>
+                    <input  class="form-camp" type="text" name="lastName" id="apellido" placeholder="Ingrese su Apellido" value="<%= locals.oldData ? oldData.lastName : null %>">
+                    <% if (locals.errors && errors.lastName) { %>
+                        <div class="text-danger">
+                            <%= errors.lastName.msg %>
+                        </div>
+                    <% } %>
+                    <label for="email">Correo Electrónico:</label>
+                    <input  class="form-camp" type="email" name="email" id="email" placeholder="Ingrese su Correo" value="<%= locals.oldData ? oldData.email : null %>">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
+                    <label for="password">Password:</label>
+                    <input class="form-camp" type="password" name="password" id="password" placeholder="Ingrese su contraseña" >
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="text-danger">
+                            <%= errors.password.msg %>
+                        </div>
+                    <% } %>
+                    <label for="password2">Password:</label>
+                    <input class="form-camp" type="password" name="password2" id="password2" placeholder="Ingrese otra vez su contraseña">
+                    <label for="genero">Selecciona tu género:</label>
+                    <select class="form-camp" name="gender" placeholder="Género">
+                        <option value="sinSelección" selected>Selecciona género</option>
+                        <option value="femenino">Femenino</option>
+                        <option value="masculino">Masculino</option>
+                    </select>
+                    <label for="date">Ingresa tu fecha de Nacimiento:</label>
+                    <input class="form-camp" type="date" name="date" value="<%= locals.oldData ? oldData.date : null %>">
+                    <% if (locals.errors && errors.date) { %>
+                        <div class="text-danger">
+                            <%= errors.date.msg %>
+                        </div>
+                    <% } %>
+                    <label for="imagen">Imagen de usuario:</label>
+                    
+                    <label for="imagen">Imagen del producto</label>
+
+                    <input class="form-camp" type="file" name="image" id="image">
+                    <% if (locals.errors && errors.image) { %>
+                        <div class="text-danger">
+                            <%= errors.image.msg %>
+                        </div>
+                    <% } %>
+                    <p>Estoy de acuerdo con</p>
+                    <a href="#">Terminos y Condiciones</a>
+                    <button type="submit" class="form-input b-margin">Guardar</button>
+                    <button type="reset" class="form-input b-margin">Limpiar</button>
+                </div>
+            </form>
             <p>O bien registrate a través de...</p>
             <a class="logos" href="#"><img href="#" src="/images/googlelogo.png" width="30%"></a>
             <a class="logos" href="#"><img href="#" src="/images/facebooklogo.png" width="30%"></a>

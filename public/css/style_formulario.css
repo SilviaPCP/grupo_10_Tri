@@ -1,149 +1,164 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    background-image: url('/images/triathlon_login.jpg');
-    background-size: auto;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  @media (min-width: 760px){
-    .form-register {
-      display: flex;
-      flex-direction: column;
-      width: 50%;
-      background: white;
-      padding: 30px;
-      margin: auto;
-      margin-top: 100px;
-      border-radius: 4px;
-      font-family: 'calibri';
-      color: white;
-      box-shadow: 7px 13px 37px #000;
-      border: blue solid 1px;
-      border-radius: 35px;
-    }
-  }
-   
-  @media (max-width: 760px){
-    .form-register {
-      display: flex;
-      flex-direction: column;
-      width: 70%;
-      background: white;
-      padding: 30px;
-      margin: auto;
-      margin-top: 100px;
-      border-radius: 4px;
-      font-family: 'calibri';
-      color: white;
-      box-shadow: 7px 13px 37px #000;
-      border: blue solid 1px;
-      border-radius: 35px;
-    }
-  }
+body {
+  background-image: url('/images/triathlon_login.jpg');
+  background-size: auto;
+}
 
-  @media (max-width: 480px){
-    .form-register {
-      display: flex;
-      flex-direction: column;
-      width: 90%;
-      background: white;
-      padding: 30px;
-      margin: auto;
-      margin-top: 100px;
-      border-radius: 4px;
-      font-family: 'calibri';
-      color: white;
-      box-shadow: 7px 13px 37px #000;
-      border: blue solid 1px;
-      border-radius: 35px;
-    }
-  }
-
-  .form-register h4 {
-    font-size: 22px;
-    margin: 20px;
-    color: black;
-    text-align: center;
-    padding: 5px;
-  }
-  
-  .form-register .controls {
-    width: 100%;
-    background: white;
-    padding: 10px;
-    border-radius: 10px;
-    margin-bottom: 16px;
-    border: 1px solid #1f53c5;
-    font-family: --fuentePrincipal;
-    font-size: 18px;
-    color: black;
-  }
-  
-  .form-register p {
-    height: 40px;
-    text-align: center;
-    font-size: 18px;
-    line-height: 40px;
-    color: black;
-  }
-  
-  .form-register a {
-    text-align: center;
-    color: black;
-    text-decoration: none;
-    font-size: 18px;
-  }
-  
-  .form-register a:hover {
-    color: black;
-    text-decoration: underline;
-  }
-  
-  .form-register .botons {
+@media (min-width: 760px){
+  .form-register {
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    background: #1f53c5;
-    border: none;
-    padding: 1%;
+    flex-direction: column;
+    width: 70%;
+    background:var(--primario);
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
     color: white;
-    margin: 1%;
-    font-size: 16px;
+    box-shadow: 7px 13px 37px #000;
+    border: blue solid 1px;
     border-radius: 35px;
   }
-
-  .form-register .logos {
+}
+ 
+@media (max-width: 760px){
+  .form-register {
     display: flex;
-    width: 100%;
-    background: transparent;
-    border: none;
+    flex-direction: column;
+    width: 70%;
+    background: white;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    border: blue solid 1px;
+    border-radius: 35px;
   }
+}
 
-  /*Login*/
+@media (max-width: 480px){
+  .form-register {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background: white;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+    border: blue solid 1px;
+    border-radius: 35px;
+  }
+}
+
+.form-register h4 {
+  font-size: 22px;
+  margin: 20px;
+  color: black;
+  text-align: center;
+  padding: 5px;
+}
+
+.controls {
+  width: 100%;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #1f53c5;
+  font-family: --fuentePrincipal;
+  font-size: 18px;
+  color: black;
+}
+
+.text-danger{
+  font-weight: 400;
+  color: red;
+  text-align: center;
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+label {
+  font-weight: 400;
+  color: var(--blanco);
+  text-align: center;
+  font-size: 2rem;
+  margin: 1rem;
+}
+.form-register p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+  color: black;
+}
+
+.form-register a {
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.form-register a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+ .botons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background: #1f53c5;
+  border: none;
+  padding: 1%;
+  color: white;
+  margin: 1%;
+  font-size: 16px;
+  border-radius: 35px;
+}
+
+.logos {
+  display: flex;
+  width: 100%;
+  background: transparent;
+  border: none;
+}
+
+/*Login*/
 
 .HeadLogin {
-    font-family: --fuentePrincipal;
-    font-weight: 1000;
-    text-align: center;
-    font-size: 30px;
+  font-family: --fuentePrincipal;
+  font-weight: 1000;
+  text-align: center;
+  font-size: 30px;
 }
 
 .LoginGoogle {
-    display: flex;
-    width: 100%;
-    border: 0px;
-    background-color: transparent;
+  display: flex;
+  width: 100%;
+  border: 0px;
+  background-color: transparent;
 }
 
 .LoginFacebook {
-    display: flex;
-    width: 100%;
-    border: 0px;
-    background-color: transparent;
+  display: flex;
+  width: 100%;
+  border: 0px;
+  background-color: transparent;
 }
 
 

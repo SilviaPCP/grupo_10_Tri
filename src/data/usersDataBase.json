@@ -1,29 +1,40 @@
 [
-    {
-     "id": 1,
-     "firstName": "Silvia del Carmen",
-     "lastName": "Perez",
-     "email": "",
-     "password": "",
-     "category": "",
-     "image": ""
-    },
-    {
-        "id": 2,
-        "firstName": "Antonio",
-        "lastName": "Oropeza",
-        "email": "",
-        "password": "",
-        "category": "",
-        "image": ""
-    },
-    {
-        "id": 3,
-        "firstName": "Omar",
-        "lastName": "Diaz",
-        "email": "",
-        "password": "",
-        "category": "",
-        "image": ""
-    }
+ {
+  "id": 1,
+  "firstName": "Silvia del Carmen",
+  "lastName": "Perez",
+  "email": "",
+  "password": "",
+  "category": "",
+  "image": ""
+ },
+ {
+  "id": 2,
+  "firstName": "Antonio",
+  "lastName": "Oropeza",
+  "email": "",
+  "password": "",
+  "category": "",
+  "image": ""
+ },
+ {
+  "id": 3,
+  "firstName": "Omar",
+  "lastName": "Diaz",
+  "email": "",
+  "password": "",
+  "category": "",
+  "image": ""
+ },
+ {
+  "id": 4,
+  "firstName": "SILVIA",
+  "lastName": "PEREZ",
+  "email": "scpc@lim.com",
+  "password": "silvia",
+  "password2": "silvia",
+  "gender": "femenino",
+  "date": "2021-10-01",
+  "image": "image-1633605264220.gif"
+ }
 ]
