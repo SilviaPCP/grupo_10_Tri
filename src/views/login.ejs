@@ -4,7 +4,10 @@
 <!--Partial del head-->
 <%- include('partials/head', {title: 'Login'}) %>
     <!--Se dejaron afuera las ccs propias de la pagina-->
-    <link rel="stylesheet" href="css/style_formulario.css">
+    <link rel="stylesheet" href="/css/style_formulario.css">
+    <link rel="stylesheet" href="/css/productForm.css">
+    <link rel="stylesheet" href="/css/product.css">
+
     <title>Formulario</title>
 
     <header>
@@ -16,22 +19,42 @@
     </header>
 
     <body>
-        <section class="form-register">
+        <section>
             <p>Triathlon Store</p>
             <p>INGRESAR</p>
-            <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-            <input class="controls" type="password" name="pass1" id="correo" placeholder="Ingrese su contraseña">
-            <p>Estoy de acuerdo con</p>
-            <a href="#">Terminos y Condiciones</a>
-            <p><a class="botons" href="submit">Ingresar</a></p>
-            <p></p>
-            <p><a class="botons" href="recuperarpass">¿Olvidaste tu contraseña?</a></p>
-            <p></p>
-            <p><a class="botons" href="/users">¿Aún no te has registrado?</a></p>
-            <p></p>
+            <form action="/users/login" method="POST" enctype="multipart/form-data">
+                <div class="form-register">
+                    <label for="email">Correo electrónico:</label>
+                    <input class="form-camp" type="email" name="email" id="email" placeholder="Ingrese su Correo">
+                    <% if (locals.errors && errors.email) { %>
+                        <div class="text-danger">
+                            <%= errors.email.msg %>
+                        </div>
+                    <% } %>
+                    <label for="email">Password:</label>
+                    <input class="form-camp" type="password" name="password" id="password" placeholder="Ingrese su contraseña">
+                    <% if (locals.errors && errors.password) { %>
+                        <div class="text-danger">
+                            <%= errors.password.msg %>
+                        </div>
+                    <% } %>
+                    <p>Estoy de acuerdo con</p>
+                    <a href="#">Terminos y Condiciones</a>
+
+                    <button type="submit" class="botons">Ingresar</button>
+                    <button type="reset" class="botons">Limpiar</button>
+
+                    <p></p>
+            
+                    <p><a class="botons" href="recuperarpass">¿Olvidaste tu contraseña?</a></p>
+                    <p></p>
+                    <p><a class="botons" href="/users">¿Aún no te has registrado?</a></p>
+                    <p></p>
             <p>O bien ingresa a través de...</p>
             <a class="logos" href="#"><img href="#" src="/images/googlelogo.png" width="30%"></a>
             <a class="logos" href="#"><img href="#" src="/images/facebooklogo.png" width="30%"></a>
+        </div>
+    </form>
         </section>
 
     </body>

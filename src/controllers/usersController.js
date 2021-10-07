@@ -12,6 +12,21 @@ const controller = {
     index: (req,res) =>{
         res.render('formulario')
     },
+    login: (req,res)=>{
+        res.render('login');
+    },
+
+    validate: (req, res)=>{
+        const resultsValidationLogin = validationResult(req);
+          if(resultsValidationLogin.errors.length > 0){
+              return res.render('login', {
+                  errors: resultsValidationLogin.mapped(),
+                  oldData: req.body
+              })
+         } else{
+            res.redirect('/'); 
+         }
+    },
 
     store: (req, res)=> {
          const resultsValidation = validationResult(req);

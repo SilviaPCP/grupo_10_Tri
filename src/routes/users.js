@@ -41,9 +41,18 @@ const validations = [
     // })
 ]
 
+const validationsLogin = [
+    body('email').notEmpty().withMessage('Escribe tu email').bail()
+        .isEmail().withMessage('Debe tener un formato de correo electrónico'),
+    body('password').notEmpty().withMessage('Escribe tu password')
+]
+
+
 //router.get('/create', usersController.create);
 router.get('/', usersController.index);
+router.get('/login', usersController.login);
 router.post('/', upload.any(), validations, usersController.store);
+router.post('/login', upload.any(), validationsLogin, usersController.validate);
 
 //router.post('/', usersController.store);
 
