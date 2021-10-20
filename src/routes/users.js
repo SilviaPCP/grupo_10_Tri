@@ -31,7 +31,13 @@ const validations = [
         .isEmail().withMessage('Debe tener un formato de correo electrónico'),
     body('password').notEmpty().withMessage('Escribe tu password'),
     body('gender').notEmpty().withMessage('Selecciona tu género'),
-    body('date').notEmpty().withMessage('Captura tu fecha de nacimiento')
+    body('date').notEmpty().withMessage('Captura tu fecha de nacimiento'),
+    body('password').custom((value, { req })=>{
+        if(value!== req.body.password2){
+            throw new Error('Los passwords no coinciden');
+        }
+        return true;
+    })
     // body('image').custom((value, { req })=>{
     //     let file = req.file;
     //     if(!file) {
