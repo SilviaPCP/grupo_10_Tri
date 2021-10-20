@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const bcryptjs = require('bcryptjs'); 
 
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
 const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
@@ -38,7 +39,6 @@ const controller = {
          } 
          else {
             let image
-        
                 
              if (req.files[0] != undefined) {
                   image = req.files[0].filename
@@ -46,12 +46,18 @@ const controller = {
              } else {
                  image = 'default-image.png'
             }
-    
+
+            let passHash =bcryptjs.hashSync(req.body.password, 10);
+            
+
             let newUser = {
                 id: users[users.length - 1].id + 1,
                 ...req.body,
+                password: passHash,
+                password2: '',
                 image: image
             };
+            
             users.push(newUser)
 
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
