@@ -9,6 +9,8 @@ const usersController = require('../controllers/usersController');
 //CONFIG MULTER//
 const multer = require('multer');
 
+const guestMiddleware = require('../middlewares/guestMiddleware');
+
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'public/images/users/');
@@ -54,11 +56,13 @@ const validationsLogin = [
 ]
 
 
+
 //router.get('/create', usersController.create);
 router.get('/', usersController.index);
 router.get('/login', usersController.login);
 router.post('/', upload.any(), validations, usersController.store);
 router.post('/login', upload.any(), validationsLogin, usersController.validate);
+router.get('/', usersController.profile);
 
 //router.post('/', usersController.store);
 

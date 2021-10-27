@@ -10,64 +10,13 @@
  },
  {
   "id": 2,
-  "firstName": "Antonio",
-  "lastName": "Oropeza",
-  "email": "",
-  "password": "",
-  "category": "",
-  "image": ""
- },
- {
-  "id": 3,
-  "firstName": "Omar",
-  "lastName": "Diaz",
-  "email": "",
-  "password": "",
-  "category": "",
-  "image": ""
- },
- {
-  "id": 4,
   "firstName": "SILVIA",
   "lastName": "PEREZ",
-  "email": "scpc@lim.com",
-  "password": "silvia",
-  "password2": "silvia",
+  "email": "silvia@limvet.com.mx",
+  "password": "$2a$10$WptGFLgpl.pw3pdHhYAuOeJeRKz5fW0ZPBh63WyHf9c1MJRaX8ZMu",
+  "password2": "",
   "gender": "femenino",
   "date": "2021-10-01",
-  "image": "image-1633605264220.gif"
- },
- {
-  "id": 5,
-  "firstName": "LELO",
-  "lastName": "LELO",
-  "email": "LELO@IN.COM",
-  "password": "$2a$10$.0ntjtk/aHUzPQou4en7aus0Vr.L77ZoWByp8VD0891z.7xDAeLNe",
-  "password2": "",
-  "gender": "sinSelección",
-  "date": "2021-10-02",
-  "image": "default-image.png"
- },
- {
-  "id": 6,
-  "firstName": "111",
-  "lastName": "111",
-  "email": "111@ko.com",
-  "password": "$2a$10$0D9tfpBJcMssIpHPYQT7huHAuepZppiuQSyCP/MEXMiAJs/73WzFa",
-  "password2": "",
-  "gender": "femenino",
-  "date": "2021-10-03",
-  "image": "default-image.png"
- },
- {
-  "id": 7,
-  "firstName": "4444",
-  "lastName": "4444",
-  "email": "4444@vvv.com",
-  "password": "$2a$10$FoDTX7H9zio5soH8FwvbPuJgTDl1E0QhmZWorUFDUd2nCRwAAEwJy",
-  "password2": "",
-  "gender": "femenino",
-  "date": "2021-10-06",
-  "image": "default-image.png"
+  "image": "image-1635246972170.jpg"
  }
 ]

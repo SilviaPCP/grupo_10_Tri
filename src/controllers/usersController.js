@@ -16,17 +16,47 @@ const controller = {
     login: (req,res)=>{
         res.render('login');
     },
-
+    profile: (req,res)=>{
+        console.log('profiel');
+        res.render('userProfile');
+    },
     validate: (req, res)=>{
         const resultsValidationLogin = validationResult(req);
           if(resultsValidationLogin.errors.length > 0){
               return res.render('login', {
                   errors: resultsValidationLogin.mapped(),
                   oldData: req.body
-              })
-         } else{
-            res.redirect('/'); 
-         }
+              });
+         }          
+            //validando que le usuario exista
+           let Uemail = req.body.email;
+           let userFound = users.find(user => user.email === Uemail)
+//aqui entra si todo esta bien
+           if (userFound){
+            let isOKUser = bcryptjs.compareSync(req.body.password, userFound.password);
+            if (isOKUser){
+                delete userFound.password;
+                req.session.userLogged = userFound;
+                return res.render('index', {user: req.session.userLogged});
+            }
+            //password no coincide
+            return res.render('login', {
+                errors:{
+                    email:{
+                        msg: 'Password incorrecto'
+                    }
+                }
+            });
+
+
+           }
+           return res.render('login', {
+               errors:{
+                   email:{
+                       msg: 'Usuario no existente'
+                   }
+               }
+           });
     },
 
     store: (req, res)=> {
@@ -37,7 +67,21 @@ const controller = {
                   oldData: req.body
               })
          } 
-         else {
+         // mientras else {
+         let userInDB = users.find(user => user.email === req.body.email);
+
+            if (userInDB){
+                return res.render('formulario', {
+                    errors:{
+                        email: {
+                            msg: 'Este email ya esta registrado'
+                        }
+                    },
+                oldData: req.body
+                });
+            }
+         
+            
             let image
                 
              if (req.files[0] != undefined) {
@@ -61,9 +105,19 @@ const controller = {
             users.push(newUser)
 
             fs.writeFileSync(usersFilePath, JSON.stringify(users, null, ' '));
-            res.redirect('/');    
-        }
-    }
+            res.redirect('/login');    
+        //mientras}
+    },
+    findByPk: (req, res) => {
+        //console.log(req.params.id);
+        let id = req.params.id;
+        let userFound = users.find(users => user.id == id)
+        console.log("buscando");
+        //res.render('products/productsCons', {
+            //product,
+            //toThousand
+        //});
+    },
 }
 
 module.exports = controller;

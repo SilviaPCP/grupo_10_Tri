@@ -2,6 +2,7 @@
 const createError = require('http-errors');
 //const cookieParser = require('cookie-parser');
 const express = require('express');
+const session = require('express-session');
 //const logger = require('morgan');
 const path = require('path');
 const methodOverride = require('method-override'); // Pasar poder usar los métodos PUT y DELETE
@@ -11,6 +12,15 @@ const app = express();
 const mainRutas = require('./src/routes/mainRouter');
 const productsRouter = require('./src/routes/products'); // Rutas /products
 const usersRouter = require('./src/routes/users'); // Rutas /users
+const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
+
+app.use(session({
+   secret: "topsecret",
+   resave: false,
+   saveUninitialized: false,
+}));
+
+app.use(userLoggedMiddleware);
 
 app.use(express.static(path.resolve(__dirname, 'public')));
 app.use(express.urlencoded({ extended: false }));

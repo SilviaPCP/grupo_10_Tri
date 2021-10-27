@@ -1,8 +1,15 @@
 <header>
     <div class="top-header container">
+
+        <% if (!locals.isLogged) { %>
         <div class="base">
-            <a class="align" href="users/login"><i class="fas fa-user"></i></a>
+            <a class="align" href="users/login">
+             <i class="fas fa-user"></i></a>
         </div>
+        <% } else { %>
+            <p> Hello </p>>
+
+        <% } %>
         <div class="base first">
             <a class="base" href="/">
                 <p>Triathlon<span>Store</span></p>
