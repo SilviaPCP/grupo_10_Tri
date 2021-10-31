@@ -3,11 +3,11 @@
 
         <% if (!locals.isLogged) { %>
         <div class="base">
-            <a class="align" href="users/login">
+            <a class="align" href="/login">
              <i class="fas fa-user"></i></a>
         </div>
         <% } else { %>
-            <p> Hello </p>>
+            <p> <img src="/images/users/<%= locals.userLogged.image %>" width="30" style= "border-radius: 100%"> Hello <%= locals.userLogged.firstName %></p>
 
         <% } %>
         <div class="base first">
@@ -16,7 +16,7 @@
             </a>
         </div>
         <div class="base">
-            <a class="right" href="cartNew"><i class="fas fa-shopping-cart"></i></a>
+            <a class="right" href="/cartNew"><i class="fas fa-shopping-cart"></i></a>
         </div>
         <form class="form" action="/search" method="GET">
             <input class="input" type="text" placeholder="Buscar productos, marcas y más" name='keywords'>

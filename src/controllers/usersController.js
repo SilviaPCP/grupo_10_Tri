@@ -8,11 +8,13 @@ const usersImageFolder = path.join(__dirname, '/../public/images/users');
 
 // traer las validacinoes de formulario
 const { validationResult } = require('express-validator');
+const { url } = require('inspector');
+const { URLSearchParams } = require('url');
 
 const controller = {
-    index: (req,res) =>{
-        res.render('formulario')
-    },
+     index: (req,res) =>{
+         res.render('formulario')
+     },
     login: (req,res)=>{
         res.render('login');
     },
@@ -21,6 +23,8 @@ const controller = {
         res.render('userProfile');
     },
     validate: (req, res)=>{
+        // res.cookie('testing', 'Hola mundo', {maxAge: 1000 * 30});
+        // console.log(req.cookies.testing); 
         const resultsValidationLogin = validationResult(req);
           if(resultsValidationLogin.errors.length > 0){
               return res.render('login', {
@@ -37,7 +41,8 @@ const controller = {
             if (isOKUser){
                 delete userFound.password;
                 req.session.userLogged = userFound;
-                return res.render('index', {user: req.session.userLogged});
+                //return res.render('userProfile', {user: req.session.userLogged});
+                return res.redirect('/../index');
             }
             //password no coincide
             return res.render('login', {

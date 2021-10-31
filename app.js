@@ -1,6 +1,6 @@
 // ************ Require's ************
 const createError = require('http-errors');
-//const cookieParser = require('cookie-parser');
+const cookies = require('cookie-parser');
 const express = require('express');
 const session = require('express-session');
 //const logger = require('morgan');
@@ -13,6 +13,7 @@ const mainRutas = require('./src/routes/mainRouter');
 const productsRouter = require('./src/routes/products'); // Rutas /products
 const usersRouter = require('./src/routes/users'); // Rutas /users
 const userLoggedMiddleware = require('./src/middlewares/userLoggedMiddleware');
+const { cookie } = require('express-validator');
 
 app.use(session({
    secret: "topsecret",
@@ -20,6 +21,8 @@ app.use(session({
    saveUninitialized: false,
 }));
 
+
+app.use(cookies());
 app.use(userLoggedMiddleware);
 
 app.use(express.static(path.resolve(__dirname, 'public')));
