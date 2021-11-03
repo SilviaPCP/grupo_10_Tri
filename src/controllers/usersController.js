@@ -42,7 +42,7 @@ const controller = {
                 delete userFound.password;
                 req.session.userLogged = userFound;
                 //return res.render('userProfile', {user: req.session.userLogged});
-                return res.redirect('/../index');
+                return res.redirect('/../userProfile');
             }
             //password no coincide
             return res.render('login', {

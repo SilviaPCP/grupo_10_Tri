@@ -23,6 +23,9 @@ const controller = {
     login: (req, res) => {
         res.render('login');
     },
+    profile: (req, res) => {
+        res.render('userProfile');
+    },
     recuperarpass: (req, res) => {
         res.render('recuperarpass');
     },

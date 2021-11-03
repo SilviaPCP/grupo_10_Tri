@@ -469,6 +469,7 @@ main section article {
 
 .b-nav a {
     color: var(--blanco);
+    background-color: var(--blanco);
     text-decoration: none;
     font-size: 1.5rem;
     display: block;

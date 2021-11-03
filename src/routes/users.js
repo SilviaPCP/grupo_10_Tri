@@ -62,7 +62,7 @@ router.get('/', usersController.index);
 router.get('/login', usersController.login);
 router.post('/', upload.any(), validations, usersController.store);
 router.post('/login', upload.any(), validationsLogin, usersController.validate);
-//router.get('/', usersController.profile);
+
 
 //router.post('/', usersController.store);
 
