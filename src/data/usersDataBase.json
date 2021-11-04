@@ -29,5 +29,16 @@
   "gender": "femenino",
   "date": "2021-10-09",
   "image": "image-1635646482832.jpg"
+ },
+ {
+  "id": 4,
+  "firstName": "Antonio",
+  "lastName": "Oropeza Ugalde",
+  "email": "antonio.oroug@outlook.com",
+  "password": "$2a$10$40o6SVL6b6nIKDMqSRSWauT5cAy.0Yk6VzzkMK/TBQXXGUYwLDMOG",
+  "password2": "",
+  "gender": "masculino",
+  "date": "1997-04-12",
+  "image": "image-1636050240580.jpg"
  }
 ]
