@@ -56,3 +56,18 @@ y resolverlos con conjutno.
 Dejar de darleseguimeto de manera constnte al proyecto y subir trabajo son consultar
 
 
+Retrospectiva del trabajo en equipo del Sprint 5
+
+¿Qué problemas tuvimos?
+Algunos problmeas con las versiones en git, pero logramos ponernos de acuerdo para no volver a tener problemas de borrar las versiones y modiificaciones del otro.
+
+¿Qué hacer mas?
+Tenemos que comunicarnos mas en tiempo real sobre las dudas y sobre la parte del srpint que nos toca a cada quien, para poder apoyarnos mas y avanzar de manera mas rápida.
+
+¿Qué continuar haciendo?
+Continuar investiagando sobre los temas que mas se nos complican o que desconocemos y platicarlo y resolverlos en conjutno. Alguno puede tener el conocimiento que otro no tiene.
+
+¿Qué hacer menos?
+Distraernos del sprint que se debe entregar.
+
+
