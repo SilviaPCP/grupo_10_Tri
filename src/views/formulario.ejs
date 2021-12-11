@@ -5,8 +5,8 @@
 <%- include('partials/head', {title: 'Formulario'}) %>
 
     <!--Se dejaron afuera las ccs propias de la pagina-->
-    <link rel="stylesheet" href="css/style_formulario.css">
-    <link rel="stylesheet" href="css/productForm.css">
+    <link rel="stylesheet" href="/css/style_formulario.css">
+    <link rel="stylesheet" href="/css/productForm.css">
     <link rel="stylesheet" href="/css/product.css">
 
     <title>Formulario</title>
@@ -25,17 +25,17 @@
             <form action="/users" method="POST" enctype="multipart/form-data">
                 <div class="form-register">
                     <label for="nombre">Nombre:</label>
-                    <input  class="form-camp" type="text" name="firstName" id="nombre" placeholder="Ingrese su Nombre" value="<%= locals.oldData ? oldData.firstName : null %>">
-                    <% if (locals.errors && errors.firstName) { %>
+                    <input  class="form-camp" type="text" name="first_name" id="nombre" placeholder="Ingrese su Nombre" value="<%= locals.oldData ? oldData.first_name : null %>">
+                    <% if (locals.errors && errors.first_name) { %>
                         <div class="text-danger">
-                            <%= errors.firstName.msg %>
+                            <%= errors.first_name.msg %>
                         </div>
                     <% } %>
                     <label for="lastName">Apellido:</label>
-                    <input  class="form-camp" type="text" name="lastName" id="apellido" placeholder="Ingrese su Apellido" value="<%= locals.oldData ? oldData.lastName : null %>">
-                    <% if (locals.errors && errors.lastName) { %>
+                    <input  class="form-camp" type="text" name="last_name" id="apellido" placeholder="Ingrese su Apellido" value="<%= locals.oldData ? oldData.last_name : null %>">
+                    <% if (locals.errors && errors.last_name) { %>
                         <div class="text-danger">
-                            <%= errors.lastName.msg %>
+                            <%= errors.last_name.msg %>
                         </div>
                     <% } %>
                     <label for="email">Correo Electrónico:</label>

@@ -1,16 +1,5 @@
 [
  {
-  "id": 1,
-  "name": "Mono trifunción",
-  "price": "1800",
-  "discount": "5",
-  "category": "swim",
-  "description": "Nuestro equipo de triatletas apasionados(as) ha creado este mono trifunción, equipamiento icónico e imprescindible, para tus primeros triatlones larga distancia   ",
-  "color": "Negro",
-  "size": "Grande",
-  "image": "destacado1.jpg"
- },
- {
   "id": 2,
   "name": "Mochila transición",
   "price": "1490",
@@ -32,17 +21,6 @@
   "image": "destacado3.jpg"
  },
  {
-  "id": 4,
-  "name": "Reloj pulsómetro",
-  "price": "1000",
-  "discount": "20",
-  "category": "run",
-  "description": "Mide tu regularidad o de tu progresión en una distancia fija. La función Tiempo intermedio permite medir el tiempo de paso en una marca determinada (vuelta de pista, kilómetro, etc.). ",
-  "color": "Negro",
-  "size": "Unitalla",
-  "image": "destacado4.jpg"
- },
- {
   "id": 10,
   "name": "Ejemplo s/imagen",
   "price": "5892",
@@ -54,6 +32,38 @@
  },
  {
   "id": 11,
+  "name": "",
+  "price": "",
+  "discount": "",
+  "description": "",
+  "color": "",
+  "size": "",
+  "image": "default-image.png"
+ },
+ {
+  "id": 12,
+  "name": "BICICLETA SPECIALIZED 3000",
+  "price": "67000",
+  "discount": "15",
+  "category": "bike",
+  "description": "Probablemente no hay una bicicleta más rápida en el circo de triatlón que el Aerium C:68 SL. Responsables de tanta velocidad y alto rendimiento son su innovadora aerodinámica y la cuidadosa selección de componentes de alta gama.",
+  "color": "GRIS ",
+  "size": "M",
+  "image": "default-image.png"
+ },
+ {
+  "id": 13,
+  "name": "Bici Aerium C:68 SL Low",
+  "price": "76000",
+  "discount": "10",
+  "category": "bike",
+  "description": "Probablemente no hay una bicicleta más rápida en el circo de triatlón que el Aerium C:68 SL. Responsables de tanta velocidad y alto rendimiento son su innovadora aerodinámica y la cuidadosa selección de componentes de alta gama.",
+  "color": "gris/blanco",
+  "size": "MED",
+  "image": "default-image.png"
+ },
+ {
+  "id": 14,
   "name": "",
   "price": "",
   "discount": "",

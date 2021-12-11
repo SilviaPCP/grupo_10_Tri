@@ -7,7 +7,7 @@
              <i class="fas fa-user"></i></a>
         </div>
         <% } else { %>
-            <a href="userProfile"><p> <img src="/images/users/<%= locals.userLogged.image %>" width="30" style= "border-radius: 100%"> Hello <%= locals.userLogged.firstName %></p></a>
+            <a href="/userProfile"><p> <img src="/images/users/<%= locals.userLogged.image %>" width="30" style= "border-radius: 100%"> Hello <%= locals.userLogged.first_name %></p></a>
 
         <% } %>
         <div class="base first">

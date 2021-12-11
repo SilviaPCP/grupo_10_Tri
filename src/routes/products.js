@@ -19,19 +19,33 @@ const storage = multer.diskStorage({
 })
 const upload = multer({ storage: storage });
 
+//NUEVO REQUERIR validator
+const { body } = require('express-validator');
+
+// arreglo de validaciones 
+const prodsValidations = [
+    body('product_name').notEmpty().withMessage('Escribe nombre del producto'),
+    body('price').notEmpty().withMessage('Escribe el precio'),
+    body('discount').notEmpty().withMessage('Escribe el descuento'),
+    body('category').notEmpty().withMessage('Selecciona la categoría'),
+    body('description').notEmpty().withMessage('Escribe la descripción del producto'),
+    body('color').notEmpty().withMessage('Escribe el color del producto'),
+    body('size').notEmpty().withMessage('Escibre la talla del producto')
+]
+
 /*** GET ALL PRODUCTS ***/
 router.get('/', productsController.index);
 
 /*** CREATE ONE PRODUCT ***/
 router.get('/create', productsController.create);
-router.post('/', upload.any(), productsController.store);
+router.post('/', upload.any(), prodsValidations, productsController.store);
 
 /*** GET ONE PRODUCT ***/
 router.get('/detail/:id', productsController.detail);
 
 /*** EDIT ONE PRODUCT ***/
 router.get('/edit/:id', productsController.edit);
-router.patch('/edit/:id', upload.any(), productsController.update);
+router.patch('/edit/:id', upload.any(), prodsValidations, productsController.update);
 
 /*** DELETE ONE PRODUCT ***/
 router.delete('/delete/:id', productsController.destroy);

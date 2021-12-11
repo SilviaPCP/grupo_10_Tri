@@ -29,5 +29,16 @@
   "gender": "femenino",
   "date": "2021-10-09",
   "image": "image-1635646482832.jpg"
+ },
+ {
+  "id": 4,
+  "firstName": "LARISA",
+  "lastName": "PEREZ",
+  "email": "larisa@limvet.com.mx",
+  "password": "$2a$10$uzI/w0p8fAT1VxuTmAaVv.OwQuChI3A9rIB7CCrZcDNLsMnhPAfJ.",
+  "password2": "",
+  "gender": "femenino",
+  "date": "2005-09-28",
+  "image": "default-image.png"
  }
 ]

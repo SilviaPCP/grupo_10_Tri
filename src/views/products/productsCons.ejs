@@ -14,19 +14,19 @@
                 <div class="headProd">
                     <h1>Consulta de Productos</h1>
 
-                    <form action="/products/detail/<%= product.id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+                    <form action="/products/detail/<%= product.product_id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
                         <div class="formProd">
-                            <label for="id">Id del producto</label>
-                            <input class="form-camp" type="number" id="id" name="id" value="<%= product.id %>" disabled>
+                            <label for="id">Id del producto: <%= product.product_id %> </label>
+                            <input class="form-camp" type="number" id="id" name="id" value="<%= product.product_id %>" disabled>
 
                             <label for="name">Nombre del producto</label>
-                            <input class="form-camp" type="text" id="name" name="name" value="<%= product.name%>" disabled>
+                            <input class="form-camp" type="text" id="name" name="name" value="<%= product.product_name%>" disabled>
 
                             <div class="f-blocks">
                                 <img class="i-margin form-block" src="/images/products/<%= product.image %>" alt="Imagen del producto">
                                 <div class="product-container form-block">
                                     <div class="info-product f-info">
-                                        <p class="product-price f-price"><span>$<%= product.price %> </span></p>
+                                        <p class="product-price f-price"><span>$<%= toThousand(product.price) %> </span></p>
                                         <p class="product-discount f-price"><span><%= product.discount %>% off </span></p>
                                     </div>
                                     <p class="final-price">Precio Final:
@@ -38,7 +38,7 @@
 
                                                 <% } else { %>
 
-                                                    <%= product.price %>
+                                                    <%= toThousand(product.price) %>
 
                                                         <% } %>
 
@@ -52,15 +52,19 @@
 
 
                             <div class="b-container">
-                                <a href="/products/edit/<%= product.id %>" class="form-input">Editar</a>
+                                <% if (locals.isLogged) { %>
+                                <a href="/products/edit/<%= product.product_id %>" class="form-input">Editar</a>
+                                <% } %>
                                 <a href="/products" class="form-input b-margin">Regresar</a>
                             </div>
 
                         </div>
                     </form>
-                    <form action="/products/delete/<%= product.id %>?_method=DELETE" method="POST">
-                        <button class="form-input b-margin b-delete">Eliminar</button>
-                    </form>
+                    <% if (locals.isLogged) { %>
+                        <form action="/products/delete/<%= product.product_id %>?_method=DELETE" method="POST">
+                            <button class="form-input b-margin b-delete">Eliminar</button>
+                        </form>                            
+                    <% } %>
                 </div>
             </main>
     </body>

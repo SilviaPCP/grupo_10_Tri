@@ -18,7 +18,8 @@
                     let finalPrice = (product.price * ((100 - product.discount) / 100)).toFixed(0)
                 %>
                                 <article>
-                                    <a href="/products/detail/<%= product.id %>"><img src="/images/products/<%= product.image %>" alt="Imagen del producto"></a>
+                                    <a href="/products/detail/<%= product.product_id %>"> 
+                                        <h1><%= product.product_name %></h1> <img src="/images/products/<%= product.image %>" alt="Imagen del producto"></a>
                                     <div class="main-article">
                                         <% if (product.category == "swim") { %>
                                             <i class="fas fa-swimmer"></i>
@@ -31,7 +32,7 @@
                                                             <p class="price">
                                                                 <% if (product.price != null) { %>
                                                                     $
-                                                                    <%= product.price %>
+                                                                    <%= toThousand(product.price) %>
                                                                         <% } else { %>
                                                                             $0
                                                                             <% } %>
@@ -45,7 +46,7 @@
                                                             </p>
                                                         </div>
                                                         <p class="description">
-                                                            <%= product.name %>
+                                                            <%= product.description %>
                                                         </p>
                                     </div>
                                 </article>

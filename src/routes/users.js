@@ -27,8 +27,8 @@ const upload = multer({ storage: storage });
 const { body } = require('express-validator');
 // arreglo de validaciones 
 const validations = [
-    body('firstName').notEmpty().withMessage('Escribe tu nombre'),
-    body('lastName').notEmpty().withMessage('Escribe tu apellido'),
+    body('first_name').notEmpty().withMessage('Escribe tu nombre'),
+    body('last_name').notEmpty().withMessage('Escribe tu apellido'),
     body('email').notEmpty().withMessage('Escribe tu email').bail()
         .isEmail().withMessage('Debe tener un formato de correo electrónico'),
     body('password').notEmpty().withMessage('Escribe tu password'),
