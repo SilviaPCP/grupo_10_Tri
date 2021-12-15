@@ -3,7 +3,7 @@ const path = require('path');
 const bcryptjs = require('bcryptjs'); 
 
 const usersFilePath = path.join(__dirname, '../data/usersDataBase.json');
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+//const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const usersImageFolder = path.join(__dirname, '/../public/images/users');
 
 // traer las validacinoes de formulario
@@ -122,9 +122,8 @@ const controller = {
 
     store: (req, res)=> {
          const resultsValidation = validationResult(req);
-         
           if(resultsValidation.errors.length > 0){
-              console.log(resultsValidation.errors.length);
+              console.log(resultsValidation.errors);
               return res.render('formulario', {
                   errors: resultsValidation.mapped(),
                   oldData: req.body
@@ -217,16 +216,16 @@ const controller = {
         //     res.redirect('/login');    
         // //mientras}
     },
-    findByPk: (req, res) => {
-        //console.log(req.params.id);
-        let id = req.params.id;
-        let userFound = users.find(users => user.id == id)
-        console.log("buscando");
-        //res.render('products/productsCons', {
-            //product,
-            //toThousand
-        //});
-    },
+    // findByPk: (req, res) => {
+    //     //console.log(req.params.id);
+    //     let id = req.params.id;
+    //     let userFound = users.find(users => user.id == id)
+    //     console.log("buscando");
+    //     //res.render('products/productsCons', {
+    //         //product,
+    //         //toThousand
+    //     //});
+    // },
 }
 
 module.exports = controller;
