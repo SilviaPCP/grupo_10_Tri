@@ -123,7 +123,7 @@ const controller = {
     store: (req, res)=> {
          const resultsValidation = validationResult(req);
           if(resultsValidation.errors.length > 0){
-              console.log(resultsValidation.errors);
+              //console.log(resultsValidation.errors);
               return res.render('formulario', {
                   errors: resultsValidation.mapped(),
                   oldData: req.body
@@ -161,6 +161,20 @@ const controller = {
 
             db.User.create(
                 {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     first_name: req.body.first_name,
                     last_name: req.body.last_name,
                     email: req.body.email,

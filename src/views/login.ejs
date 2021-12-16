@@ -20,7 +20,8 @@
 
     <body>
         <section>
-            <form action="/users/login" method="POST" enctype="multipart/form-data">
+            <ul class="mostrarFormulario errores"></ul>
+            <form class="form" action="/users/login"  method="POST" enctype="multipart/form-data">
                 <div class="form-register">
                     <label for="email">Correo electrónico:</label>
                     <input class="form-camp" type="email" name="email" id="email" placeholder="Ingrese su Correo">
@@ -39,7 +40,7 @@
                     <p>Estoy de acuerdo con</p>
                     <a href="#">Terminos y Condiciones</a>
 
-                    <button type="submit" class="botons">Ingresar</button>
+                    <button type="submit" class="form-input b-margin">Ingresar</button>
                     <button type="reset" class="botons">Limpiar</button>
 
                     <p></p>
@@ -54,13 +55,6 @@
         </div>
     </form>
         </section>
-
+        <script src="/js/loginValidator.js"></script> 
     </body>
-
 </html>
-
-<!--Partial del footer desde social media-->
-<%- include ('partials/footer')%>
-    </body>
-
-    </html>

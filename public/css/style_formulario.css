@@ -160,3 +160,27 @@ label {
   border: 0px;
   background-color: transparent;
 }
+
+/*Clases creadas para el otorgamiento de CSS a los formularios*/
+.mostrarFormulario{
+  margin: auto;
+  margin-top: 20px;
+  width: 40%;
+  border-radius: 10px;
+}
+
+.is-valid {
+  color: #198754;
+}
+
+.is-invalid {
+  color: #842029;
+}
+
+.alert-warning{
+  color:#842029;
+  background-color: #F8D7DA;
+  text-align: center;
+  font-size: large;
+  border-radius: 10px;
+}

@@ -22,17 +22,18 @@
     <body>
 
         <section >
-            <form action="/users" method="POST" enctype="multipart/form-data">
+            <ul class="mostrarFormulario errores"></ul>
+            <form class="form" action="/users" method="POST" enctype="multipart/form-data">
                 <div class="form-register">
                     <label for="nombre">Nombre:</label>
-                    <input  class="form-camp" type="text" name="first_name" id="nombre" placeholder="Ingrese su Nombre" value="<%= locals.oldData ? oldData.first_name : null %>">
+                    <input  class="form-camp" type="text" name="first_name" id="first_name" placeholder="Ingrese su Nombre" value="<%= locals.oldData ? oldData.first_name : null %>">
                     <% if (locals.errors && errors.first_name) { %>
                         <div class="text-danger">
                             <%= errors.first_name.msg %>
                         </div>
                     <% } %>
                     <label for="lastName">Apellido:</label>
-                    <input  class="form-camp" type="text" name="last_name" id="apellido" placeholder="Ingrese su Apellido" value="<%= locals.oldData ? oldData.last_name : null %>">
+                    <input  class="form-camp" type="text" name="last_name" id="last_name" placeholder="Ingrese su Apellido" value="<%= locals.oldData ? oldData.last_name : null %>">
                     <% if (locals.errors && errors.last_name) { %>
                         <div class="text-danger">
                             <%= errors.last_name.msg %>
@@ -55,13 +56,13 @@
                     <label for="password2">Confirmación de password:</label>
                     <input class="form-camp" type="password" name="password2" id="password2" placeholder="Ingrese otra vez su contraseña">
                     <label for="genero">Selecciona tu género:</label>
-                    <select class="form-camp" name="gender" placeholder="Género">
+                    <select class="form-camp" name="gender" id="gender" placeholder="Género">
                         <option value="sinSelección" selected>Selecciona género</option>
                         <option value="femenino">Femenino</option>
                         <option value="masculino">Masculino</option>
                     </select>
                     <label for="date">Ingresa tu fecha de Nacimiento:</label>
-                    <input class="form-camp" type="date" name="date" value="<%= locals.oldData ? oldData.date : null %>">
+                    <input class="form-camp" type="date" name="date" id="date" value="<%= locals.oldData ? oldData.date : null %>">
                     <% if (locals.errors && errors.date) { %>
                         <div class="text-danger">
                             <%= errors.date.msg %>
@@ -87,6 +88,6 @@
 
         <!--Partial del footer desde social media-->
         <%- include ('partials/footer')%>
+        <script src="/js/usersValidator.js"></script> 
     </body>
-
 </html>

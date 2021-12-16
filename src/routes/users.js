@@ -44,7 +44,6 @@ const validations = [
         }
         return true;
     }),
-    
       body('image').custom((value, { req })=>{
           let file = req.files;
          if(file=="") {
