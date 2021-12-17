@@ -43,7 +43,6 @@ const controller = {
 //nuevo BD
 
     'detail': (req, res) => {
-        console.log('ya entre a detail')
         db.Product.findByPk(req.params.id)
             .then(product => {
                 res.render('products/productsCons', {product, toThousand});
@@ -53,7 +52,6 @@ const controller = {
     //BD NUEVO EDIT
 
     'edit': function(req, res) {
-        console.log('ya entre a EDIT')
         let prodId = req.params.id;
         db.Product.findByPk(prodId)
         .then(product => {
@@ -64,8 +62,6 @@ const controller = {
     //BD NUEVO UPDATE
     update: function (req,res) {
         let prodId = req.params.id;
-        console.log("entre a update");
-
         
        let image        
        if (req.files[0] != undefined) {
@@ -95,7 +91,7 @@ const controller = {
  
     // DBDelete - Delete one product
     destroy: (req, res) => {
-        console.log('entre a destroy')
+
         let prodId = req.params.id;
         db.Product.destroy({where: {product_id: prodId}, force: true})
         .then(()=>{
@@ -124,7 +120,6 @@ const controller = {
 
     // Create - Form to create
     create: (req, res) => {
-        console.log("create");
         res.render('products/productsForm');
     },
 

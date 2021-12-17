@@ -27,7 +27,6 @@ const controller = {
         res.render('login');
     },
     profile: (req,res)=>{
-        console.log('profiel');
         res.render('userProfile');
     },
     validate: (req, res)=>{

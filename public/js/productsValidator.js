@@ -9,57 +9,57 @@ window.onload = function(){
 
     //------DESDE AQUÍ CONTINÚE CON LAS VALIDACIONES DEL FORMULARIO //
     //-------------------DE REGISTRO DE PELÍCULAS------------------//    
-
-    let form = document.querySelector(".form");
-    form.addEventListener('submit', (e) => {
-
+    
+    let form = document.querySelector(".forma");    
+    form.addEventListener('submit', (e) => {    
         let errors = [];
-        let firstName = document.querySelector('#first_name');
-        let lastName = document.querySelector('#last_name');
-        let email = document.querySelector('#email');
-        let password = document.querySelector('#password');
-        let gender = document.querySelector('#gender');
-        let date = document.querySelector('#date');
+        let productName = document.querySelector('#product_name');
+        let price = document.querySelector('#price');
+        let discount = document.querySelector('#discount');
+        let category = document.querySelector('#category');
+        let description = document.querySelector('#description');
+        let color = document.querySelector('#color');
+        let size = document.querySelector('#size');
         let image = document.querySelector('#image');
 
-        if (firstName.value == '' ) {
-            errors.push('El campo nombre no puede estar vacío');    
+
+        if (productName.value == '' ) {
+            errors.push('El campo nombre de producto no puede estar vacío');    
         }else {
-            if(firstName.value.length < 2) {
-              errors.push('El campo nombre debe ser mayor a 2 caracteres');    
+            if(productName.value.length < 5) {
+              errors.push('El campo nombre de producto debe ser mayor a 5 caracteres');    
             };
         };
         
-        if (lastName.value == '') {
-             errors.push('El campo apellido no puede estar vacío');
-        }else{
-            if (lastName.value.length < 2) {
-                errors.push('El campo apellido debe ser mayor a 2 caracteres');    
-            }
+        if (price.value == '') {
+             errors.push('El precio no puede estar vacío');
+        };
+        
+        if (discount.value == '') {
+             errors.push('El campo descuento no puede estar vacío');
         };
 
         
-        if (email.value == '') {
-             errors.push('El campo email no puede estar vacío');
-        };
-
-        
-        if (password.value == '') {
-             errors.push('El campo password no puede estar vacío');
-        }else{
-            if (password.value.length < 8) {
-                errors.push('El password debe ser mayor a 8 caracteres');    
-            }
+        if (category.value == 'Elige categoria') {
+             errors.push('Debes seleccionar una categoría');
         };      
         
-        if (gender.value == '') {
-            errors.push('El campo género no puede estar vacío');
+        if (description.value == '') {
+            errors.push('La descripción no puede estar vacía');
+        }else{
+            if(description.value.length < 20) {
+                errors.push('La descripción debe ser mayor a 20 caracteres');    
+              };
         };
         
-        if (date.value == '') {
-            errors.push('El campo fecha de nacimiento no puede estar vacío');
+        if (color.value == '') {
+            errors.push('El campo color no puede estar vacío');
         };
         
+        if (size.value == '') {
+            errors.push('La talla no puede estar vacío');
+        };
+
         if (image.value == '') {
             errors.push('El campo imagen no puede estar vacío');
         }else{
@@ -88,7 +88,5 @@ window.onload = function(){
              alert('La validación fué exitosa')
             form.submit();
          }
-
     });
-
 }

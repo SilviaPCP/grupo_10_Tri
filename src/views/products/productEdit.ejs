@@ -6,6 +6,7 @@
     <!--Se dejaron afuera las ccs propias de la pagina-->
     <link rel="stylesheet" href="/css/productsForm.css">
     <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/style_formulario.css">
 
     <body>
 
@@ -15,8 +16,8 @@
             <!--Partial del menu seleccion-->
             <%- include('../partials/menu') %>
                 <h2>Edición de producto:</h2>
-
-                <form action="/products/edit/<%= product.product_id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+                <ul class="mostrarFormulario errores"></ul>
+                <form class="forma" action="/products/edit/<%= product.product_id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
                     <div class="formProd">
                         <label for="name">Nombre del producto:</label>
                         <input class="form-camp" type="text" id="product_name" name="product_name" value="<%= product.product_name %>">
@@ -45,6 +46,8 @@
                         <input class="form-camp" type="text" id="size" name="size" value="<%= product.size %>">
 
                         <label for="imagen">Imagen del producto</label>
+                        <img class="i-margin form-block" src="/images/products/<%= product.image %>" alt="Imagen del producto">
+                        <label for="imagen"><%= product.image %></label>
                         <input class="form-camp" type="file" name="image" id="image" value="<%= product.image %>">
 
                         <div class="b-container">
@@ -52,7 +55,7 @@
                             <button type="reset" class="form-input b-margin">Limpiar</button>
                         </div>
 
-                    </div>
+            <script src="/js/productsValidator.js"></script>                     </div>
     </body>
 
 </html>

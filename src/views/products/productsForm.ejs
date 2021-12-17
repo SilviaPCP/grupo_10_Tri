@@ -9,14 +9,15 @@
 
     <body>
         <%- include('../partials/header') %>
+                    <!--Partial del menu seleccion-->
+            <%- include('../partials/menu') %>
             <main>
 
                 <div class="headProd">
                     <h1> Alta de Productos</h1>
-
-                    <form action="/products" method="POST" enctype="multipart/form-data">
+                    <ul class="mostrarFormulario errores"></ul>
+                    <form class="forma" action="/products" method="POST" enctype="multipart/form-data">
                         <div class="formProd">
-
                             <label for="producto">Nombre del producto:</label>
                             <input class="form-camp" type="text" id="product_name" name="product_name" placeholder="Ej: Zapatillas Reebok" value="<%= locals.oldData ? oldData.product_name : null %>">
                             <% if (locals.errors && errors.product_name) { %>
@@ -88,10 +89,9 @@
 
                         </div>
                     </form>
-
                 </div>
 
             </main>
-        <script src="/public/js/productsValidator.js"></script> 
+        <script src="/js/productsValidator.js"></script> 
     </body>
 </html>
