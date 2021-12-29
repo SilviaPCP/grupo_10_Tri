@@ -13,8 +13,7 @@
             <main>
                 <div class="headProd">
                     <h1>Consulta de Productos</h1>
-
-                    <form action="/products/detail/<%= product.product_id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
+                    <form class="form1" action="/products/detail/<%= product.product_id %>?_method=PATCH" method="POST" enctype="multipart/form-data">
                         <div class="formProd">
                             <label for="id">Id del producto: <%= product.product_id %> </label>
                             <input class="form-camp" type="number" id="id" name="id" value="<%= product.product_id %>" disabled>
@@ -61,12 +60,12 @@
                         </div>
                     </form>
                     <% if (locals.isLogged) { %>
-                        <form action="/products/delete/<%= product.product_id %>?_method=DELETE" method="POST">
-                            <button class="form-input b-margin b-delete">Eliminar</button>
-                        </form>                            
+                        <form class="forma" action="/products/delete/<%= product.product_id %>?_method=DELETE" method="POST" enctype="multipart/form-data">
+                            <button type="submit" class="form-input b-margin b-delete">Eliminar</button>
+                        </form>
                     <% } %>
                 </div>
             </main>
+        <script src="/js/confirma.js"></script> 
     </body>
-
 </html>

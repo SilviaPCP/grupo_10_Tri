@@ -29,6 +29,13 @@ const controller = {
     profile: (req,res)=>{
         res.render('userProfile');
     },
+    logout:(req, res)=>{
+        // req.session.userLogged = false;
+        // req.session = false;
+        // res.locals.isLogged = false;
+        req.session.destroy();
+        return res.redirect('/');
+    },
     validate: (req, res)=>{
       //  res.cookie('testing', 'Hola mundo', {maxAge: 1000 * 30});
         const resultsValidationLogin = validationResult(req);
@@ -160,20 +167,6 @@ const controller = {
 
             db.User.create(
                 {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                     first_name: req.body.first_name,
                     last_name: req.body.last_name,
                     email: req.body.email,

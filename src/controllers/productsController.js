@@ -8,12 +8,14 @@ const productsImageFolder = path.join(__dirname, '/../public/images/products');
 //NUEVO BD
 const db = require('../../database/models');
 const sequelize = db.sequelize;
+const Op = db.Sequelize.Op;
 
 //Otra forma de llamar a los modelos
 const Products = db.Product;
 
 //TRAER VALIDACIONES DE ALTA PRODS
 const { validationResult } = require('express-validator');
+const { response } = require('express');
 
 const toThousand = n => n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 // const visited = products.filter(function(product) {
@@ -36,6 +38,12 @@ const controller = {
         db.Product.findAll()
             .then(products => {
                 res.render('products/products.ejs', {products, toThousand})
+                //Empezando con la API
+                // return res.status(200).json({
+                //     total: products.length,
+                //     data: products,
+                //     status: 200
+                // })
             })
     },
 
@@ -46,6 +54,11 @@ const controller = {
         db.Product.findByPk(req.params.id)
             .then(product => {
                 res.render('products/productsCons', {product, toThousand});
+                //API
+            //     return res.status(200).json({
+            //         data: product,
+            //         status: 200
+            //     })
             });
     },
 
@@ -59,10 +72,45 @@ const controller = {
         })
     },
 
+    search: function(req, res) {
+        let search = req.query.keywords;
+        search = '%'+search+'%';
+
+        console.log(search)
+        db.Product.findAll({
+            where: {
+                product_name: {[Op.like]: search }
+            }
+        })
+
+        .then(products => {
+            res.render('products/products.ejs', {products, toThousand})
+        })
+    },
+
+    category: function(req, res) {
+        let search = req.params.cat;
+        search = '%'+search+'%';
+        
+        console.log(search)
+        
+        db.Product.findAll({
+            where: {
+                category: {[Op.like]: search }
+            }
+        })
+        
+
+        .then(products => {
+            res.render('products/products.ejs', {products, toThousand})
+        })
+
+    },
+
+
     //BD NUEVO UPDATE
     update: function (req,res) {
         let prodId = req.params.id;
-        
        let image        
        if (req.files[0] != undefined) {
            image = req.files[0].filename
@@ -91,9 +139,13 @@ const controller = {
  
     // DBDelete - Delete one product
     destroy: (req, res) => {
-
         let prodId = req.params.id;
+        console.log(prodId)
         db.Product.destroy({where: {product_id: prodId}, force: true})
+        // .then(response=>{
+        //      return res.json(response)
+        // })
+
         .then(()=>{
             return res.redirect('/products')})
         .catch(error => res.send(error)) 
@@ -125,36 +177,46 @@ const controller = {
 
     //DB NUEVO STORE
     store: function (req, res) {
-        const resultsValidation = validationResult(req);
-        if(resultsValidation.errors.length > 0){
-            return res.render('products/productsForm', {
-                errors: resultsValidation.mapped(),
-                oldData: req.body
-            })
-       } 
+         const resultsValidation = validationResult(req);
+         if(resultsValidation.errors.length > 0){
+             return res.render('products/productsForm', {
+                 errors: resultsValidation.mapped(),
+                 oldData: req.body
+             })
+        } 
 
-       let image        
-        if (req.files[0] != undefined) {
-            image = req.files[0].filename
-        } else {
-            image = 'default-image.png'
-        }
+        let image        
+         if (req.files[0] != undefined) {
+             image = req.files[0].filename
+         } else {
+             image = 'default-image.png'
+         }
 
         db.Product.create(
             {
-                product_name: req.body.product_name,
-                price: req.body.price,
-                discount: req.body.discount,
-                category: req.body.category,
-                description: req.body.description,
-                color: req.body.color,
-                size: req.body.size,
-                image: image
-            },
-        )
-        .then(()=> {
-            return res.redirect('/products')})   
-        .catch(error => res.send(error))
+        
+            //API
+            // .create(req.body)
+            // .then(product =>{
+            //      return res.status(200).json({
+            //         data: product,
+            //         status: 200,
+            //         created: 'ok'
+            //     })
+            // })
+                 product_name: req.body.product_name,
+                 price: req.body.price,
+                 discount: req.body.discount,
+                 category: req.body.category,
+                 description: req.body.description,
+                 color: req.body.color,
+                 size: req.body.size,
+                 image: image
+             })
+
+         .then(()=> {
+             return res.redirect('/products')})   
+         .catch(error => res.send(error))
     },
     
     // Create -  Method to store

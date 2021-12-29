@@ -50,4 +50,9 @@ router.patch('/edit/:id', upload.any(), prodsValidations, productsController.upd
 /*** DELETE ONE PRODUCT ***/
 router.delete('/delete/:id', productsController.destroy);
 
+//search
+router.get('/search', productsController.search);
+
+router.get('/searchCategory/:cat', productsController.category);
+
 module.exports = router;

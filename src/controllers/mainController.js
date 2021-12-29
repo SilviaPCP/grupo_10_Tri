@@ -40,16 +40,17 @@ const controller = {
     },
     prodsCons: (req, res) => {
         res.render('productsCons');
-    },
-    search: (req, res) => {
-        let search = req.query.keywords;
-        let productsToSearch = products.filter(product => product.name.toLowerCase().includes(search));
-        res.render('results', {
-            products: productsToSearch,
-            search,
-            toThousand,
-        });
     }
+    //search: (req, res) => {
+        //res.render('search');
+        // let search = req.query.keywords;
+        // let productsToSearch = products.filter(product => product.name.toLowerCase().includes(search));
+        // res.render('results', {
+        //     products: productsToSearch,
+        //     search,
+        //     toThousand,
+        //});
+    //}
 
 };
 

@@ -35,7 +35,7 @@ const validations = [
         .isEmail().withMessage('Debe tener un formato de correo electrónico'),
     body('password').notEmpty().withMessage('Escribe tu password')
         .isLength({min: 8}).withMessage('Password debe tener al menos 8 carateres')
-        .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/, "i").withMessage("Incluye mayúsuclas, minúsculas y números en tu password"),
+        .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9]).{8,}$/, "i").withMessage("Incluye mayúsuclas, minúsculas, números y especiales en tu password"),
     body('gender').notEmpty().withMessage('Selecciona tu género'),
     body('date').notEmpty().withMessage('Captura tu fecha de nacimiento'),
     body('password').custom((value, { req })=>{
@@ -64,6 +64,7 @@ const validationsLogin = [
 //router.get('/create', usersController.create);
 router.get('/', usersController.index);
 router.get('/login', usersController.login);
+router.get('/logout', usersController.logout);
 router.post('/', upload.any(), validations, usersController.store);
 router.post('/login', upload.any(), validationsLogin, usersController.validate);
 

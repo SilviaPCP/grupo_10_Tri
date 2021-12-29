@@ -133,6 +133,13 @@ header {
     flex: 0 0 calc(33.3% - 1rem);
 }
 
+.base a {
+    font-size: 1.5rem;
+    color: var(--blanco);
+    text-align: center;
+    
+}
+
 .top-header p {
     font-weight: 400;
     color: var(--primario);
@@ -444,7 +451,7 @@ main section article {
 
 .bottom-navbar {
     overflow: hidden;
-    background-color: var(--primario)
+    background-color: var(--gris)
 }
 
 .bottom-mobile-menu {
@@ -469,7 +476,7 @@ main section article {
 
 .b-nav a {
     color: var(--blanco);
-    background-color: var(--blanco);
+    background-color: var(--gris);
     text-decoration: none;
     font-size: 1.5rem;
     display: block;
@@ -614,9 +621,11 @@ footer p {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
+
     }
     .products article {
         flex: 0 0 calc(50% - 1rem);
+        
     }
     /*Footer*/
     footer img {
@@ -704,6 +713,7 @@ footer p {
     /*Articulos*/
     .products article {
         flex: 0 0 calc(25% - 1rem);
+        text-align: center;
     }
     /*Bottom Navbar*/
     .block-navbar {
@@ -713,7 +723,7 @@ footer p {
         border-top: solid var(--terciario) 0.1rem;
     }
     .bottom-navbar {
-        background-color: var(--blanco);
+        background-color: var(--gris);
     }
     .bottom-mobile-menu {
         display: none;

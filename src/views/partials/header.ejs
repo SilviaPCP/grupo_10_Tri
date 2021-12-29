@@ -7,8 +7,11 @@
              <i class="fas fa-user"></i></a>
         </div>
         <% } else { %>
-            <a href="/userProfile"><p> <img src="/images/users/<%= locals.userLogged.image %>" width="30" style= "border-radius: 100%"> Hello <%= locals.userLogged.first_name %></p></a>
-
+        <div class="base">  
+            <a href="/userProfile"><p> <img src="/images/users/<%= locals.userLogged.image %>" width="30" style= "border-radius: 100%"> 
+                Hello <%= locals.userLogged.first_name %></p></a>
+                <a href="/users/logout">Cerrar</a>
+        </div>
         <% } %>
         <div class="base first">
             <a class="base" href="/">
@@ -18,7 +21,7 @@
         <div class="base">
             <a class="right" href="/cartNew"><i class="fas fa-shopping-cart"></i></a>
         </div>
-        <form class="form" action="/search" method="GET">
+        <form class="form" action="/products/search" method="GET">
             <input class="input" type="text" placeholder="Buscar productos, marcas y más" name='keywords'>
             <button class="submit" type="submit"><i class="fa fa-search"></i></button>
         </form>
