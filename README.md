@@ -40,7 +40,9 @@ Las tiendas online que fueron sondeadas son:
 3. **Jair Omar Díaz Álvarez:** Estudiante de la carrera Ingeniería Petrolera de la Facultad de Ingeniería de la UNAM, originario de la Ciudad de México, busco complementar mi formación profesional con los fundamentos de la programación, en mi experiencia académica he tenido contacto con la programación orientada a objetos en lenguajes Python, Fortran, C++, y Java, además de la herramienta MATLAB. 
 
 # Link al tablero de trabajo
-
 https://trello.com/b/zvb2qiQo/proyecto-ecommerce-sprint2
 
+# Link de git para el Dashboard de React
+https://github.com/SilviaPCP/ReactProyecto.git
 
+# Link de git para las API
