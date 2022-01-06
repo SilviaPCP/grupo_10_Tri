@@ -37,7 +37,7 @@ Las tiendas online que fueron sondeadas son:
 #---Breve descripción de integrantes del equipo---
 1. **Antonio Oropeza Ugalde:** Estudiante de la licenciatura en Informática en la Facultad de Estudios Superiores Cuautitlán de la UNAM, soy del Estado de México y estoy interesado een seguir fortaleciendo mis conociemientos ya que he tenido experiencia académica en lenguajes como Java, C, C++ y también en bases de datos de MySql y SQL Server, me llama la atención el desarrollo web porque gracias a lo poco que se de este rubro me he podido dar cuenta que las tecnologías utilizadas son bastante requeridas y además de que me gustaría en un futuro cercano poder dedicarme a esto ya que es un tema que me gusta.
 2. **Silvia del Carmen Pérez Carrizosa:** Soy egresada de la carrera de Diseño de la comunicación Gráfica de la UAM Xochimilco, y cuento con una maestría en Ciencias de la computación por el ITESM, siempre me he interesado por el desarrollo de páginas web y todo lo que tenga que ver con desarrollo web. Con el curso quiero actualizarme en este tema ya que mi desarrollo laboral tomo el rumbo de la administración. Trabajé en empresas de desarrollo de sistemas ubicadas en la CDMX, ahora radico en la ciudad de Quéretaro.
-3. **Jair Omar Díaz Álvarez:** Estudiante de la carrera Ingeniería Petrolera de la Facultad de Ingeniería de la UNAM, originario de la Ciudad de México, busco complementar mi formación profesional con los fundamentos de la programación, en mi experiencia académica he tenido contacto con la programación orientada a objetos en lenguajes Python, Fortran, C++, y Java, además de la herramienta MATLAB. 
+3. **Jair Omar Díaz Álvarez:** Estudiante de la carrera Ingeniería Petrolera de la Facultad de Ingeniería de la UNAM, originario de la Ciudad de México, busco complementar mi formación profesional con los fundamentos de la programación, en mi experiencia académica he tenido contacto con la programación orientada a objetos en lenguajes Python, Fortran, C++, y Java, además de la herramienta MATLAB. (NO TERMINO EL CURSO CON NOSOTROS DESDE EL SPRINT 5)
 
 # Link al tablero de trabajo
 https://trello.com/b/zvb2qiQo/proyecto-ecommerce-sprint2
@@ -46,3 +46,4 @@ https://trello.com/b/zvb2qiQo/proyecto-ecommerce-sprint2
 https://github.com/SilviaPCP/ReactProyecto.git
 
 # Link de git para las API
+https://github.com/SilviaPCP/ProyectoAPIdigital.git 
