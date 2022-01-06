@@ -39,6 +39,6 @@ app.use('/products', productsRouter);
 //ageragar ruta de users
 app.use('/users', usersRouter);
 
-app.listen(3000, () => {
-    console.log('Servidor funcionando en el puerto 3000');
+app.listen(3003, () => {
+    console.log('Servidor funcionando en el puerto 3003');
 });

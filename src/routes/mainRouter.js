@@ -14,5 +14,6 @@ router.get('/productDetail', mainController.detail);
 router.get('/productsForm', mainController.products);
 router.get('/productsCons', mainController.prodsCons);
 router.get('/userProfile', mainController.profile);
+router.get('/stats', mainController.stats);
 
 module.exports = router;

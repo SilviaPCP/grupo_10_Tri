@@ -92,7 +92,7 @@ li {
 /*Utilidades*/
 
 .container {
-    width: min(90%, 120rem);
+    width: min(70%, 120rem);
     margin: auto;
 }
 
@@ -366,6 +366,13 @@ main section article {
     padding: 1.5rem;
     border-top: solid var(--blanco) 0.1rem;
     position: relative;
+}
+
+.main-return {
+    font-size: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+
 }
 
 .main-article i {

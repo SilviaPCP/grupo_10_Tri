@@ -9,6 +9,10 @@ body {
   background-size: auto;
 }
 
+.form-data {
+  color: var(--blanco);
+}
+
 @media (min-width: 760px){
   .form-register {
     display: flex;

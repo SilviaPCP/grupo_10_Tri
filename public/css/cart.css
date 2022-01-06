@@ -1,8 +1,8 @@
 .cart-Container{
     padding: 20px;
-    width: 100%;
+    width: 50%;
     text-align: center;
-    background-color: var(--blanco);
+    background-color: var(--terciario);
 }
 
 

@@ -75,14 +75,11 @@ const controller = {
     search: function(req, res) {
         let search = req.query.keywords;
         search = '%'+search+'%';
-
-        console.log(search)
         db.Product.findAll({
             where: {
                 product_name: {[Op.like]: search }
             }
         })
-
         .then(products => {
             res.render('products/products.ejs', {products, toThousand})
         })

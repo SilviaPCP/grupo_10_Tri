@@ -38,6 +38,9 @@ const controller = {
     products: (req, res) => {
         res.render('productsForm');
     },
+    stats: (req, res) => {
+        res.render('stats');
+    },
     prodsCons: (req, res) => {
         res.render('productsCons');
     }
